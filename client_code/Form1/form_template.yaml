@@ -489,7 +489,7 @@ components:
         - data_bindings: []
           layout_properties: {}
           name: label_2_copy_8_copy
-          properties: {font: '', text: 'Észlelés:'}
+          properties: {font: ti, text: 'Észlelés:'}
           type: Label
         - layout_properties: {expand: false, width: 75}
           name: outlined_2_copy_8_copy
@@ -504,7 +504,7 @@ components:
         properties: {}
         type: FlowPanel
       data_bindings: []
-      layout_properties: {full_width_row: false, grid_position: 'FORBDV,QWUQHU'}
+      layout_properties: {full_width_row: false, grid_position: 'QNQQGS,HTEAWP'}
       name: column_panel_2
       properties:
         border: ''
@@ -513,18 +513,206 @@ components:
           margin: [null, 0, null, null]
           padding: [null, 0, null, '10']
       type: ColumnPanel
+    - components:
+      - components:
+        - layout_properties: {}
+          name: label_2_copy_6_copy
+          properties:
+            spacing:
+              margin: [null, 0, null, null]
+              padding: [null, 0, null, null]
+            text: 'Erő:'
+          type: Label
+        - layout_properties: {expand: false, width: 75}
+          name: outlined_2_copy_6_copy
+          properties:
+            margin: [null, '100', null, null]
+            role: outlined
+            text: '12'
+            type: number
+          type: TextBox
+        layout_properties: {full_width_row: true, grid_position: 'NWLLUN,YVONNM RJWKXO,EBOJNL'}
+        name: flow_panel_4_copy_6_copy
+        properties:
+          spacing:
+            margin: [null, null, '4', null]
+          spacing_below: small
+        type: FlowPanel
+      - components:
+        - layout_properties: {}
+          name: label_2_copy_5_copy
+          properties: {text: 'Szépség: '}
+          type: Label
+        - layout_properties: {expand: false, width: 75}
+          name: outlined_2_copy_5_copy
+          properties:
+            margin: [null, '75', null, null]
+            role: outlined
+            text: '12'
+            type: number
+          type: TextBox
+        layout_properties: {full_width_row: true, grid_position: 'NWLLUN,YVONNM RRSECU,NVLEOM'}
+        name: flow_panel_4_copy_5_copy
+        properties: {}
+        type: FlowPanel
+      - components:
+        - layout_properties: {}
+          name: label_2_copy_copy
+          properties: {text: 'Gyorsaság: '}
+          type: Label
+        - layout_properties: {expand: false, width: 75}
+          name: outlined_2_copy_copy
+          properties:
+            margin: [null, '100', null, null]
+            role: outlined
+            text: '12'
+            type: number
+          type: TextBox
+        layout_properties: {full_width_row: true, grid_position: 'NWLLUN,SXYJHM ITZWZA,YMCBXM'}
+        name: flow_panel_4_copy_copy
+        properties: {}
+        type: FlowPanel
+      - components:
+        - layout_properties: {}
+          name: label_2_copy_9
+          properties: {text: 'Intelligencia:'}
+          type: Label
+        - layout_properties: {expand: false, width: 75}
+          name: outlined_2_copy_9
+          properties:
+            margin: [null, '100', null, null]
+            role: outlined
+            text: '12'
+            type: number
+          type: TextBox
+        layout_properties: {full_width_row: true, grid_position: 'NWLLUN,SXYJHM JCDWEM,QNOIPM'}
+        name: flow_panel_4_copy_7_copy
+        properties: {}
+        type: FlowPanel
+      - components:
+        - layout_properties: {}
+          name: label_2_copy_2_copy_7
+          properties: {text: 'Ügyesség: '}
+          type: Label
+        - layout_properties: {expand: false, width: 75}
+          name: outlined_2_copy_2_copy
+          properties:
+            margin: [null, '100', null, null]
+            role: outlined
+            text: '12'
+            type: number
+          type: TextBox
+        layout_properties: {full_width_row: true, grid_position: 'NWLLUN,VUDWOA SJELNI,FJXUEF'}
+        name: flow_panel_4_copy_2_copy
+        properties: {}
+        type: FlowPanel
+      - components:
+        - name: label_2_copy_7_copy
+          properties: {text: 'Akaraterő:'}
+          type: Label
+        - layout_properties: {expand: false, width: 75}
+          name: outlined_2_copy_7_copy
+          properties:
+            margin: [null, '100', null, null]
+            role: outlined
+            text: '12'
+            type: number
+          type: TextBox
+        layout_properties: {full_width_row: true, grid_position: 'NWLLUN,VUDWOA EYDFDH,CNUDJM'}
+        name: flow_panel_4_copy_8_copy
+        properties: {}
+        type: FlowPanel
+      - components:
+        - layout_properties: {}
+          name: label_2_copy_3_copy
+          properties: {text: 'Állóképesség: '}
+          type: Label
+        - layout_properties: {expand: false, width: 75}
+          name: outlined_2_copy_3_copy
+          properties:
+            margin: [null, '100', null, 0]
+            role: outlined
+            text: '12'
+            type: number
+          type: TextBox
+        layout_properties: {full_width_row: true, grid_position: 'NWLLUN,DWAZNE INDFPM,JKPULY'}
+        name: flow_panel_4_copy_3_copy
+        properties: {}
+        type: FlowPanel
+      - components:
+        - layout_properties: {}
+          name: label_2_copy_8_copy_2
+          properties: {text: 'Asztrál:'}
+          type: Label
+        - layout_properties: {expand: false, width: 75}
+          name: outlined_2_copy_8_copy_2
+          properties:
+            margin: [null, '100', null, null]
+            role: outlined
+            text: '12'
+            type: number
+          type: TextBox
+        layout_properties: {full_width_row: true, grid_position: 'NWLLUN,DWAZNE BTTHZU,AVOSYM'}
+        name: flow_panel_4_copy_9_copy_2
+        properties: {}
+        type: FlowPanel
+      - components:
+        - layout_properties: {}
+          name: label_2_copy_4_copy
+          properties: {text: 'Egészség: '}
+          type: Label
+        - layout_properties: {expand: false, width: 75}
+          name: outlined_2_copy_4_copy
+          properties:
+            margin: [null, '100', null, null]
+            role: outlined
+            text: '12'
+            type: number
+          type: TextBox
+        layout_properties: {full_width_row: true, grid_position: 'NWLLUN,THBPPX GSAOIN,AOZWUN'}
+        name: flow_panel_4_copy_4_copy
+        properties: {}
+        type: FlowPanel
+      - components:
+        - data_bindings: []
+          layout_properties: {}
+          name: label_2_copy_8_copy_copy
+          properties: {font: ti, text: 'Észlelés:'}
+          type: Label
+        - layout_properties: {expand: false, width: 75}
+          name: outlined_2_copy_8_copy_copy
+          properties:
+            margin: [null, '100', null, null]
+            role: outlined
+            text: '12'
+            type: number
+          type: TextBox
+        layout_properties: {full_width_row: true, grid_position: 'NWLLUN,THBPPX RGIGFD,BFLDLR'}
+        name: flow_panel_4_copy_9_copy_copy
+        properties: {}
+        type: FlowPanel
+      data_bindings: []
+      layout_properties: {grid_position: 'MNPDCW,KVURHV'}
+      name: column_panel_2_copy
+      properties:
+        border: ''
+        role: outlined-card
+        spacing:
+          margin: [null, 0, null, null]
+          padding: [null, 0, null, '10']
+      type: ColumnPanel
     data_bindings: []
-    layout_properties: {col_xs: 0, row: NUEORJ, width_xs: 7}
+    layout_properties: {col_xs: 0, row: NUEORJ, width_xs: 6}
     name: column_panel_1
     properties:
       col_spacing: medium
       role: elevated-card
       spacing:
-        padding: [null, '0', null, '10']
+        padding: [null, 10, null, '10']
       spacing_above: small
       spacing_below: small
       visible: true
-      wrap_on: tablet
+      wrap_on: mobile
     type: ColumnPanel
   layout_properties: {slot: default}
   name: grid_panel_2
@@ -539,3 +727,4 @@ custom_component: true
 custom_component_container: false
 is_package: true
 properties: []
+slots: {}
