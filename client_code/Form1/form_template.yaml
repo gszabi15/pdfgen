@@ -313,39 +313,42 @@ components:
     - components:
       - layout_properties: {}
         name: label_2_copy_6
-        properties: {text: 'Erő:'}
+        properties: {text: 'Erő: '}
         type: Label
       - layout_properties: {expand: false, width: 75}
         name: outlined_2_copy_6
         properties: {role: outlined, text: '12', type: number}
         type: TextBox
-      layout_properties: {grid_position: 'SUOIBR,SMMVPE GLUURF,RFFCLT'}
+      layout_properties: {grid_position: 'FPDJZD,JWKTGZ RRHRWH,PXXQLM'}
       name: flow_panel_4_copy_6
-      properties: {}
+      properties:
+        spacing:
+          margin: [null, null, '4', null]
+        spacing_below: small
       type: FlowPanel
     - components:
       - layout_properties: {}
         name: label_2_copy_5
-        properties: {text: 'Szépség:'}
+        properties: {text: 'Szépség: '}
         type: Label
       - layout_properties: {expand: false, width: 75}
         name: outlined_2_copy_5
         properties: {role: outlined, text: '12', type: number}
         type: TextBox
-      layout_properties: {grid_position: 'SUOIBR,SMMVPE SOHETX,XJTUYR'}
+      layout_properties: {grid_position: 'FPDJZD,JWKTGZ LPUTFC,XLRFGA'}
       name: flow_panel_4_copy_5
       properties: {}
       type: FlowPanel
     - components:
       - layout_properties: {}
         name: label_2_copy
-        properties: {text: 'Gyorsaság:'}
+        properties: {text: 'Gyorsaság: '}
         type: Label
       - layout_properties: {expand: false, width: 75}
         name: outlined_2_copy
         properties: {role: outlined, text: '12', type: number}
         type: TextBox
-      layout_properties: {grid_position: 'SUOIBR,EIKYTH DBMKZE,JISTTE'}
+      layout_properties: {grid_position: 'FPDJZD,CUNUUL FBZGJE,QUTJNT'}
       name: flow_panel_4_copy
       properties: {}
       type: FlowPanel
@@ -358,46 +361,45 @@ components:
         name: outlined_2
         properties: {role: outlined, text: '12', type: number}
         type: TextBox
-      layout_properties: {grid_position: 'SUOIBR,EIKYTH YLHFGJ,LKJZPA'}
+      layout_properties: {grid_position: 'FPDJZD,CUNUUL ZVTAIH,FHGCXD'}
       name: flow_panel_4_copy_7
       properties: {}
       type: FlowPanel
     - components:
       - layout_properties: {}
         name: label_2_copy_2
-        properties: {text: 'Ügyesség:'}
+        properties: {text: 'Ügyesség: '}
         type: Label
       - layout_properties: {expand: false, width: 75}
         name: outlined_2_copy_2
         properties: {role: outlined, text: '12', type: number}
         type: TextBox
-      layout_properties: {grid_position: 'SUOIBR,JHGJLH LFHJNH,YQNDOL'}
+      layout_properties: {grid_position: 'FPDJZD,MTVBXH ZJIYLS,FUYTVP'}
       name: flow_panel_4_copy_2
       properties: {}
       type: FlowPanel
     - components:
-      - layout_properties: {}
-        name: label_2_copy_7
+      - name: label_2_copy_7
         properties: {text: 'Akaraterő:'}
         type: Label
       - layout_properties: {expand: false, width: 75}
         name: outlined_2_copy_7
         properties: {role: outlined, text: '12', type: number}
         type: TextBox
-      layout_properties: {grid_position: 'SUOIBR,JHGJLH ADZAJJ,SLRLOV'}
+      layout_properties: {grid_position: 'FPDJZD,MTVBXH WPCYDO,VDPIFQ'}
       name: flow_panel_4_copy_8
       properties: {}
       type: FlowPanel
     - components:
       - layout_properties: {}
         name: label_2_copy_3
-        properties: {text: 'Állóképesség:'}
+        properties: {text: 'Állóképesség: '}
         type: Label
       - layout_properties: {expand: false, width: 75}
         name: outlined_2_copy_3
         properties: {role: outlined, text: '12', type: number}
         type: TextBox
-      layout_properties: {grid_position: 'SUOIBR,LPGYBQ ITJCHJ,IRBSAI'}
+      layout_properties: {grid_position: 'FPDJZD,ZUBKKA HJKRRX,DLEYSC'}
       name: flow_panel_4_copy_3
       properties: {}
       type: FlowPanel
@@ -410,20 +412,20 @@ components:
         name: outlined_2_copy_8
         properties: {role: outlined, text: '12', type: number}
         type: TextBox
-      layout_properties: {grid_position: 'SUOIBR,LPGYBQ MBACZY,SQCVHB'}
+      layout_properties: {grid_position: 'FPDJZD,ZUBKKA NBMHOH,KAPATD'}
       name: flow_panel_4_copy_9
       properties: {}
       type: FlowPanel
     - components:
       - layout_properties: {}
         name: label_2_copy_4
-        properties: {text: 'Egészség:'}
+        properties: {text: 'Egészség: '}
         type: Label
       - layout_properties: {expand: false, width: 75}
         name: outlined_2_copy_4
         properties: {role: outlined, text: '12', type: number}
         type: TextBox
-      layout_properties: {grid_position: 'SUOIBR,OGYKME NWAYSL,SKQYDZ'}
+      layout_properties: {grid_position: 'FPDJZD,HEGHNI PIETOW,BYDYTA'}
       name: flow_panel_4_copy_4
       properties: {}
       type: FlowPanel
@@ -436,7 +438,7 @@ components:
         name: outlined_2_copy_8_copy
         properties: {role: outlined, text: '12', type: number}
         type: TextBox
-      layout_properties: {grid_position: 'SUOIBR,OGYKME FVVHBP,KRWTSZ'}
+      layout_properties: {grid_position: 'FPDJZD,HEGHNI MUMEUK,ACXHVC'}
       name: flow_panel_4_copy_9_copy
       properties: {}
       type: FlowPanel
