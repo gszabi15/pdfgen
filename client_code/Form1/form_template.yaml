@@ -1,13 +1,39 @@
 components:
-- components: []
-  layout_properties: {slot: default}
-  name: content_panel
-  properties: {col_widths: '{}'}
-  type: ColumnPanel
-- layout_properties: {slot: nav-right}
-  name: navbar_links
+- layout_properties: {slot: left-nav}
+  name: label_1
   properties: {}
-  type: FlowPanel
+  type: Label
+- components: []
+  layout_properties: {slot: nav-right}
+  name: grid_panel_1
+  properties: {}
+  type: GridPanel
+- components:
+  - components:
+    - layout_properties: {}
+      name: label_2
+      properties: {text: 'Név:'}
+      type: Label
+    layout_properties: {col_xs: 1, row: YULJRR, width_xs: 2}
+    name: navbar_links
+    properties: {}
+    type: FlowPanel
+  - layout_properties: {col_xs: 4, row: YULJRR, width_xs: 4}
+    name: outlined_1
+    properties: {role: outlined}
+    type: TextBox
+  - layout_properties: {col_xs: 3, row: YULJRR, width_xs: 4}
+    name: grid_panel_4
+    properties: {}
+    type: GridPanel
+  - layout_properties: {col_xs: 8, row: YULJRR, width_xs: 4}
+    name: grid_panel_3
+    properties: {}
+    type: GridPanel
+  layout_properties: {slot: default}
+  name: grid_panel_2
+  properties: {}
+  type: GridPanel
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
