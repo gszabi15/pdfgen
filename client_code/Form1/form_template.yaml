@@ -25,6 +25,8 @@ components:
             margin: [null, 0, null, 0]
             placeholder: ''
             role: outlined
+            spacing_above: small
+            spacing_below: small
             text: ''
             tooltip: ''
             underline: false
@@ -521,7 +523,7 @@ components:
             spacing:
               margin: [null, 0, null, null]
               padding: [null, 0, null, null]
-            text: 'Erő:'
+            text: 'Titkosajtó keresés:'
           type: Label
         - layout_properties: {expand: false, width: 75}
           name: outlined_2_copy_6_copy
@@ -541,7 +543,7 @@ components:
       - components:
         - layout_properties: {}
           name: label_2_copy_5_copy
-          properties: {text: 'Szépség: '}
+          properties: {text: 'Zárnyitás: '}
           type: Label
         - layout_properties: {expand: false, width: 75}
           name: outlined_2_copy_5_copy
@@ -558,7 +560,7 @@ components:
       - components:
         - layout_properties: {}
           name: label_2_copy_copy
-          properties: {text: 'Gyorsaság: '}
+          properties: {text: 'Ugrás: '}
           type: Label
         - layout_properties: {expand: false, width: 75}
           name: outlined_2_copy_copy
@@ -575,7 +577,7 @@ components:
       - components:
         - layout_properties: {}
           name: label_2_copy_9
-          properties: {text: 'Intelligencia:'}
+          properties: {text: 'Rejtőzés:'}
           type: Label
         - layout_properties: {expand: false, width: 75}
           name: outlined_2_copy_9
@@ -592,7 +594,7 @@ components:
       - components:
         - layout_properties: {}
           name: label_2_copy_2_copy_7
-          properties: {text: 'Ügyesség: '}
+          properties: {text: 'Esés: '}
           type: Label
         - layout_properties: {expand: false, width: 75}
           name: outlined_2_copy_2_copy
@@ -607,8 +609,9 @@ components:
         properties: {}
         type: FlowPanel
       - components:
-        - name: label_2_copy_7_copy
-          properties: {text: 'Akaraterő:'}
+        - layout_properties: {}
+          name: label_2_copy_7_copy
+          properties: {text: 'Kötéltánc:'}
           type: Label
         - layout_properties: {expand: false, width: 75}
           name: outlined_2_copy_7_copy
@@ -625,7 +628,7 @@ components:
       - components:
         - layout_properties: {}
           name: label_2_copy_3_copy
-          properties: {text: 'Állóképesség: '}
+          properties: {text: 'Mászás: '}
           type: Label
         - layout_properties: {expand: false, width: 75}
           name: outlined_2_copy_3_copy
@@ -642,7 +645,7 @@ components:
       - components:
         - layout_properties: {}
           name: label_2_copy_8_copy_2
-          properties: {text: 'Asztrál:'}
+          properties: {text: 'Lopózás:'}
           type: Label
         - layout_properties: {expand: false, width: 75}
           name: outlined_2_copy_8_copy_2
@@ -659,7 +662,7 @@ components:
       - components:
         - layout_properties: {}
           name: label_2_copy_4_copy
-          properties: {text: 'Egészség: '}
+          properties: {text: 'Zsebmetszés: '}
           type: Label
         - layout_properties: {expand: false, width: 75}
           name: outlined_2_copy_4_copy
@@ -677,7 +680,11 @@ components:
         - data_bindings: []
           layout_properties: {}
           name: label_2_copy_8_copy_copy
-          properties: {font: ti, text: 'Észlelés:'}
+          properties:
+            font: ti
+            spacing:
+              margin: [null, null, null, '-5']
+            text: 'Csapdafelfedezés:'
           type: Label
         - layout_properties: {expand: false, width: 75}
           name: outlined_2_copy_8_copy_copy
@@ -702,7 +709,7 @@ components:
           padding: [null, 0, null, '10']
       type: ColumnPanel
     data_bindings: []
-    layout_properties: {col_xs: 0, row: NUEORJ, width_xs: 6}
+    layout_properties: {col_xs: 0, row: NUEORJ, width_xs: 9}
     name: column_panel_1
     properties:
       col_spacing: medium
