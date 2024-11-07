@@ -15,5 +15,8 @@ components:
   name: outlined_4
   properties: {role: outlined, type: number}
   type: TextBox
-container: {type: DataRowPanel}
+container:
+  data_bindings: []
+  properties: {auto_display_data: false, spacing_above: none, spacing_below: none, visible: true}
+  type: DataRowPanel
 is_package: true
