@@ -351,6 +351,7 @@ components:
         name: flow_panel_4_copy_6
         properties:
           align: center
+          gap: huge
           spacing:
             margin: [null, null, '4', null]
           spacing_above: small
@@ -543,7 +544,7 @@ components:
         name: flow_panel_4_copy_6_copy
         properties:
           align: center
-          gap: medium
+          gap: huge
           spacing:
             margin: [null, null, '4', null]
           spacing_above: small
@@ -572,7 +573,7 @@ components:
           name: label_2_copy_copy
           properties: {text: 'Ugrás: '}
           type: Label
-        - layout_properties: {expand: false, width: 75}
+        - layout_properties: {width: 75}
           name: outlined_2_copy_copy
           properties:
             margin: [null, '100', null, null]
@@ -583,7 +584,7 @@ components:
         data_bindings: []
         layout_properties: {full_width_row: true, grid_position: 'NWLLUN,SXYJHM ITZWZA,YMCBXM'}
         name: flow_panel_4_copy_copy
-        properties: {align: center, role: null}
+        properties: {align: center, gap: huge, role: null, vertical_align: full, visible: true}
         type: FlowPanel
       - components:
         - layout_properties: {}
@@ -623,7 +624,7 @@ components:
           type: TextBox
         layout_properties: {full_width_row: true, grid_position: 'NWLLUN,VUDWOA SJELNI,FJXUEF'}
         name: flow_panel_4_copy_2_copy
-        properties: {align: center}
+        properties: {align: center, gap: huge}
         type: FlowPanel
       - components:
         - layout_properties: {}
@@ -657,7 +658,7 @@ components:
           type: TextBox
         layout_properties: {full_width_row: true, grid_position: 'NWLLUN,DWAZNE INDFPM,JKPULY'}
         name: flow_panel_4_copy_3_copy
-        properties: {align: center}
+        properties: {align: center, gap: huge}
         type: FlowPanel
       - components:
         - layout_properties: {}
@@ -674,7 +675,7 @@ components:
           type: TextBox
         layout_properties: {full_width_row: true, grid_position: 'NWLLUN,DWAZNE BTTHZU,AVOSYM'}
         name: flow_panel_4_copy_9_copy_2
-        properties: {align: center, gap: medium, spacing_above: small, spacing_below: small}
+        properties: {align: center, gap: huge, spacing_above: small, spacing_below: small}
         type: FlowPanel
       - components:
         - layout_properties: {}
@@ -691,7 +692,7 @@ components:
           type: TextBox
         layout_properties: {full_width_row: true, grid_position: 'NWLLUN,THBPPX GSAOIN,AOZWUN'}
         name: flow_panel_4_copy_4_copy
-        properties: {align: center}
+        properties: {align: center, gap: huge}
         type: FlowPanel
       - components:
         - data_bindings: []
@@ -713,7 +714,7 @@ components:
           type: TextBox
         layout_properties: {full_width_row: true, grid_position: 'NWLLUN,THBPPX RGIGFD,BFLDLR'}
         name: flow_panel_4_copy_9_copy_copy
-        properties: {align: center}
+        properties: {align: center, gap: huge}
         type: FlowPanel
       data_bindings: []
       layout_properties: {grid_position: 'MNPDCW,KVURHV'}
@@ -753,7 +754,8 @@ container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
 custom_component: true
-custom_component_container: false
+custom_component_container: true
 is_package: true
-properties: []
+properties:
+- {default_binding_prop: true, default_value: vertical, important: true, name: orientation, type: string}
 slots: {}
