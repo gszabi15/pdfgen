@@ -1,19 +1,19 @@
 components:
 - layout_properties: {column: VJQQOR}
-  name: hatas_1
+  name: te_1
   properties: {role: outlined}
   type: TextBox
 - layout_properties: {column: OJLQEN}
-  name: mp_1
+  name: ve_1
   properties: {role: outlined}
   type: TextBox
 - layout_properties: {column: CLVIEP}
-  name: db_1
+  name: ce_1
   properties: {role: outlined}
   type: TextBox
 - layout_properties: {column: JKSDUP}
-  name: text_box_1
-  properties: {}
+  name: ke_1
+  properties: {role: outlined}
   type: TextBox
 container:
   data_bindings: []
