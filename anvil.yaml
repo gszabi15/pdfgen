@@ -1,6 +1,9 @@
 allow_embedding: false
 db_schema: {}
-dependencies: []
+dependencies:
+- dep_id: dep_mpg7hpbeygkkar
+  resolution_hints: {app_id: BXCIC4NU77E3WIMC, name: Material Design 1, package_name: Material_Design_1}
+  version: {branch: master}
 name: PDFgen
 native_deps: null
 package_name: PDFgen
