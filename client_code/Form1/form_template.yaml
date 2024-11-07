@@ -5,10 +5,6 @@ components:
   properties: {}
   type: GridPanel
 - components:
-  - layout_properties: {col_xs: 3, row: NUEORJ, width_xs: 9}
-    name: repeating_panel_2
-    properties: {item_template: Form1.ItemTemplate5}
-    type: RepeatingPanel
   - components:
     - components:
       - components:
@@ -741,7 +737,12 @@ components:
         name: text_area_2
         properties: {height: '140', text: Hátrány}
         type: TextArea
-      - components: []
+      - components:
+        - data_bindings: []
+          layout_properties: {}
+          name: repeating_panel_1
+          properties: {item_template: Form1.RowTemplate1}
+          type: RepeatingPanel
         data_bindings: []
         layout_properties: {full_width_row: false, grid_position: 'TORDUX,JCPDBA'}
         name: varazstargyak
@@ -760,7 +761,7 @@ components:
       properties: {role: outlined-card}
       type: ColumnPanel
     data_bindings: []
-    layout_properties: {col_xs: 0, row: NUEORJ, width_xs: 9}
+    layout_properties: {col_xs: 0, row: NUEORJ, width_xs: 5}
     name: column_panel_1
     properties:
       col_spacing: medium
@@ -772,14 +773,6 @@ components:
       visible: true
       wrap_on: mobile
     type: ColumnPanel
-  - layout_properties: {col_xs: 9, row: NUEORJ, width_xs: 3}
-    name: column_panel_4
-    properties: {}
-    type: ColumnPanel
-  - layout_properties: {col_xs: 2, row: JEXDMA, width_xs: 8}
-    name: repeating_panel_1
-    properties: {item_template: Form1.RowTemplate3}
-    type: RepeatingPanel
   layout_properties: {slot: default}
   name: grid_panel_2
   properties:
