@@ -1714,6 +1714,11 @@ components:
         name: column_panel_30
         properties: {col_widths: '{"UAJOVH":50,"DRGJHP":10}', role: elevated-card}
         type: ColumnPanel
+      - event_bindings: {click: mentes_click}
+        layout_properties: {grid_position: 'RIYUCT,PQFHBB'}
+        name: mentes
+        properties: {icon: 'fa:download', icon_align: right, role: filled-button, text: Mentés}
+        type: Button
       layout_properties: {width: 1164}
       name: column_panel_9
       properties: {col_widths: '{"RRNLRS":35,"GNIWQA":25,"JGOJJQ":25,"BVOXFT":25}', role: tonal-card}

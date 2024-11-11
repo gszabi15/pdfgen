@@ -2,7 +2,6 @@ from ._anvil_designer import Form1Template
 from anvil import *
 import anvil.server
 
-
 class Form1(Form1Template):
   #def click(self, **properties):
   #  self.outlined_button_1.visible = 0
@@ -184,3 +183,8 @@ class Form1(Form1Template):
       delete.enabled = False
     if len(rep.items) < 7:
       add.enabled = True
+
+  def mentes_click(self, **event_args):
+    data = {}
+    result = anvil.server.call('genpdf',data)
+    anvil.media.download(result("asd"))

@@ -1,6 +1,7 @@
 unique_ids:
   assets:
-    Képernyőkép_20241106_161441-1.png: '1730906103740162304877746.9054'
+    karakterlap1.jpg: '1731349065970652900992396.3047'
+    karakterlap2.jpg: '1731349098507372764927890.5483'
     standard-page.html: I7Y47UDXZFFLB47ZLXR2YLUQVV6FYMQ2
     theme.css: JIGC7TL7KSQBFS6LJ6JAIBR6FL4BJ5RH
   forms:
@@ -16,4 +17,4 @@ unique_ids:
   modules: {}
   scripts: {}
   server_modules:
-    ServerModule1: '1730891794351984551208065.2981'
+    pdf4: '1730891794351984551208065.2981'
