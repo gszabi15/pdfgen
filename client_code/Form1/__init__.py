@@ -185,5 +185,29 @@ class Form1(Form1Template):
       add.enabled = True
 
   def mentes_click(self, **event_args):
-    data = {}
+    data = {
+    "": {
+        "alap": ["Amar Amdus", "30", "Varázsló (Varázslók könyve)", "Ember", "", "Gorvik", "", "Anyagmágus", "", "", "", "", "","7","Rend",""],
+        "stat": [10, 14, 15, 17, 12, 17, 20, 15, 14, 14],
+        "szazalek": ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"],
+        "elony": ["Erős lélek (Ego: 83)", "", "", "", ""],
+        "hatrany": ["", "", "", "", ""], 
+        "varazstargyak": [["", "", "", ""], ["", "", "", ""], ["", "", "", ""], ["", "", "", ""]],
+        "fegyver_nelkuli": ["11", "27", "103", "5"],
+        "fegyver": [["Tőrlard", "25", "50", "127", "2", "1K6+2", "", False, False], ["", "", "", "", "", "", "", False, False], ["", "", "", "", "", "", "", False, False]],
+        "pszi": ["59", "4", "59", "0", "63", "5", "59", "0", "64", False, False, False, False, True, False],
+        "varazsero": ["80", "", "", False, False, False, False],
+        "vert": ["abbitacél sodronying", "5", "71", "4", "0", False, True],
+        "levonasok": [["","","",""],["","","",""]],
+        "penz": [["17", "3", "50", ""],["", "", "", ""],["", "", "", ""]],
+        "nyelv": [[["Gorviki","Erv","Pyar","Dzsad","Toroni"],["5","5","5","4","3"]],[["Aszisz","Shadoni","","",""],["3","3","","",""]]],
+        "felszereles": [[["Varázslóbot",""],["ing, nemesi",""],["kesztyű, nemesi",""],["Kaftán",""],["prém köpeny",""],["Alapellátáshoz szükséges felszerelés",""],["Utazó, egyszerű alkimista felszerelés",""],["SKCS",""]],[["",""]]],
+        "kepzettseg": [[["fegyverhasználat (Tőrkard)", False, True],["rúnamágia", False, True],["ásványtan", False, True],["alkímia", False, True],["etikett", False, True],["ősi nyelv ismerete (Kyr)", True, False],["írás/olvasás", True, False],["legendaismeret", True, False],["történelemismeret", True, False],["sebgyógyítás", True, False],["heraldika", True, False],["építészet", True, False],["térképészet", True, False],["vallásismeret", True, False],["szexuális kultúra", True, False],["tánc", True, False],["úszás", True, False],["lovaglás", True, False],["kocsihajtás", True, False],["értékbecslés", True, False],["hamiskártya", True, False]],[["", True, False]]],
+        "mergek": [["","","",""],["","","",""],["","","",""],["","","",""]],
+        "tarsak": [["Ló, utazó", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", ""]],
+        "talalkozok": [["","","","","",""],["","","","","",""],["","","","","",""],["","","","","",""],["","","","","",""],["","","","","",""]],
+        "tp": "", 
+        "zsakmany": [["",""],["",""],["",""],["",""],["",""],["",""],["",""]]
+    }
+}
     anvil.media.download(anvil.server.call('retgenpdf',data,"asd"))

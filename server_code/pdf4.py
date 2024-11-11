@@ -59,7 +59,9 @@ class genpdf:
                 self.zsakmany(elap, data[x]['zsakmany'])
     def __call__(self, filename):
       pdf_bytes = BytesIO()
+      self.editlap[0].save(pdf_bytes,  format="PDF", save_all=True, append_images=self.editlap[1:],quality=100, subsampling=0)
       pdf_bytes.seek(0)
+      
       return BlobMedia("application/pdf", pdf_bytes.read(), name=filename+".pdf")
     def font(self, size: int, bold=False):
         if bold:
