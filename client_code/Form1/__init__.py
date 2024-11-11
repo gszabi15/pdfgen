@@ -186,5 +186,4 @@ class Form1(Form1Template):
 
   def mentes_click(self, **event_args):
     data = {}
-    result = anvil.server.call('genpdf',data)
-    anvil.media.download(result("asd"))
+    anvil.media.download(anvil.server.call('retgenpdf',data,"asd"))

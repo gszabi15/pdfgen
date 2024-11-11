@@ -4,8 +4,10 @@ import anvil.media
 from io import BytesIO
 from PIL import Image, ImageFont, ImageDraw
 import json
-
 @anvil.server.callable
+def retgenpdf(data,name):
+      instance = genpdf(data)
+      return instance(name)
 class genpdf:
     def __init__(self, data):
         self.kepz = 0
@@ -55,7 +57,6 @@ class genpdf:
                     if len(data[x]["fegyver"]) >= 5:
                         self.fegyver(elap, 5, data[x]['fegyver'][4])
                 self.zsakmany(elap, data[x]['zsakmany'])
-
     def __call__(self, filename):
       pdf_bytes = BytesIO()
       pdf_bytes.seek(0)
