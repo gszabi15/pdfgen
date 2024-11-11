@@ -1738,6 +1738,5 @@ container:
 custom_component: true
 custom_component_container: true
 is_package: true
-properties:
-- {default_binding_prop: true, default_value: vertical, important: true, name: orientation, type: string}
+properties: []
 slots: {}
