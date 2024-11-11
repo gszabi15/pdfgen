@@ -35,12 +35,10 @@ class Form1(Form1Template):
     for row in panel.get_components():
         row_data = []
         for component in row.get_components():
-            print(dir(component))
-            if hasattr(component, 'text'):
-                row_data.append(component.text)
-            elif hasattr(component, 'checked'):  # Pl.: CheckBox esetén
+            if hasattr(component, 'checked'):  # Pl.: CheckBox esetén
                 row_data.append(component.checked)
-                print(component.checked)
+            elif hasattr(component, 'text') and not hasattr(component, 'checked'):
+                row_data.append(component.text)
             elif hasattr(component, 'value'):  # Egyéb komponens esetén
                 row_data.append(component.value)
         current_data.append(row_data)
@@ -56,7 +54,7 @@ class Form1(Form1Template):
     for i, row in enumerate(panel.get_components()):
         for j, component in enumerate(row.get_components()):
             if j < len(panel_data[i]):
-                if hasattr(component, 'text'):
+                if hasattr(component, 'text') and not hasattr(component, 'checked'):
                     component.text = panel_data[i][j]
                 elif hasattr(component, 'checked'):
                     component.checked = panel_data[i][j]
@@ -71,12 +69,13 @@ class Form1(Form1Template):
     for i, row in enumerate(panel.get_components()):
         for j, component in enumerate(row.get_components()):
             if j < len(panel_data[i]):
-                if hasattr(component, 'text'):
+                if hasattr(component, 'text') and not hasattr(component, 'checked'):
                     component.text = panel_data[i][j]
                 elif hasattr(component, 'checked'):
                     component.checked = panel_data[i][j]
                 elif hasattr(component, 'value'):
                     component.value = panel_data[i][j]
+                
                   
   def lathato_felszereles_add_click(self, **event_args):
     self.addrow(self.lathato_felszereles)
