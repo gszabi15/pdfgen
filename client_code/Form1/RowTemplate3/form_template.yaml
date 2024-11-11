@@ -1,5 +1,0 @@
-components: []
-container:
-  properties: {auto_display_data: true}
-  type: DataRowPanel
-is_package: true

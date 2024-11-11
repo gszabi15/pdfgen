@@ -1,22 +1,3 @@
-components:
-- layout_properties: {column: JKSDUP}
-  name: outlined_1
-  properties: {role: outlined}
-  type: TextBox
-- layout_properties: {column: VJQQOR}
-  name: outlined_2
-  properties: {role: outlined}
-  type: TextBox
-- layout_properties: {column: OJLQEN}
-  name: outlined_3
-  properties: {role: outlined, type: number}
-  type: TextBox
-- layout_properties: {column: NILNSE}
-  name: outlined_4
-  properties: {role: outlined, type: number}
-  type: TextBox
-container:
-  data_bindings: []
-  properties: {auto_display_data: false, spacing_above: none, spacing_below: none, visible: true}
-  type: DataRowPanel
+components: []
+container: {type: DataRowPanel}
 is_package: true
