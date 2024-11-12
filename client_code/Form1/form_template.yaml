@@ -789,7 +789,7 @@ components:
         - data_bindings:
           - {code: 'self.item['''']', property: items, writeback: false}
           layout_properties: {pinned: true}
-          name: repeating_panel_2
+          name: varazstargyak
           properties: {item_template: Form1.varazstargyak}
           type: RepeatingPanel
         layout_properties: {grid_position: 'SOIPEW,KSOPDD'}
