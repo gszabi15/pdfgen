@@ -185,8 +185,8 @@ class Form1(Form1Template):
       add.enabled = True
   def getfegyver(self):
     out = []
-    for i in range(5):
-      for row in self.fegyver_1.get_components() if i < 3 else self.fegyver_2.get_components() if i == 3 else self.fegyver_2.get_components() if i == 4 else []:
+    for i in range(3):
+      for row in (self.fegyver_1.get_components() if i == 0 else self.fegyver_2.get_components() if i == 1 else self.fegyver_3.get_components() if i == 2 else []):
         fegyver = []
         fegyver += [row.nev.text]
         fegyver += [row.ke.text]
@@ -203,7 +203,7 @@ class Form1(Form1Template):
   def mentes_click(self, **event_args):
     elony = [item for sublist in self.getrow(self.elony) for item in sublist]
     hatrany = [item for sublist in self.getrow(self.hatrany) for item in sublist]
-    print(self.getfegyver())
+    print()
     data = {
     "": {
         "alap": [self.nev.text, self.kor_box.text, self.kaszt_box.text, self.faj_box.text, self.vallas_box.text, self.szarmazas_box.text, self.csillagjegy_box.text, self.rend_box.text, self.rang_box.text, self.csapat_box.text, self.falka_box.text, self.jelmondat_box.text, self.jelmondat2_box.text,self.szint.text,self.jellem_1.text,self.jellem_2.text],
@@ -213,24 +213,20 @@ class Form1(Form1Template):
         "hatrany": hatrany + ['']*(5-len(hatrany)), 
         "varazstargyak": [["", "", "", ""], ["", "", "", ""], ["", "", "", ""], ["", "", "", ""]],
         "fegyver_nelkuli": [self.ke.text, self.te.text, self.ve.text, self.ce.text],
-        "fegyver": [["Tőrlard", "25", "50", "127", "2", "1K6+2", "", False, False], ["", "", "", "", "", "", "", False, False], ["", "", "", "", "", "", "", False, False]],
+        "fegyver": self.getfegyver(),
         "pszi": [self.pszi.text, self.termeszetes_asztral.text, self.statikus_asztral.text, self.dinamikus_asztral.text, self.me_asztral.text, self.termeszetes_mental.text, self.statikus_mental.text, self.dinamikus_mental.text, self.me_mental.text, self.pszi_af.checked, self.pszi_mf.checked, self.pszi_pyarroni.checked, self.pszi_slan.checked, self.pszi_kyr.checked, self.pszi_siopa.checked],
         "varazsero": [self.mana.text, self.od.text, self.verpont.text, self.elet.checked, self.lelek.checked, self.termeszet.checked, self.halal.checked],
         "vert": [self.vert.text, self.ep.text, self.fp.text, self.sfe.text, self.mgt.text, self.nehezvert_af.checked, self.nehezvert_mf.checked],
         "levonasok": [["","","",""],["","","",""]],
         "penz": [[self.arany_1.text, self.ezust_1.text, self.rez_1.text, self.hol_1.text],[self.arany_2.text, self.ezust_2.text, self.rez_2.text, self.hol_2.text],[self.arany_3.text, self.ezust_3.text, self.rez_3.text, self.hol_3.text]],
-        "nyelv": [[["Gorviki","Erv","Pyar","Dzsad","Toroni"],["5","5","5","4","3"]],[["Aszisz","Shadoni","","",""],["3","3","","",""]]],
+        "nyelv": [[[self.nyelv_1.text,self.nyelv_2.text,self.nyelv_3.text,self.nyelv_4.text,self.nyelv_5.text],[self.nyelv_1_szint.text,self.nyelv_2_szint.text,self.nyelv_3_szint.text,self.nyelv_4_szint.text,self.nyelv_5_szint.text]],[[self.nyelv_6.text,self.nyelv_7.text,self.nyelv_8.text,self.nyelv_9.text,self.nyelv_10.text],[self.nyelv_6_szint.text,self.nyelv_7_szint.text,self.nyelv_8_szint.text,self.nyelv_9_szint.text,self.nyelv_10_szint.text]]],
         "felszereles": [self.getrow(self.lathato_felszereles),self.getrow(self.nem_lathato_felszereles)],
         "kepzettseg": [self.getrow(self.kepzettsegek_1),self.getrow(self.kepzettsegek_2)],
         "mergek": self.getrow(self.mergek),
-        "tarsak": [["Ló, utazó", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", ""]],
+        "tarsak": [[self.allat_faj.text, self.allat_nev.text, self.allat_ep.text, self.allat_fp.text, self.allat_ke.text, self.allat_te.text, self.allat_ve.text, self.allat_tam.text, self.allat_sebzes.text, self.allat_teher.text, self.allat_megjegyzes.text], [self.kisero_faj.text, self.kisero_nev.text, self.kisero_ep.text, self.kisero_fp.text, self.kisero_ke.text, self.kisero_te.text, self.kisero_ve.text, self.kisero_tam.text, self.kisero_sebzes.text, self.kisero_teher.text, self.kisero_megjegyzes.text]],
         "talalkozok": self.getrow(self.rendezvenyek),
         "tp": self.tp.text, 
         "zsakmany": self.getrow(self.zsakmany)
     }
 }
-    #anvil.media.download(anvil.server.call('retgenpdf',data,self.nev.text.replace(" ","_")+"_karakterlap"))
-
-  def ero_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
+    anvil.media.download(anvil.server.call('retgenpdf',data,self.nev.text.replace(" ","_")+"_karakterlap"))

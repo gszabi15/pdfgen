@@ -72,6 +72,8 @@ class genpdf:
         l,t,r,b = self.font(size,bold).getbbox(str(text))
         return (r-l, b-t)
     def wtext(self, edit, x, y,text, size=16, bold = False, max=0):
+        if text == None:
+          text = ''
         if max == 0:
             edit.text((x,y-size-1),str(text),(0, 0, 0), self.font(size,bold))
         else:
@@ -84,12 +86,18 @@ class genpdf:
                     size2 -= 1
             edit.text((x,y-size2-1),text,(0, 0, 0), self.font(size2,bold))
     def wchtext(self, edit, x, y,text, size=16,bold=False):
+        if text == None:
+          text = ''
         w,h = self.getsize(str(text),size,bold)
         self.wtext(edit, x, y+h/2, str(text), size, bold)
     def wcwtext(self, edit, x, y,text, size=16,bold=False):
+        if text == None:
+          text = ''
         w,h = self.getsize(str(text),size,bold)
         self.wtext(edit, x-w/2, y, str(text), size, bold)
     def wcatext(self, edit, x, y,text, size=16,bold=False):
+        if text == None:
+          text = ''
         w,h = self.getsize(str(text),size,bold)
         self.wtext(edit, x-w/2, y+h/2, str(text), size, bold)
     def wcircle(self, edit, x,y):
@@ -612,6 +620,8 @@ class genpdf:
                 self.wtext(edit,762,1474+29*6+1,text[sor][0], 16, False, 330)
                 self.wcwtext(edit,1126,1474+29*6+1,text[sor][1])
     def tp(self, edit, text):
+        if text == None:
+          text = ''
         self.wcatext(edit,598,1412,text,20)
     def levonasok(self, edit, text=[["","","",""],["","","",""]]):
         if text != []:
