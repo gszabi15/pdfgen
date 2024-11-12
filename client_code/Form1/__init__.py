@@ -187,7 +187,7 @@ class Form1(Form1Template):
   def mentes_click(self, **event_args):
     data = {
     "": {
-        "alap": ["Amar Amdus", "30", "Varázsló (Varázslók könyve)", "Ember", "", "Gorvik", "", "Anyagmágus", "", "", "", "", "","7","Rend",""],
+        "alap": [self.nev.text, self.kor.text, self.kaszt.text, self.faj.text, "", self.szarmazas_box.text, "", "Anyagmágus", "", "", "", "", "","7","Rend",""],
         "stat": [10, 14, 15, 17, 12, 17, 20, 15, 14, 14],
         "szazalek": ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"],
         "elony": ["Erős lélek (Ego: 83)", "", "", "", ""],
@@ -210,4 +210,4 @@ class Form1(Form1Template):
         "zsakmany": [["",""],["",""],["",""],["",""],["",""],["",""],["",""]]
     }
 }
-    anvil.media.download(anvil.server.call('retgenpdf',data,"asd"))
+    anvil.media.download(anvil.server.call('retgenpdf',data,self.nev.text.replace(" ","_")+"_karakterlap"))

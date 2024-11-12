@@ -14,7 +14,7 @@ class genpdf:
         print(dir(anvil.media))
         url1 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap1.jpg").get_bytes())
         #asd = anvil.media.open("karakterlap1.jpg")
-        url2 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap1.jpg").get_bytes())
+        url2 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap2.jpg").get_bytes())
         self.lap = [Image.open(url1), Image.open(url2)]
         self.editlap = []
         for x in list(data.keys()):
