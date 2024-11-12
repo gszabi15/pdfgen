@@ -1130,7 +1130,7 @@ components:
         type: ColumnPanel
       layout_properties: {width: 470}
       name: column_panel_4
-      properties: {col_spacing: medium, role: tonal-card, spacing_above: small}
+      properties: {col_spacing: medium, role: tonal-card, spacing_above: small, wrap_on: mobile}
       type: ColumnPanel
     layout_properties: {col_xs: 0, row: NUEORJ, width_xs: 11}
     name: flow_panel_4
