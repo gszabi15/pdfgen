@@ -772,6 +772,20 @@ components:
           name: elony
           properties: {item_template: Form1.elony_hatrany}
           type: RepeatingPanel
+        - components:
+          - event_bindings: {click: elony_del_click}
+            layout_properties: {}
+            name: elony_del
+            properties: {enabled: false, text: '-'}
+            type: Button
+          - event_bindings: {click: elony_add_click}
+            name: elony_add
+            properties: {text: +}
+            type: Button
+          layout_properties: {grid_position: 'JZOTNK,YVULXW CVDVSB,LXVCNQ'}
+          name: flow_panel_3_copy_2_copy_copy
+          properties: {align: right, gap: tiny}
+          type: FlowPanel
         - layout_properties: {grid_position: 'JZOTNK,RYWSIR PQBEXO,LDSRUN'}
           name: label_65
           properties: {text: Hátrány}
@@ -780,6 +794,20 @@ components:
           name: hatrany
           properties: {item_template: Form1.elony_hatrany}
           type: RepeatingPanel
+        - components:
+          - event_bindings: {click: hatrany_del_click}
+            layout_properties: {}
+            name: hatrany_del
+            properties: {enabled: false, text: '-'}
+            type: Button
+          - event_bindings: {click: hatrany_add_click}
+            name: hatrany_add
+            properties: {text: +}
+            type: Button
+          layout_properties: {grid_position: 'JZOTNK,RYWSIR XNYKSW,GZYXDY'}
+          name: flow_panel_3_copy_2_copy_copy_2
+          properties: {align: right, gap: tiny}
+          type: FlowPanel
         data_bindings: []
         layout_properties: {grid_position: 'LYUCMP,FOBFVM'}
         name: column_panel_5

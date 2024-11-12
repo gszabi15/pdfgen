@@ -230,3 +230,43 @@ class Form1(Form1Template):
     }
 }
     anvil.media.download(anvil.server.call('retgenpdf',data,self.nev.text.replace(" ","_")+"_karakterlap"))
+
+  def elony_add_click(self, **event_args):
+    rep = self.elony
+    add = self.elony_add
+    delete = self.elony_del
+    self.addrow(rep)
+    if len(rep.items) > 1:
+      delete.enabled = True
+    if len(rep.items) == 4:
+      add.enabled = False
+
+  def elony_del_click(self, **event_args):
+    rep = self.elony
+    add = self.elony_add
+    delete = self.elony_del
+    self.delrow(rep)
+    if len(rep.items) == 1:
+      delete.enabled = False
+    if len(rep.items) < 4:
+      add.enabled = True
+
+  def hatrany_del_click(self, **event_args):
+    rep = self.hatrany
+    add = self.hatrany_add
+    delete = self.hatrany_del
+    self.delrow(rep)
+    if len(rep.items) > 1:
+      delete.enabled = True
+    if len(rep.items) == 4:
+      add.enabled = False
+
+  def hatrany_add_click(self, **event_args):
+    rep = self.hatrany
+    add = self.hatrany_add
+    delete = self.hatrany_del
+    self.addrow(rep)
+    if len(rep.items) > 1:
+      delete.enabled = True
+    if len(rep.items) == 4:
+      add.enabled = False
