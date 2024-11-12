@@ -376,7 +376,7 @@ components:
             type: Label
           - event_bindings: {pressed_enter: outlined_2_copy_6_pressed_enter}
             layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_6
+            name: ero
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -400,7 +400,7 @@ components:
             properties: {text: 'Szépség: '}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_5
+            name: szepseg
             properties:
               margin: [null, '75', null, null]
               role: outlined
@@ -417,7 +417,7 @@ components:
             properties: {text: 'Gyorsaság: '}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy
+            name: gyorsasag
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -434,7 +434,7 @@ components:
             properties: {text: 'Intelligencia:'}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2
+            name: intelligencia
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -451,7 +451,7 @@ components:
             properties: {text: 'Ügyesség: '}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_2
+            name: ugyesseg
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -467,7 +467,7 @@ components:
             properties: {text: 'Akaraterő:'}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_7
+            name: akaratero
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -484,7 +484,7 @@ components:
             properties: {text: 'Állóképesség: '}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_3
+            name: allokepesseg
             properties:
               margin: [null, '100', null, 0]
               role: outlined
@@ -501,7 +501,7 @@ components:
             properties: {text: 'Asztrál:'}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_8
+            name: asztral
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -518,7 +518,7 @@ components:
             properties: {text: 'Egészség: '}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_4
+            name: egeszseg
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -536,7 +536,7 @@ components:
             properties: {font: ti, text: 'Észlelés:'}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_8_copy
+            name: eszleles
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -568,7 +568,7 @@ components:
               text: 'Titkosajtó keresés:'
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_6_copy
+            name: titkosajto_kereses
             properties:
               align: left
               margin: [null, '100', null, null]
@@ -593,7 +593,7 @@ components:
             properties: {text: 'Zárnyitás: '}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_5_copy
+            name: zarnyitas
             properties:
               margin: [null, '75', null, null]
               role: outlined
@@ -610,7 +610,7 @@ components:
             properties: {text: 'Ugrás: '}
             type: Label
           - layout_properties: {width: 75}
-            name: outlined_2_copy_copy
+            name: ugras
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -628,7 +628,7 @@ components:
             properties: {text: 'Rejtőzés:'}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_9
+            name: rejtozes
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -650,7 +650,7 @@ components:
               text: 'Esés:'
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_2_copy
+            name: eses
             properties:
               align: left
               margin: [null, '100', null, null]
@@ -668,7 +668,7 @@ components:
             properties: {text: 'Kötéltánc:'}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_7_copy
+            name: koteltanc
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -685,7 +685,7 @@ components:
             properties: {text: 'Mászás: '}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_3_copy
+            name: maszas
             properties:
               margin: [null, '100', null, 0]
               role: outlined
@@ -702,7 +702,7 @@ components:
             properties: {text: 'Lopózás:'}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_8_copy_2
+            name: lopozas
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -719,7 +719,7 @@ components:
             properties: {text: 'Zsebmetszés: '}
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_4_copy
+            name: zsebmetszes
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -741,7 +741,7 @@ components:
               text: 'Csapdafelfedezés:'
             type: Label
           - layout_properties: {expand: false, width: 75}
-            name: outlined_2_copy_8_copy_copy
+            name: csapdafelfedezes
             properties:
               margin: [null, '100', null, null]
               role: outlined
@@ -817,11 +817,11 @@ components:
             properties: {bold: false, role: null, text: 'Új diszciplinák:'}
             type: Label
           - layout_properties: {}
-            name: check_box_1
+            name: pszi_af
             properties: {text: Af}
             type: CheckBox
           - layout_properties: {}
-            name: check_box_2
+            name: pszi_mf
             properties: {text: Mf}
             type: CheckBox
           layout_properties: {grid_position: 'DTHDBC,RJKAHJ'}
@@ -830,15 +830,15 @@ components:
           type: FlowPanel
         - components:
           - layout_properties: {grid_position: 'JSLLFM,GFIPWM GKVRBN,ARVJYA'}
-            name: check_box_3
+            name: pszi_pyarroni
             properties: {text: Pyarroni}
             type: CheckBox
           - layout_properties: {grid_position: 'JSLLFM,SLNEKH GMNLSX,AIBOYX'}
-            name: check_box_4
+            name: pszi_slan
             properties: {text: Slan}
             type: CheckBox
           - layout_properties: {grid_position: 'JSLLFM,SLNEKH DSPRRP,QUASMR'}
-            name: check_box_6
+            name: pszi_siopa
             properties: {text: Siopa}
             type: CheckBox
           - components:
@@ -855,7 +855,7 @@ components:
             properties: {role: outlined-card}
             type: ColumnPanel
           - layout_properties: {grid_position: 'JSLLFM,GFIPWM SYGBAI,HTSRYU'}
-            name: check_box_5
+            name: pszi_kyr
             properties: {text: Kyr}
             type: CheckBox
           layout_properties: {grid_position: 'OFPUTA,NZGYQP'}
@@ -888,19 +888,19 @@ components:
             properties: {align: center, bold: true, text: asztrál}
             type: Label
           - layout_properties: {grid_position: 'CSPZFO,CXXANW YWGIET,IJNVZA'}
-            name: outlined_3
+            name: termeszetes_asztral
             properties: {role: outlined, type: number}
             type: TextBox
           - layout_properties: {grid_position: 'CSPZFO,CXXANW CPDZHU,IJGXYO'}
-            name: outlined_5
+            name: statikus_asztral
             properties: {role: outlined, type: number}
             type: TextBox
           - layout_properties: {grid_position: 'CSPZFO,CXXANW MDPFVE,CUZYSX'}
-            name: outlined_7
+            name: dinamikus_asztral
             properties: {role: outlined, type: number}
             type: TextBox
           - layout_properties: {grid_position: 'CSPZFO,CXXANW GTZSIR,AFJAMY'}
-            name: outlined_9
+            name: me_asztral
             properties: {role: outlined, type: number}
             type: TextBox
           - layout_properties: {grid_position: 'CSPZFO,MAGTYJ IVYOIJ,XDAANV'}
@@ -908,19 +908,19 @@ components:
             properties: {align: center, bold: true, text: mentál}
             type: Label
           - layout_properties: {grid_position: 'CSPZFO,MAGTYJ VNIFHY,KCLVSC'}
-            name: outlined_4
+            name: termeszetes_mental
             properties: {role: outlined, type: number}
             type: TextBox
           - layout_properties: {grid_position: 'CSPZFO,MAGTYJ QOCVQD,LSHXAQ'}
-            name: outlined_6
+            name: statikus_mental
             properties: {role: outlined, type: number}
             type: TextBox
           - layout_properties: {grid_position: 'CSPZFO,MAGTYJ NUPZOO,QAHTGZ'}
-            name: outlined_8
+            name: dinamikus_mental
             properties: {role: outlined, type: number}
             type: TextBox
           - layout_properties: {grid_position: 'CSPZFO,MAGTYJ ABNJTN,JNFQPO'}
-            name: outlined_10
+            name: me_mental
             properties: {role: outlined, type: number}
             type: TextBox
           layout_properties: {grid_position: 'FRNNSR,VHMHBI'}
@@ -1074,15 +1074,15 @@ components:
           properties: {bold: true, text: 'Vért:'}
           type: Label
         - layout_properties: {grid_position: 'KZUBUK,OUXBTJ DDHSAA,SOURPP'}
-          name: text_box_1
+          name: vert
           properties: {}
           type: TextBox
         - layout_properties: {grid_position: 'KZUBUK,OUXBTJ AUJMFK,ZNRIIZ'}
-          name: check_box_7
+          name: nehezvert_af
           properties: {text: Af}
           type: CheckBox
         - layout_properties: {grid_position: 'KZUBUK,OUXBTJ AUJMFK,OBZEGR'}
-          name: check_box_8
+          name: nehezvert_mf
           properties: {text: Mf}
           type: CheckBox
         - components:
