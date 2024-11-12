@@ -124,7 +124,7 @@ components:
               text: 'Vallás:'
             type: Label
           - layout_properties: {expand: true, width: 198}
-            name: outlined_1
+            name: vallas_box
             properties: {role: outlined}
             type: TextBox
           layout_properties: {grid_position: 'RNCRYA,IPXWLP TZSAYH,ZIOPUI'}
@@ -374,7 +374,8 @@ components:
                 padding: [null, 0, null, null]
               text: 'Erő:'
             type: Label
-          - layout_properties: {expand: false, width: 75}
+          - event_bindings: {pressed_enter: outlined_2_copy_6_pressed_enter}
+            layout_properties: {expand: false, width: 75}
             name: outlined_2_copy_6
             properties:
               margin: [null, '100', null, null]

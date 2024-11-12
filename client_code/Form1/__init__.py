@@ -187,7 +187,7 @@ class Form1(Form1Template):
   def mentes_click(self, **event_args):
     data = {
     "": {
-        "alap": [self.nev.text, self.kor_box.text, self.kaszt_box.text, self.faj_box.text, "", self.szarmazas_box.text, "", "Anyagmágus", "", "", "", "", "",self.szint.text,self.jellem_1.text,self.jellem_2.text],
+        "alap": [self.nev.text, self.kor_box.text, self.kaszt_box.text, self.faj_box.text, self.vallas_box.text, self.szarmazas_box.text, self.csillagjegy_box.text, self.rend_box.text, self.rang_box.text, self.csapat_box.text, self.falka_box.text, self.jelmondat_box.text, self.jelmondat2_box.text,self.szint.text,self.jellem_1.text,self.jellem_2.text],
         "stat": [10, 14, 15, 17, 12, 17, 20, 15, 14, 14],
         "szazalek": ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"],
         "elony": ["Erős lélek (Ego: 83)", "", "", "", ""],
@@ -211,3 +211,7 @@ class Form1(Form1Template):
     }
 }
     anvil.media.download(anvil.server.call('retgenpdf',data,self.nev.text.replace(" ","_")+"_karakterlap"))
+
+  def ero_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
