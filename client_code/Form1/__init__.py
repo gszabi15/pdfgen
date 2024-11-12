@@ -187,7 +187,7 @@ class Form1(Form1Template):
   def mentes_click(self, **event_args):
     data = {
     "": {
-        "alap": [self.nev.text, self.kor.text, self.kaszt.text, self.faj.text, "", self.szarmazas_box.text, "", "Anyagmágus", "", "", "", "", "","7","Rend",""],
+        "alap": [self.nev.text, self.kor_box.text, self.kaszt_box.text, self.faj_box.text, "", self.szarmazas_box.text, "", "Anyagmágus", "", "", "", "", "",self.szint.text,self.jellem_1.text,self.jellem_2.text],
         "stat": [10, 14, 15, 17, 12, 17, 20, 15, 14, 14],
         "szazalek": ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"],
         "elony": ["Erős lélek (Ego: 83)", "", "", "", ""],
