@@ -808,6 +808,27 @@ components:
       properties: {role: outlined-card}
       type: ColumnPanel
     - components:
+      - data_bindings:
+        - {code: 'self.item['''']', property: items, writeback: false}
+        layout_properties: {pinned: true}
+        name: varazstargyak
+        properties: {item_template: Form1.varazstargyak}
+        type: RepeatingPanel
+      layout_properties: {grid_position: 'FHWJPW,SRAPBD SOIPEW,KSOPDD'}
+      name: data_grid_1
+      properties:
+        background: theme:On Primary
+        columns:
+        - {data_key: column_1, expand: false, id: JKSDUP, title: Varázstárgyak, width: 238}
+        - {data_key: column_2, expand: false, id: VJQQOR, title: Hatás, width: 249}
+        - {data_key: column_3, id: OJLQEN, title: MP}
+        - {data_key: column_4, id: CLVIEP, title: db}
+        foreground: ''
+        role: tonal-data-grid
+        show_page_controls: false
+        wrap_on: mobile
+      type: DataGrid
+    - components:
       - components:
         - components:
           - layout_properties: {grid_position: 'TBABUU,LCUQST'}
@@ -1164,38 +1185,17 @@ components:
         name: column_panel_19
         properties: {col_widths: '{}', role: elevated-card}
         type: ColumnPanel
-      layout_properties: {grid_position: 'FHWJPW,BJAXSH'}
+      layout_properties: {grid_position: 'FHWJPW,HRWIYJ'}
       name: column_panel_4
       properties: {col_spacing: medium, role: tonal-card, spacing_above: small, wrap_on: mobile}
       type: ColumnPanel
-    - components:
-      - data_bindings:
-        - {code: 'self.item['''']', property: items, writeback: false}
-        layout_properties: {pinned: true}
-        name: varazstargyak
-        properties: {item_template: Form1.varazstargyak}
-        type: RepeatingPanel
-      layout_properties: {grid_position: 'FHWJPW,SRAPBD SOIPEW,KSOPDD'}
-      name: data_grid_1
-      properties:
-        background: theme:On Primary
-        columns:
-        - {data_key: column_1, expand: false, id: JKSDUP, title: Varázstárgyak, width: 238}
-        - {data_key: column_2, expand: false, id: VJQQOR, title: Hatás, width: 249}
-        - {data_key: column_3, id: OJLQEN, title: MP}
-        - {data_key: column_4, id: CLVIEP, title: db}
-        foreground: ''
-        role: tonal-data-grid
-        show_page_controls: false
-        wrap_on: mobile
-      type: DataGrid
     data_bindings: []
     layout_properties: {}
     name: column_panel_1
     properties:
       col_spacing: small
-      col_widths: '{"SRAPBD":35,"BJAXSH":25}'
-      role: tonal-card
+      col_widths: '{"SRAPBD":45}'
+      role: max-width
       spacing:
         margin: [null, 0, '15', null]
         padding: [null, '10', null, '10']
