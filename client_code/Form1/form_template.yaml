@@ -1,13 +1,4 @@
 components:
-- components: []
-  layout_properties: {slot: nav-right}
-  name: grid_panel_1
-  properties: {}
-  type: GridPanel
-- layout_properties: {slot: title}
-  name: label_40
-  properties: {text: PDF Generátor v1.0}
-  type: Label
 - components:
   - components:
     - components:
@@ -1836,7 +1827,7 @@ components:
   properties: {}
   type: LinearPanel
 container:
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: ''}
   type: HtmlTemplate
 custom_component: false
 custom_component_container: true
