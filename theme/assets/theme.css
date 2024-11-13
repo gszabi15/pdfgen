@@ -1063,3 +1063,25 @@ div.plot-container.plotly svg.main-svg {
 .anvil-spinner {
     --anvil-spinner-bg: %color:Surface Variant%;
 }
+
+.column-panel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.column-panel-item {
+    flex: 1 1 48%; /* Az elemek 48%-os szélességqek lesznek nagyobb képernyQn */
+    max-width: 48%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .column-panel-item {
+        flex: 1 1 100%; /* Kisebb képernyQn a teljes szélességet kitölti */
+        max-width: 100%;
+    }
+}

@@ -9,11 +9,11 @@ components:
   type: TextBox
 - layout_properties: {column: OJLQEN}
   name: mp
-  properties: {role: outlined, type: number}
+  properties: {role: outlined, type: text}
   type: TextBox
 - layout_properties: {column: CLVIEP}
   name: db
-  properties: {role: outlined, type: number}
+  properties: {role: outlined, type: text}
   type: TextBox
 container:
   data_bindings: []
