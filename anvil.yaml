@@ -1,5 +1,10 @@
 allow_embedding: false
-db_schema: {}
+db_schema:
+  table_1:
+    client: none
+    columns: []
+    server: full
+    title: Table 1
 dependencies: []
 name: PDFgen
 native_deps: null

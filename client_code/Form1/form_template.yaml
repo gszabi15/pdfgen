@@ -4,10 +4,6 @@ components:
   name: grid_panel_1
   properties: {}
   type: GridPanel
-- layout_properties: {slot: title}
-  name: label_40
-  properties: {text: PDF Generátor v1.0}
-  type: Label
 - components:
   - components:
     - components:
@@ -1837,6 +1833,23 @@ components:
   name: linear_panel_1
   properties: {role: max-width}
   type: LinearPanel
+- components:
+  - layout_properties: {grid_position: 'ERDJHT,IUJUIB'}
+    name: button_1
+    properties: {align: center, text: Karaktergenerátor}
+    type: Button
+  - layout_properties: {grid_position: 'GEOTGH,JOILDC'}
+    name: button_2
+    properties: {text: Beállítások}
+    type: Button
+  - layout_properties: {grid_position: 'FHNAKR,CCYEBS'}
+    name: button_3
+    properties: {text: button_3}
+    type: Button
+  layout_properties: {slot: left-nav}
+  name: column_panel_46
+  properties: {}
+  type: ColumnPanel
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate

@@ -1,0 +1,99 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'XXITBI,WQQOSD'}
+    name: faj
+    properties: {align: center, text: Faj}
+    type: Label
+  - components:
+    - name: repeating_panel_1
+      properties: {item_template: Faj.RowTemplate3}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'EGDSOA,JGZVOS'}
+    name: data_grid_1
+    properties:
+      columns:
+      - {data_key: column_1, id: JKSDUP, title: ''}
+      - {data_key: column_2, id: VJQQOR, title: Tól}
+      - {data_key: column_3, id: OJLQEN, title: Ig}
+      role: tonal-data-grid
+    type: DataGrid
+  - components:
+    - layout_properties: {}
+      name: repeating_panel_2
+      properties: {item_template: Faj.kepzettsegek}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'XWHUYD,YKZQBY'}
+    name: data_grid_2
+    properties:
+      columns:
+      - {data_key: column_1, expand: false, id: JKSDUP, title: Szint, width: 74}
+      - {data_key: column_2, expand: false, id: VJQQOR, title: Képzettségek, width: 770}
+      - {data_key: column_3, id: OJLQEN, title: Af  /  Mf}
+      role: tonal-data-grid
+    type: DataGrid
+  - components:
+    - layout_properties: {grid_position: 'LIIQDO,EPBPEF'}
+      name: label_1
+      properties: {align: center, bold: true, text: Szint}
+      type: Label
+    - layout_properties: {grid_position: 'LIIQDO,GRHWYA'}
+      name: label_32
+      properties: {align: center, bold: true, text: Képzettségek}
+      type: Label
+    - layout_properties: {grid_position: 'LIIQDO,JMUZFR'}
+      name: label_33
+      properties: {align: center, bold: true, text: Af/Mf}
+      type: Label
+    - layout_properties: {grid_position: 'YHLJEY,MEQEMC'}
+      name: kepzettsegek_1
+      properties:
+        item_template: Faj.kepzettsegek
+        margin: [null, '18', null, '0']
+      type: RepeatingPanel
+    - components:
+      - event_bindings: {click: kepzettseg1_del_click}
+        layout_properties: {}
+        name: kepzettseg1_del
+        properties: {enabled: false, text: '-'}
+        type: Button
+      - event_bindings: {click: kepzettseg1_add_click}
+        name: kepzettseg1_add
+        properties: {text: +}
+        type: Button
+      layout_properties: {grid_position: 'KIYVXN,DUWVLW'}
+      name: flow_panel_3_copy_2
+      properties: {align: right, gap: tiny}
+      type: FlowPanel
+    layout_properties: {grid_position: 'FBAQLC,LAMGOT'}
+    name: column_panel_26
+    properties: {col_widths: '{"GRHWYA":60,"JMUZFR":15,"EPBPEF":5}'}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'YVYYAE,OVLSGS'}
+    name: button_1
+    properties: {align: center, text: Karaktergenerátor}
+    type: Button
+  - layout_properties: {grid_position: 'YXXISE,GJSHWS'}
+    name: button_3
+    properties: {text: Közös karaktergenerátor}
+    type: Button
+  - layout_properties: {grid_position: 'GEOTGH,JOILDC'}
+    name: button_2
+    properties: {text: Beállítások}
+    type: Button
+  layout_properties: {slot: left-nav}
+  name: column_panel_46
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true
