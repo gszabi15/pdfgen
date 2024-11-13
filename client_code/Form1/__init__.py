@@ -14,6 +14,7 @@ class Form1(Form1Template):
     #self.outlined_button_1.add_event_handler('click',self.click)
     # Any code you write here will run before the form opens.
     self.varazstargyak.items = {'varazstargyak_1':'','varazstargyak_2':'','varazstargyak_3':'','varazstargyak_4':'','varazstargyak_5':''}
+    #self.column_panel_9.width = 680+470+15
     #self.repeating_panel.items = {'ke':'','te':'','ve':'','ce':''}
     self.fegyver_1.items = ['']*3
     self.fegyver_2.items = ['']

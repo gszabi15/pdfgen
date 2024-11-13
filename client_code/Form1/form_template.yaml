@@ -4,6 +4,10 @@ components:
   name: grid_panel_1
   properties: {}
   type: GridPanel
+- layout_properties: {slot: title}
+  name: label_40
+  properties: {text: PDF Generátor v1.0}
+  type: Label
 - components:
   - components:
     - components:
@@ -834,11 +838,95 @@ components:
           show_page_controls: false
           wrap_on: mobile
         type: DataGrid
+      data_bindings: []
+      layout_properties: {grid_position: 'TUNDXK,RNYFVC'}
+      name: column_panel_1
+      properties:
+        col_spacing: small
+        col_widths: '{}'
+        role: tonal-card
+        spacing:
+          margin: [null, 0, '15', null]
+          padding: [null, '10', null, '10']
+        spacing_above: small
+        spacing_below: small
+        visible: true
+        wrap_on: mobile
+      type: ColumnPanel
+    - components:
       - components:
-        - layout_properties: {grid_position: 'OVZZXW,KMHMNL'}
-          name: label_7
-          properties: {align: center, bold: true, role: title, text: Pszi, underline: true}
-          type: Label
+        - components:
+          - layout_properties: {grid_position: 'TBABUU,LCUQST'}
+            name: label_3
+            properties: {align: center, bold: true, text: KÉ}
+            type: Label
+          - layout_properties: {full_width_row: true, grid_position: 'YENPOS,PYETPG'}
+            name: ke
+            properties: {role: outlined, type: text}
+            type: TextBox
+          layout_properties: {grid_position: 'DTCKVP,SMXAOY'}
+          name: column_panel_34
+          properties: {}
+          type: ColumnPanel
+        - components:
+          - layout_properties: {grid_position: 'RDAEDT,AGWVVB'}
+            name: label_4
+            properties: {align: center, bold: true, text: TÉ}
+            type: Label
+          - layout_properties: {full_width_row: true, grid_position: 'ABLTNU,PJJHHB'}
+            name: te
+            properties: {role: outlined, type: text}
+            type: TextBox
+          layout_properties: {grid_position: 'DTCKVP,GKNXBB'}
+          name: column_panel_35
+          properties: {}
+          type: ColumnPanel
+        - components:
+          - layout_properties: {grid_position: 'FKORYX,TSSXBH'}
+            name: label_5
+            properties: {align: center, bold: true, text: VÉ}
+            type: Label
+          - layout_properties: {full_width_row: true, grid_position: 'HAURCA,ERPQSQ'}
+            name: ve
+            properties: {role: outlined, type: text}
+            type: TextBox
+          layout_properties: {grid_position: 'DTCKVP,GBKCFU'}
+          name: column_panel_36
+          properties: {}
+          type: ColumnPanel
+        - components:
+          - layout_properties: {grid_position: 'ELWFMU,IPFWPL'}
+            name: label_6
+            properties: {align: center, bold: true, text: CÉ}
+            type: Label
+          - layout_properties: {full_width_row: true, grid_position: 'KNDJBT,NDVQQC'}
+            name: ce
+            properties: {role: outlined, type: text}
+            type: TextBox
+          layout_properties: {grid_position: 'DTCKVP,HDJMMG'}
+          name: column_panel_37
+          properties: {}
+          type: ColumnPanel
+        layout_properties: {grid_position: 'IILGLI,XMRDNN'}
+        name: column_panel_6
+        properties: {col_widths: '{}', role: outlined-card}
+        type: ColumnPanel
+      - data_bindings:
+        - {code: 'self.item['''']', property: tag, writeback: false}
+        layout_properties: {full_width_row: false, grid_position: 'RQXXHR,ZCJACO'}
+        name: fegyver_1
+        properties: {item_template: Form1.fegyver, role: null}
+        type: RepeatingPanel
+      - components:
+        - components:
+          - layout_properties: {grid_position: 'VBSCHV,EHPQUD'}
+            name: label_7
+            properties: {align: center, bold: true, role: title, text: Pszi, underline: false}
+            type: Label
+          layout_properties: {grid_position: 'FVLJFL,WTKTDB'}
+          name: column_panel_38
+          properties: {}
+          type: ColumnPanel
         - components:
           - layout_properties: {}
             name: label_8
@@ -955,129 +1043,80 @@ components:
           name: column_panel_13
           properties: {role: outlined-card}
           type: ColumnPanel
-        layout_properties: {grid_position: 'SOPRIC,GHPDDU'}
+        layout_properties: {grid_position: 'MOBFXQ,VNWUSW'}
         name: column_panel_10
         properties: {role: elevated-card}
         type: ColumnPanel
-      data_bindings: []
-      layout_properties: {width: 680}
-      name: column_panel_1
-      properties:
-        col_spacing: small
-        col_widths: '{}'
-        role: tonal-card
-        spacing:
-          margin: [null, 0, null, null]
-          padding: [null, '10', null, '10']
-        spacing_above: small
-        spacing_below: small
-        visible: true
-        wrap_on: mobile
-      type: ColumnPanel
-    - components:
       - components:
-        - layout_properties: {grid_position: 'JIKUTJ,HPZMJC GTVLYM,DWLOZG'}
-          name: label_3
-          properties: {align: center, bold: true, text: KÉ}
-          type: Label
-        - layout_properties: {grid_position: 'JIKUTJ,HPZMJC XNLAFK,CDSGVF'}
-          name: ke
-          properties: {role: outlined, type: number}
-          type: TextBox
-        - layout_properties: {grid_position: 'JIKUTJ,BXHAAU PEHITJ,PDEEYF'}
-          name: label_4
-          properties: {align: center, bold: true, text: TÉ}
-          type: Label
-        - layout_properties: {grid_position: 'JIKUTJ,BXHAAU ORKNKC,OHUWZG'}
-          name: te
-          properties: {role: outlined, type: number}
-          type: TextBox
-        - layout_properties: {grid_position: 'JIKUTJ,YMNKAF PAOIGA,DONBHE'}
-          name: label_5
-          properties: {align: center, bold: true, text: VÉ}
-          type: Label
-        - layout_properties: {grid_position: 'JIKUTJ,YMNKAF LGCHXU,FVJGSW'}
-          name: ve
-          properties: {role: outlined, type: number}
-          type: TextBox
-        - layout_properties: {grid_position: 'JIKUTJ,UXCFWX CLMCBJ,KVRPAP'}
-          name: label_6
-          properties: {align: center, bold: true, text: CÉ}
-          type: Label
-        - layout_properties: {grid_position: 'JIKUTJ,UXCFWX XSCJLW,FRLIJN'}
-          name: ce
-          properties: {role: outlined, type: number}
-          type: TextBox
-        layout_properties: {grid_position: 'IILGLI,XMRDNN'}
-        name: column_panel_6
-        properties: {col_widths: '{}', role: outlined-card}
-        type: ColumnPanel
-      - data_bindings:
-        - {code: 'self.item['''']', property: tag, writeback: false}
-        layout_properties: {full_width_row: false, grid_position: 'RQXXHR,ZCJACO'}
-        name: fegyver_1
-        properties: {item_template: Form1.fegyver, role: null}
-        type: RepeatingPanel
-      - components:
-        - layout_properties: {grid_position: 'KGVTUM,TJEAPG'}
-          name: label_17
-          properties: {align: center, bold: true, role: title, text: Varázserő}
-          type: Label
         - components:
-          - layout_properties: {grid_position: 'EVRYPB,YHMGPG'}
-            name: label_18
-            properties: {align: center, italic: false, text: 'Mana:'}
+          - layout_properties: {grid_position: 'TKOLOO,IYEDJY'}
+            name: label_17
+            properties: {align: center, bold: true, role: title, text: Varázserő}
             type: Label
-          - layout_properties: {grid_position: 'OIEZQC,VUUJDB'}
-            name: mana
-            properties: {align: center, type: number}
-            type: TextBox
-          - layout_properties: {grid_position: 'HGQTFU,RTIUDP'}
-            name: elet
-            properties: {text: Élet}
-            type: CheckBox
-          - layout_properties: {grid_position: 'SSXPBR,EQLCCP'}
-            name: lelek
-            properties: {text: Lélek}
-            type: CheckBox
-          - layout_properties: {grid_position: 'FSBXGB,QFXNIC'}
-            name: termeszet
-            properties: {text: Természet}
-            type: CheckBox
-          - layout_properties: {grid_position: 'GXFPIM,LGMZWZ'}
-            name: halal
-            properties: {text: Halál}
-            type: CheckBox
-          layout_properties: {grid_position: 'ZYMGEF,AKHARI'}
-          name: column_panel_15
-          properties: {role: outlined-card}
+          layout_properties: {grid_position: 'ZYYQSS,STWTDP'}
+          name: column_panel_40
+          properties: {}
           type: ColumnPanel
         - components:
-          - layout_properties: {grid_position: 'BXYLZS,VSCCLY'}
-            name: label_19
-            properties: {align: center, text: 'OD:'}
-            type: Label
-          - data_bindings: []
-            layout_properties: {grid_position: 'UBNBUV,NQUCQL'}
-            name: od
-            properties: {align: center, role: null, type: number, underline: false}
-            type: TextBox
-          layout_properties: {grid_position: 'ZYMGEF,KPNQYW EAESZY,LPYKWL'}
-          name: column_panel_16
-          properties: {role: outlined-card}
-          type: ColumnPanel
-        - components:
-          - layout_properties: {grid_position: 'MQEHCR,LZCTVX'}
-            name: label_20
-            properties: {align: center, text: 'Vérpont:'}
-            type: Label
-          - layout_properties: {grid_position: 'YWIVAE,IFJYAI'}
-            name: verpont
-            properties: {align: center, type: number}
-            type: TextBox
-          layout_properties: {grid_position: 'ZYMGEF,KPNQYW JDGDIM,SWVZHA'}
-          name: column_panel_17
-          properties: {role: outlined-card}
+          - components:
+            - layout_properties: {grid_position: 'EVRYPB,YHMGPG'}
+              name: label_18
+              properties: {align: center, italic: false, text: 'Mana:'}
+              type: Label
+            - layout_properties: {grid_position: 'OIEZQC,VUUJDB'}
+              name: mana
+              properties: {align: center, type: number}
+              type: TextBox
+            - layout_properties: {grid_position: 'HGQTFU,RTIUDP'}
+              name: elet
+              properties: {text: Élet}
+              type: CheckBox
+            - layout_properties: {grid_position: 'SSXPBR,EQLCCP'}
+              name: lelek
+              properties: {text: Lélek}
+              type: CheckBox
+            - layout_properties: {grid_position: 'FSBXGB,QFXNIC'}
+              name: termeszet
+              properties: {text: Természet}
+              type: CheckBox
+            - layout_properties: {grid_position: 'GXFPIM,LGMZWZ'}
+              name: halal
+              properties: {text: Halál}
+              type: CheckBox
+            layout_properties: {grid_position: 'TXNRWD,BRKCKI'}
+            name: column_panel_15
+            properties: {role: outlined-card}
+            type: ColumnPanel
+          - components:
+            - layout_properties: {grid_position: 'MQEHCR,LZCTVX'}
+              name: label_20
+              properties: {align: center, text: 'Vérpont:'}
+              type: Label
+            - layout_properties: {grid_position: 'YWIVAE,IFJYAI'}
+              name: verpont
+              properties: {align: center, type: number}
+              type: TextBox
+            layout_properties: {grid_position: 'TXNRWD,TTNAHX LKKDSJ,BTAWPE'}
+            name: column_panel_17
+            properties: {role: outlined-card}
+            type: ColumnPanel
+          - components:
+            - layout_properties: {grid_position: 'BXYLZS,VSCCLY'}
+              name: label_19
+              properties: {align: center, text: 'OD:'}
+              type: Label
+            - data_bindings: []
+              layout_properties: {grid_position: 'UBNBUV,NQUCQL'}
+              name: od
+              properties: {align: center, role: null, type: number, underline: false}
+              type: TextBox
+            layout_properties: {grid_position: 'TXNRWD,TTNAHX OCJRKZ,UFSVBR'}
+            name: column_panel_16
+            properties: {role: outlined-card}
+            type: ColumnPanel
+          layout_properties: {grid_position: 'NJDTYJ,DNVJTG'}
+          name: column_panel_39
+          properties: {col_widths: '{"BRKCKI":35,"TTNAHX":25}'}
           type: ColumnPanel
         layout_properties: {grid_position: 'IBIAFQ,UCEZCE'}
         name: column_panel_14
@@ -1085,687 +1124,722 @@ components:
         type: ColumnPanel
       - components:
         - components:
-          - layout_properties: {grid_position: 'LOFYAW,OGTGNJ'}
-            name: label_22
-            properties: {align: center, bold: true, text: 'ÉP:'}
-            type: Label
-          - layout_properties: {grid_position: 'GMMWJH,XNYTQG'}
-            name: ep
-            properties: {align: center, type: number}
-            type: TextBox
-          layout_properties: {grid_position: 'KZUBUK,GVIKEF'}
-          name: column_panel_20
-          properties: {role: outlined-card}
-          type: ColumnPanel
-        - layout_properties: {grid_position: 'KZUBUK,OUXBTJ WHDEDN,DUOHJK'}
-          name: label_21
-          properties: {bold: true, text: 'Vért:'}
-          type: Label
-        - layout_properties: {grid_position: 'KZUBUK,OUXBTJ DDHSAA,SOURPP'}
-          name: vert
-          properties: {}
-          type: TextBox
-        - layout_properties: {grid_position: 'KZUBUK,OUXBTJ AUJMFK,ZNRIIZ'}
-          name: nehezvert_af
-          properties: {text: Af}
-          type: CheckBox
-        - layout_properties: {grid_position: 'KZUBUK,OUXBTJ AUJMFK,OBZEGR'}
-          name: nehezvert_mf
-          properties: {text: Mf}
-          type: CheckBox
-        - components:
-          - layout_properties: {grid_position: 'PXHZKS,DTUCJM'}
-            name: label_24
-            properties: {align: center, text: 'SFÉ:'}
-            type: Label
-          - layout_properties: {grid_position: 'FUFQPN,UFCZIO'}
-            name: sfe
-            properties: {align: center, type: number}
-            type: TextBox
-          layout_properties: {grid_position: 'OKPZZS,KZKNEY'}
-          name: column_panel_22
-          properties: {}
+          - components:
+            - layout_properties: {grid_position: 'LOFYAW,OGTGNJ'}
+              name: label_22
+              properties: {align: center, bold: true, text: 'ÉP:'}
+              type: Label
+            - layout_properties: {grid_position: 'GMMWJH,XNYTQG'}
+              name: ep
+              properties: {align: center, type: number}
+              type: TextBox
+            layout_properties: {grid_position: 'UXPOXL,FVPIOU'}
+            name: column_panel_20
+            properties: {role: outlined-card}
+            type: ColumnPanel
+          - components:
+            - layout_properties: {grid_position: 'KLCJWG,PXBBSE'}
+              name: label_21
+              properties: {bold: true, text: 'Vért:'}
+              type: Label
+            - layout_properties: {grid_position: 'VPGGRC,UAVZUP'}
+              name: vert
+              properties: {}
+              type: TextBox
+            - layout_properties: {grid_position: 'DNFJBO,FVMWKJ'}
+              name: nehezvert_af
+              properties: {text: Af}
+              type: CheckBox
+            - layout_properties: {grid_position: 'DNFJBO,AXWEXQ'}
+              name: nehezvert_mf
+              properties: {text: Mf}
+              type: CheckBox
+            layout_properties: {grid_position: 'UXPOXL,HQUJAH'}
+            name: column_panel_42
+            properties: {col_widths: '{"FVMWKJ":10,"AXWEXQ":50}'}
+            type: ColumnPanel
+          layout_properties: {grid_position: 'TUUAVO,TWNVJP'}
+          name: column_panel_41
+          properties: {col_widths: '{"FVPIOU":20,"HQUJAH":40}', wrap_on: tablet}
           type: ColumnPanel
         - components:
-          - layout_properties: {grid_position: 'QGZUWK,UKWLDK'}
-            name: label_25
-            properties: {align: center, text: 'MGT:'}
-            type: Label
-          - layout_properties: {grid_position: 'DVTWIR,XEKRJO'}
-            name: mgt
-            properties: {align: center, type: number}
-            type: TextBox
-          layout_properties: {grid_position: 'OKPZZS,GXUSET'}
-          name: column_panel_23
-          properties: {}
-          type: ColumnPanel
-        - components:
-          - layout_properties: {grid_position: 'PFORGC,XYUDIR'}
-            name: label_23
-            properties: {align: center, bold: true, text: 'FP:'}
-            type: Label
-          - layout_properties: {grid_position: 'VNGEOS,VTQBBS'}
-            name: fp
-            properties: {align: center, type: number}
-            type: TextBox
-          layout_properties: {grid_position: 'OKPZZS,ECYHGC'}
-          name: column_panel_21
-          properties: {role: outlined-card}
+          - components:
+            - layout_properties: {grid_position: 'PXHZKS,DTUCJM'}
+              name: label_24
+              properties: {align: center, text: 'SFÉ:'}
+              type: Label
+            - layout_properties: {grid_position: 'FUFQPN,UFCZIO'}
+              name: sfe
+              properties: {align: center, type: number}
+              type: TextBox
+            layout_properties: {grid_position: 'ZWDNNM,SBASPH'}
+            name: column_panel_22
+            properties: {}
+            type: ColumnPanel
+          - components:
+            - layout_properties: {grid_position: 'QGZUWK,UKWLDK'}
+              name: label_25
+              properties: {align: center, text: 'MGT:'}
+              type: Label
+            - layout_properties: {grid_position: 'DVTWIR,XEKRJO'}
+              name: mgt
+              properties: {align: center, type: number}
+              type: TextBox
+            layout_properties: {grid_position: 'ZWDNNM,ZKOZAZ'}
+            name: column_panel_23
+            properties: {}
+            type: ColumnPanel
+          - components:
+            - layout_properties: {grid_position: 'PFORGC,XYUDIR'}
+              name: label_23
+              properties: {align: center, bold: true, text: 'FP:'}
+              type: Label
+            - layout_properties: {grid_position: 'VNGEOS,VTQBBS'}
+              name: fp
+              properties: {align: center, type: number}
+              type: TextBox
+            layout_properties: {grid_position: 'ZWDNNM,BWHPKU'}
+            name: column_panel_21
+            properties: {role: outlined-card}
+            type: ColumnPanel
+          layout_properties: {grid_position: 'PHBCBG,LIXFGX'}
+          name: column_panel_43
+          properties: {wrap_on: tablet}
           type: ColumnPanel
         layout_properties: {grid_position: 'VXBRQA,QKBHPV'}
         name: column_panel_19
-        properties: {col_widths: '{"GVIKEF":20,"OUXBTJ":40,"ZNRIIZ":15,"OBZEGR":45}', role: elevated-card}
+        properties: {col_widths: '{}', role: elevated-card}
         type: ColumnPanel
-      layout_properties: {width: 470}
+      layout_properties: {grid_position: 'TUNDXK,SCTKOX'}
       name: column_panel_4
       properties: {col_spacing: medium, role: tonal-card, spacing_above: small, wrap_on: mobile}
       type: ColumnPanel
-    layout_properties: {col_xs: 0, row: NUEORJ, width_xs: 11}
+    layout_properties: {}
+    name: outlined_card_2
+    properties: {col_widths: '{"RNYFVC":35,"SCTKOX":25}', role: outlined-card}
+    type: ColumnPanel
+  - components: []
+    data_bindings:
+    - {code: 'self.item[''responsive-grid'']', property: role, writeback: false}
+    name: grid_panel_2
+    properties: {}
+    type: GridPanel
+  - components:
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'DJGMGS,MCYWGA IHKZCN,QQSGXM'}
+          name: label_30
+          properties: {align: center, bold: true, text: Látható felszerelés, underline: true}
+          type: Label
+        - layout_properties: {grid_position: 'DJGMGS,MCYWGA TDGHEL,NBNSRS'}
+          name: lathato_felszereles
+          properties: {item_template: Form1.felszereles, role: null}
+          type: RepeatingPanel
+        - components:
+          - event_bindings: {click: lathato_felszereles_del_click}
+            layout_properties: {}
+            name: lathato_felszereles_del
+            properties: {enabled: false, text: '-'}
+            type: Button
+          - event_bindings: {click: lathato_felszereles_add_click}
+            name: lathato_felszereles_add
+            properties: {text: +}
+            type: Button
+          layout_properties: {grid_position: 'DJGMGS,MCYWGA ZGKWXJ,QAMUCQ'}
+          name: flow_panel_3_copy_3
+          properties: {align: right, gap: tiny}
+          type: FlowPanel
+        - layout_properties: {grid_position: 'DJGMGS,PCTKLI YUABCD,WVAVZZ'}
+          name: label_31
+          properties: {align: center, bold: true, text: Nem látható felszerelés, underline: true}
+          type: Label
+        - data_bindings:
+          - {code: 'self.item['''']', property: role, writeback: false}
+          layout_properties: {grid_position: 'DJGMGS,PCTKLI XJQDXL,OTJCQV'}
+          name: nem_lathato_felszereles
+          properties: {item_template: Form1.felszereles, role: null}
+          type: RepeatingPanel
+        - components:
+          - event_bindings: {click: felszereles_del_click}
+            layout_properties: {}
+            name: nem_lathato_felszereles_del
+            properties: {enabled: false, text: '-'}
+            type: Button
+          - event_bindings: {click: felszereles_add_click}
+            name: nem_lathato_felszereles_add
+            properties: {text: +}
+            type: Button
+          layout_properties: {grid_position: 'DJGMGS,PCTKLI EGORTS,ZLIUUA'}
+          name: flow_panel_3_copy_3_copy
+          properties: {align: right, gap: tiny}
+          type: FlowPanel
+        layout_properties: {grid_position: 'EUEZDT,BDQBYA'}
+        name: column_panel_25
+        properties: {role: elevated-card}
+        type: ColumnPanel
+      - components:
+        - components:
+          - layout_properties: {grid_position: 'LIIQDO,GRHWYA'}
+            name: label_32
+            properties: {align: center, bold: true, text: Képzettségek}
+            type: Label
+          - layout_properties: {grid_position: 'LIIQDO,JMUZFR'}
+            name: label_33
+            properties: {align: center, bold: true, text: Af/Mf}
+            type: Label
+          - layout_properties: {grid_position: 'YHLJEY,MEQEMC'}
+            name: kepzettsegek_1
+            properties:
+              item_template: Form1.kepzettsegek
+              margin: [null, '18', null, '0']
+            type: RepeatingPanel
+          - components:
+            - event_bindings: {click: kepzettseg1_del_click}
+              layout_properties: {}
+              name: kepzettseg1_del
+              properties: {enabled: false, text: '-'}
+              type: Button
+            - event_bindings: {click: kepzettseg1_add_click}
+              name: kepzettseg1_add
+              properties: {text: +}
+              type: Button
+            layout_properties: {grid_position: 'KIYVXN,DUWVLW'}
+            name: flow_panel_3_copy_2
+            properties: {align: right, gap: tiny}
+            type: FlowPanel
+          layout_properties: {grid_position: 'UUSAXH,GHIHFF'}
+          name: column_panel_26
+          properties: {col_widths: '{"GRHWYA":45,"JMUZFR":15}'}
+          type: ColumnPanel
+        - components:
+          - layout_properties: {grid_position: 'BIVTCF,UVYATC'}
+            name: label_34
+            properties: {align: center, bold: true, text: Képzettségek}
+            type: Label
+          - layout_properties: {grid_position: 'BIVTCF,UPYOZI'}
+            name: label_35
+            properties: {align: center, bold: true, text: Af/Mf}
+            type: Label
+          - layout_properties: {grid_position: 'SIAJVY,BXYEZW'}
+            name: kepzettsegek_2
+            properties:
+              item_template: Form1.kepzettsegek
+              margin: [null, '18', null, null]
+            type: RepeatingPanel
+          - components:
+            - event_bindings: {click: kepzettseg2_del_click}
+              layout_properties: {}
+              name: kepzettseg2_del
+              properties: {enabled: false, text: '-'}
+              type: Button
+            - event_bindings: {click: kepzettseg2_add_click}
+              name: kepzettseg2_add
+              properties: {text: +}
+              type: Button
+            layout_properties: {grid_position: 'IIYRYN,KAKZFH'}
+            name: flow_panel_3_copy_2_copy
+            properties: {align: right, gap: tiny}
+            type: FlowPanel
+          layout_properties: {grid_position: 'UUSAXH,TFQAOM'}
+          name: column_panel_27
+          properties: {col_widths: '{"UVYATC":45,"UPYOZI":15}'}
+          type: ColumnPanel
+        layout_properties: {grid_position: 'LLNCUB,FHTPAW'}
+        name: column_panel_18
+        properties: {col_widths: '{}', role: elevated-card}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'ZHFPLU,NQANGU'}
+          name: label_36
+          properties: {align: center, bold: true, text: Mérgek}
+          type: Label
+        - layout_properties: {grid_position: 'ZHFPLU,ABCCVN'}
+          name: label_37
+          properties: {align: center, bold: true, text: Szint}
+          type: Label
+        - layout_properties: {grid_position: 'ZHFPLU,HSZTNK'}
+          name: label_38
+          properties: {align: center, bold: true, text: Hatás 1.}
+          type: Label
+        - layout_properties: {grid_position: 'ZHFPLU,DKCTMF'}
+          name: label_39
+          properties: {align: center, bold: true, text: Hatás 2.}
+          type: Label
+        - layout_properties: {grid_position: 'NQZHKX,QHHVVO'}
+          name: mergek
+          properties: {item_template: Form1.mergek}
+          type: RepeatingPanel
+        layout_properties: {grid_position: 'LCPMYP,MQCYNW'}
+        name: column_panel_28
+        properties: {col_widths: '{"NQANGU":15,"ABCCVN":5,"HSZTNK":20,"DKCTMF":20}', role: elevated-card}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'APZYCU,ASNJZL KOUYCD,XHHTFW'}
+          name: label_50
+          properties: {align: center, bold: true, text: Társak}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,ASNJZL MVHIXZ,YXNKQP'}
+          name: label_62
+          properties: {align: center, bold: true, text: Állat}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,ASNJZL QNRBYE,HZBRQU'}
+          name: label_63
+          properties: {align: center, bold: true, text: Kísérő}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,YZKGZK XJHARV,EYGNLD'}
+          name: label_51
+          properties: {align: center, text: Faj}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,YZKGZK AFTDAV,KUHZUR'}
+          name: allat_faj
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,YZKGZK SIPDEP,GVCJAA'}
+          name: kisero_faj
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,BVUDEJ ONEKJY,UWOPPV'}
+          name: label_52
+          properties: {align: center, text: Név}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,BVUDEJ VUKFOQ,JAYRJM'}
+          name: allat_nev
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,BVUDEJ LMZQKV,RMBQSX'}
+          name: kisero_nev
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,EMNMQC NBFCMM,TQVMJI'}
+          name: label_53
+          properties: {align: center, text: Ép}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,EMNMQC OQVYPI,CBKAUJ'}
+          name: allat_ep
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,EMNMQC BXKIJD,ACTJIU'}
+          name: kisero_ep
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,WRCVTJ LBYORH,MGDFDW'}
+          name: label_54
+          properties: {align: center, text: Fp}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,WRCVTJ MGUFWB,ZDNXIH'}
+          name: allat_fp
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,WRCVTJ NQLNWI,LDOXIP'}
+          name: kisero_fp
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,SMBMJG PVCINL,HUZGXK'}
+          name: label_55
+          properties: {align: center, text: KÉ}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,SMBMJG QZIDNF,QEUGQO'}
+          name: allat_ke
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,SMBMJG OIXFLE,PVTLEI'}
+          name: kisero_ke
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,BXNDYZ OQUVBN,OASIAD'}
+          name: label_56
+          properties: {align: center, text: TÉ}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,BXNDYZ DGAPXK,IIDYWW'}
+          name: allat_te
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,BXNDYZ IQIMYU,NZSWJW'}
+          name: kisero_te
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,QPCVZC QLKAMK,QYIVLK'}
+          name: label_57
+          properties: {align: center, text: VÉ}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,QPCVZC OIPCNQ,XMTHIC'}
+          name: allat_ve
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,QPCVZC NTZJFZ,XRLPQR'}
+          name: kisero_ve
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,FTTMPK YBECTY,MAIAYZ'}
+          name: label_58
+          properties: {align: center, text: Tám/kör}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,FTTMPK XJVESZ,ZSCJQG'}
+          name: allat_tam
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,FTTMPK GRANOH,PJNTHB'}
+          name: kisero_tam
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,YHNDMN JFSWVJ,GKIXRO'}
+          name: label_59
+          properties: {align: center, text: Sebzés}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,YHNDMN JWJWCY,GLRWPE'}
+          name: allat_sebzes
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,YHNDMN EFXTWQ,GMTZRR'}
+          name: kisero_sebzes
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,ABISMG BRGOSC,VKDRTN'}
+          name: label_60
+          properties:
+            align: center
+            font_size: 12
+            spacing:
+              padding: [null, null, 11, null]
+            spacing_above: small
+            spacing_below: small
+            text: Max. teher
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,ABISMG KJAFKZ,RCCYSD'}
+          name: allat_teher
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,ABISMG VJBKNU,ZNYNXX'}
+          name: kisero_teher
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,HDYEOM LAVMPW,XNAXHB'}
+          name: label_61
+          properties: {align: center, text: Megjegyzés}
+          type: Label
+        - layout_properties: {grid_position: 'APZYCU,HDYEOM VVRNMN,DIVEHC'}
+          name: allat_megjegyzes
+          properties: {role: outlined}
+          type: TextBox
+        - layout_properties: {grid_position: 'APZYCU,HDYEOM TMOVOD,TETCIJ'}
+          name: kisero_megjegyzes
+          properties: {role: outlined}
+          type: TextBox
+        layout_properties: {full_width_row: false, grid_position: 'RYWKPA,NYZLJC'}
+        name: column_panel_31
+        properties: {col_spacing: tiny, col_widths: '{"ASNJZL":5,"YZKGZK":5,"BVUDEJ":5,"EMNMQC":5,"WRCVTJ":5,"SMBMJG":5,"BXNDYZ":5,"QPCVZC":5,"FTTMPK":5,"YHNDMN":5,"ABISMG":5,"HDYEOM":5}', role: elevated-card, spacing_above: small, spacing_below: small, wrap_on: mobile}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'YMKXNL,DTGXWJ'}
+          name: label_42
+          properties: {align: center, role: body, text: A karakter által átélt kalandok / teljesített találkozók}
+          type: Label
+        - layout_properties: {grid_position: 'KUSVZN,FSMINS'}
+          name: label_43
+          properties: {align: center, bold: true, text: Címe}
+          type: Label
+        - layout_properties: {grid_position: 'KUSVZN,VXSRFA'}
+          name: label_44
+          properties: {align: center, bold: true, text: Rendezvény}
+          type: Label
+        - layout_properties: {grid_position: 'KUSVZN,RANQRC'}
+          name: label_45
+          properties: {align: center, bold: true, text: Csapat}
+          type: Label
+        - layout_properties: {grid_position: 'KUSVZN,PSUIZA'}
+          name: label_46
+          properties: {align: center, bold: true, text: KM}
+          type: Label
+        - layout_properties: {grid_position: 'KUSVZN,GFCMKA'}
+          name: label_47
+          properties: {align: center, bold: true, text: Elismerés / Jutalom}
+          type: Label
+        - layout_properties: {grid_position: 'WWPIZZ,OPLQRL'}
+          name: rendezvenyek
+          properties: {item_template: Form1.rendezvenyek}
+          type: RepeatingPanel
+        - components:
+          - event_bindings: {click: rendezveny_del_click}
+            layout_properties: {}
+            name: rendezveny_del
+            properties: {enabled: false, text: '-'}
+            type: Button
+          - event_bindings: {click: rendezveny_add_click}
+            name: rendezveny_add
+            properties: {text: +}
+            type: Button
+          layout_properties: {grid_position: 'FSUIQD,OIUMSE'}
+          name: flow_panel_3_copy
+          properties: {align: right, gap: tiny}
+          type: FlowPanel
+        layout_properties: {grid_position: 'YHNXNK,JTKCAJ'}
+        name: column_panel_29
+        properties: {role: elevated-card}
+        type: ColumnPanel
+      - data_bindings:
+        - {code: 'self.item['''']', property: tag, writeback: false}
+        layout_properties: {grid_position: 'GZCDFS,QDJDDL'}
+        name: fegyver_2
+        properties: {item_template: Form1.fegyver, role: null}
+        type: RepeatingPanel
+      - data_bindings:
+        - {code: 'self.item['''']', property: tag, writeback: false}
+        layout_properties: {grid_position: 'GZCDFS,JMCDWI'}
+        name: fegyver_3
+        properties: {item_template: Form1.fegyver, role: null}
+        type: RepeatingPanel
+      - components:
+        - layout_properties: {grid_position: 'XANTPV,UAJOVH'}
+          name: label_48
+          properties: {align: center, bold: true, text: A küldetés tárgyai / Zsákmány}
+          type: Label
+        - layout_properties: {grid_position: 'XANTPV,DRGJHP'}
+          name: label_49
+          properties: {align: center, bold: true, text: db}
+          type: Label
+        - layout_properties: {grid_position: 'QSLLEO,DCNSCQ'}
+          name: zsakmany
+          properties: {item_template: Form1.zsakmany}
+          type: RepeatingPanel
+        - components:
+          - event_bindings: {click: zsakmany_del_click}
+            layout_properties: {}
+            name: zsakmany_del
+            properties: {enabled: false, text: '-'}
+            type: Button
+          - event_bindings: {click: zsakmany_add_click}
+            name: zsakmany_add
+            properties: {text: +}
+            type: Button
+          layout_properties: {grid_position: 'AYYTXA,BHMONL'}
+          name: flow_panel_3
+          properties: {align: right, gap: tiny}
+          type: FlowPanel
+        layout_properties: {grid_position: 'PREEIE,ZJWYQW'}
+        name: column_panel_30
+        properties: {col_widths: '{"UAJOVH":50,"DRGJHP":10}', role: elevated-card}
+        type: ColumnPanel
+      - event_bindings: {click: mentes_click}
+        layout_properties: {grid_position: 'RIYUCT,PQFHBB'}
+        name: mentes
+        properties: {icon: 'fa:download', icon_align: right, role: filled-button, text: Mentés}
+        type: Button
+      layout_properties: {grid_position: 'PIVUUY,OAXKSC'}
+      name: column_panel_9
+      properties: {col_spacing: medium, col_widths: '{}', role: tonal-card, wrap_on: mobile}
+      type: ColumnPanel
+    layout_properties: {}
+    name: column_panel_44
+    properties: {col_widths: '{}'}
+    type: ColumnPanel
+  - components:
+    - components:
+      - components:
+        - components:
+          - layout_properties: {grid_position: 'WUVJQK,EXZCUC LKGOFM,SGZHIZ'}
+            name: label_1_copy_2
+            properties: {align: center, bold: true, text: Arany}
+            type: Label
+          - layout_properties: {grid_position: 'WUVJQK,EXZCUC RICDIQ,QFIWOM'}
+            name: arany_1
+            properties: {role: outlined, type: number}
+            type: TextBox
+          - layout_properties: {grid_position: 'WUVJQK,EXZCUC TOTORX,FQGVOZ'}
+            name: arany_2
+            properties: {role: outlined, type: number}
+            type: TextBox
+          - layout_properties: {grid_position: 'WUVJQK,EXZCUC KKUKEF,XRNNXS'}
+            name: arany_3
+            properties: {role: outlined, type: number}
+            type: TextBox
+          - layout_properties: {grid_position: 'WUVJQK,YZXGNQ EZBJFV,PSBXHY'}
+            name: label_2_copy_10
+            properties: {align: center, bold: true, text: Ezüst}
+            type: Label
+          - layout_properties: {grid_position: 'WUVJQK,YZXGNQ HZCXON,IALYDJ'}
+            name: ezust_1
+            properties: {role: outlined, type: number}
+            type: TextBox
+          - layout_properties: {grid_position: 'WUVJQK,YZXGNQ UKVOYQ,QMJZGU'}
+            name: ezust_2
+            properties: {role: outlined, type: number}
+            type: TextBox
+          - layout_properties: {grid_position: 'WUVJQK,YZXGNQ LPTIHX,ATNUXX'}
+            name: ezust_3
+            properties: {role: outlined, type: number}
+            type: TextBox
+          - layout_properties: {grid_position: 'WUVJQK,OSSDIF MSNYSG,LEOWYU'}
+            name: label_3_copy
+            properties: {align: center, bold: true, text: Réz}
+            type: Label
+          - layout_properties: {grid_position: 'WUVJQK,OSSDIF KDRTZK,OVFFPH'}
+            name: rez_1
+            properties: {role: outlined, type: number}
+            type: TextBox
+          - layout_properties: {grid_position: 'WUVJQK,OSSDIF GVFCOD,LQHRCI'}
+            name: rez_2
+            properties: {role: outlined, type: number}
+            type: TextBox
+          - layout_properties: {grid_position: 'WUVJQK,OSSDIF TOATKE,NRSWCE'}
+            name: rez_3
+            properties: {role: outlined, type: number}
+            type: TextBox
+          - layout_properties: {grid_position: 'WUVJQK,DGQNCM HPGIVG,KHYZYY'}
+            name: label_4_copy
+            properties: {align: center, bold: true, text: 'Hol verték?'}
+            type: Label
+          - layout_properties: {grid_position: 'WUVJQK,DGQNCM YANWME,IDKXHM'}
+            name: hol_1
+            properties: {role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'WUVJQK,DGQNCM VHSETC,BPJVEI'}
+            name: hol_2
+            properties: {role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'WUVJQK,DGQNCM NHVIYW,KGNHCB'}
+            name: hol_3
+            properties: {role: outlined}
+            type: TextBox
+          layout_properties: {grid_position: 'UGCXDN,DGXCFX'}
+          name: column_panel_1_copy
+          properties: {col_widths: '{"EXZCUC":15,"YZXGNQ":15,"OSSDIF":15,"DGQNCM":15}', role: outlined-card}
+          type: ColumnPanel
+        - components:
+          - layout_properties: {grid_position: 'SMNQYS,DPKSXY KTOZEH,ADHKBI'}
+            name: label_26
+            properties: {align: center, text: Nyelv}
+            type: Label
+          - layout_properties: {grid_position: 'SMNQYS,DPKSXY MNXIFJ,SDNYUW'}
+            name: nyelv_1
+            properties: {role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,DPKSXY LHZRVN,KTIDAD'}
+            name: nyelv_2
+            properties: {role: outlined}
+            type: TextBox
+          - event_bindings: {pressed_enter: nyelv_3_pressed_enter}
+            layout_properties: {grid_position: 'SMNQYS,DPKSXY AJHMRQ,QEXEAR'}
+            name: nyelv_3
+            properties: {role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,DPKSXY ZEPJKB,YHAGOS'}
+            name: nyelv_4
+            properties: {role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,DPKSXY TFGPYZ,OXXGPI'}
+            name: nyelv_5
+            properties: {role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,PYCJCI XGLECF,KNFLKG'}
+            name: label_27
+            properties: {align: center, text: Szint}
+            type: Label
+          - layout_properties: {grid_position: 'SMNQYS,PYCJCI AMEADJ,BNKOBQ'}
+            name: nyelv_1_szint
+            properties: {align: center, role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,PYCJCI QYKXJE,TXRVPQ'}
+            name: nyelv_2_szint
+            properties: {align: center, role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,PYCJCI NGWSVP,PAHECF'}
+            name: nyelv_3_szint
+            properties: {align: center, role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,PYCJCI GABQKS,ZHNMBK'}
+            name: nyelv_4_szint
+            properties: {align: center, role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,PYCJCI GPMIXB,HBNHBG'}
+            name: nyelv_5_szint
+            properties: {align: center, role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,ENZITS FTFSMJ,IVBSGG'}
+            name: label_28
+            properties: {align: center, text: Nyelv}
+            type: Label
+          - layout_properties: {grid_position: 'SMNQYS,ENZITS IDVUIT,LKSHMF'}
+            name: nyelv_6
+            properties: {role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,ENZITS GXEBKI,REHNZJ'}
+            name: nyelv_7
+            properties: {role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,ENZITS RTFSNK,QBLOGN'}
+            name: nyelv_8
+            properties: {role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,ENZITS UEWDPG,MNYGQX'}
+            name: nyelv_9
+            properties: {role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,ENZITS WKJWGJ,PZMXAV'}
+            name: nyelv_10
+            properties: {role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,YVEVMK IFTMKV,IMWHXV'}
+            name: label_29
+            properties: {align: center, text: Szint}
+            type: Label
+          - layout_properties: {grid_position: 'SMNQYS,YVEVMK DMTFSR,FGHBIR'}
+            name: nyelv_6_szint
+            properties: {align: center, role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,YVEVMK OLNXJP,RYSOXC'}
+            name: nyelv_7_szint
+            properties: {align: center, role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,YVEVMK MVHKEQ,BQOQMG'}
+            name: nyelv_8_szint
+            properties: {align: center, role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,YVEVMK WTTLAC,XETNNI'}
+            name: nyelv_9_szint
+            properties: {align: center, role: outlined}
+            type: TextBox
+          - layout_properties: {grid_position: 'SMNQYS,YVEVMK AAEOVS,JHKPDC'}
+            name: nyelv_10_szint
+            properties: {align: center, role: outlined}
+            type: TextBox
+          layout_properties: {grid_position: 'XQRYMW,FTSNON'}
+          name: column_panel_24
+          properties: {col_widths: '{"DPKSXY":20,"PYCJCI":10,"ENZITS":20,"YVEVMK":10}', role: elevated-card}
+          type: ColumnPanel
+        - components:
+          - components:
+            - layout_properties: {}
+              name: label_41
+              properties: {text: 'Tapasztalati pontok:'}
+              type: Label
+            - data_bindings: []
+              layout_properties: {width: 110}
+              name: tp
+              properties: {align: center, role: outlined, type: number}
+              type: TextBox
+            layout_properties: {grid_position: 'XFQAUL,VBXMBP'}
+            name: flow_panel_1
+            properties: {}
+            type: FlowPanel
+          layout_properties: {grid_position: 'LUWPRR,LJKEKJ'}
+          name: outlined_card_1
+          properties: {role: elevated-card}
+          type: ColumnPanel
+        layout_properties: {grid_position: 'KCEXPC,GKYLEH'}
+        name: column_panel_32
+        properties: {role: tonal-card}
+        type: ColumnPanel
+      layout_properties: {width: 680}
+      name: column_panel_33
+      properties: {}
+      type: ColumnPanel
     name: flow_panel_4
     properties: {}
     type: FlowPanel
-  - components:
-    - components:
-      - layout_properties: {grid_position: 'WUVJQK,EXZCUC LKGOFM,SGZHIZ'}
-        name: label_1_copy_2
-        properties: {align: center, bold: true, text: Arany}
-        type: Label
-      - layout_properties: {grid_position: 'WUVJQK,EXZCUC RICDIQ,QFIWOM'}
-        name: arany_1
-        properties: {role: outlined, type: number}
-        type: TextBox
-      - layout_properties: {grid_position: 'WUVJQK,EXZCUC TOTORX,FQGVOZ'}
-        name: arany_2
-        properties: {role: outlined, type: number}
-        type: TextBox
-      - layout_properties: {grid_position: 'WUVJQK,EXZCUC KKUKEF,XRNNXS'}
-        name: arany_3
-        properties: {role: outlined, type: number}
-        type: TextBox
-      - layout_properties: {grid_position: 'WUVJQK,YZXGNQ EZBJFV,PSBXHY'}
-        name: label_2_copy_10
-        properties: {align: center, bold: true, text: Ezüst}
-        type: Label
-      - layout_properties: {grid_position: 'WUVJQK,YZXGNQ HZCXON,IALYDJ'}
-        name: ezust_1
-        properties: {role: outlined, type: number}
-        type: TextBox
-      - layout_properties: {grid_position: 'WUVJQK,YZXGNQ UKVOYQ,QMJZGU'}
-        name: ezust_2
-        properties: {role: outlined, type: number}
-        type: TextBox
-      - layout_properties: {grid_position: 'WUVJQK,YZXGNQ LPTIHX,ATNUXX'}
-        name: ezust_3
-        properties: {role: outlined, type: number}
-        type: TextBox
-      - layout_properties: {grid_position: 'WUVJQK,OSSDIF MSNYSG,LEOWYU'}
-        name: label_3_copy
-        properties: {align: center, bold: true, text: Réz}
-        type: Label
-      - layout_properties: {grid_position: 'WUVJQK,OSSDIF KDRTZK,OVFFPH'}
-        name: rez_1
-        properties: {role: outlined, type: number}
-        type: TextBox
-      - layout_properties: {grid_position: 'WUVJQK,OSSDIF GVFCOD,LQHRCI'}
-        name: rez_2
-        properties: {role: outlined, type: number}
-        type: TextBox
-      - layout_properties: {grid_position: 'WUVJQK,OSSDIF TOATKE,NRSWCE'}
-        name: rez_3
-        properties: {role: outlined, type: number}
-        type: TextBox
-      - layout_properties: {grid_position: 'WUVJQK,DGQNCM HPGIVG,KHYZYY'}
-        name: label_4_copy
-        properties: {align: center, bold: true, text: 'Hol verték?'}
-        type: Label
-      - layout_properties: {grid_position: 'WUVJQK,DGQNCM YANWME,IDKXHM'}
-        name: hol_1
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'WUVJQK,DGQNCM VHSETC,BPJVEI'}
-        name: hol_2
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'WUVJQK,DGQNCM NHVIYW,KGNHCB'}
-        name: hol_3
-        properties: {role: outlined}
-        type: TextBox
-      layout_properties: {grid_position: 'JEJTOB,RRNLRS GCYPTN,DXNCLC'}
-      name: column_panel_1_copy
-      properties: {col_widths: '{"EXZCUC":15,"YZXGNQ":15,"OSSDIF":15,"DGQNCM":15}', role: outlined-card}
-      type: ColumnPanel
-    - components:
-      - components:
-        - layout_properties: {}
-          name: label_41
-          properties: {text: 'Tapasztalati pontok:'}
-          type: Label
-        - data_bindings: []
-          layout_properties: {width: 110}
-          name: tp
-          properties: {align: center, role: outlined, type: number}
-          type: TextBox
-        layout_properties: {grid_position: 'XFQAUL,VBXMBP'}
-        name: flow_panel_1
-        properties: {}
-        type: FlowPanel
-      layout_properties: {grid_position: 'JEJTOB,RRNLRS YYNAUR,SVJBHV'}
-      name: outlined_card_1
-      properties: {role: elevated-card}
-      type: ColumnPanel
-    - components:
-      - layout_properties: {grid_position: 'SMNQYS,DPKSXY KTOZEH,ADHKBI'}
-        name: label_26
-        properties: {align: center, text: Nyelv}
-        type: Label
-      - layout_properties: {grid_position: 'SMNQYS,DPKSXY MNXIFJ,SDNYUW'}
-        name: nyelv_1
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,DPKSXY LHZRVN,KTIDAD'}
-        name: nyelv_2
-        properties: {role: outlined}
-        type: TextBox
-      - event_bindings: {pressed_enter: nyelv_3_pressed_enter}
-        layout_properties: {grid_position: 'SMNQYS,DPKSXY AJHMRQ,QEXEAR'}
-        name: nyelv_3
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,DPKSXY ZEPJKB,YHAGOS'}
-        name: nyelv_4
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,DPKSXY TFGPYZ,OXXGPI'}
-        name: nyelv_5
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,PYCJCI XGLECF,KNFLKG'}
-        name: label_27
-        properties: {align: center, text: Szint}
-        type: Label
-      - layout_properties: {grid_position: 'SMNQYS,PYCJCI AMEADJ,BNKOBQ'}
-        name: nyelv_1_szint
-        properties: {align: center, role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,PYCJCI QYKXJE,TXRVPQ'}
-        name: nyelv_2_szint
-        properties: {align: center, role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,PYCJCI NGWSVP,PAHECF'}
-        name: nyelv_3_szint
-        properties: {align: center, role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,PYCJCI GABQKS,ZHNMBK'}
-        name: nyelv_4_szint
-        properties: {align: center, role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,PYCJCI GPMIXB,HBNHBG'}
-        name: nyelv_5_szint
-        properties: {align: center, role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,ENZITS FTFSMJ,IVBSGG'}
-        name: label_28
-        properties: {align: center, text: Nyelv}
-        type: Label
-      - layout_properties: {grid_position: 'SMNQYS,ENZITS IDVUIT,LKSHMF'}
-        name: nyelv_6
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,ENZITS GXEBKI,REHNZJ'}
-        name: nyelv_7
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,ENZITS RTFSNK,QBLOGN'}
-        name: nyelv_8
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,ENZITS UEWDPG,MNYGQX'}
-        name: nyelv_9
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,ENZITS WKJWGJ,PZMXAV'}
-        name: nyelv_10
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,YVEVMK IFTMKV,IMWHXV'}
-        name: label_29
-        properties: {align: center, text: Szint}
-        type: Label
-      - layout_properties: {grid_position: 'SMNQYS,YVEVMK DMTFSR,FGHBIR'}
-        name: nyelv_6_szint
-        properties: {align: center, role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,YVEVMK OLNXJP,RYSOXC'}
-        name: nyelv_7_szint
-        properties: {align: center, role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,YVEVMK MVHKEQ,BQOQMG'}
-        name: nyelv_8_szint
-        properties: {align: center, role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,YVEVMK WTTLAC,XETNNI'}
-        name: nyelv_9_szint
-        properties: {align: center, role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'SMNQYS,YVEVMK AAEOVS,JHKPDC'}
-        name: nyelv_10_szint
-        properties: {align: center, role: outlined}
-        type: TextBox
-      layout_properties: {grid_position: 'JEJTOB,GNIWQA'}
-      name: column_panel_24
-      properties: {col_widths: '{"DPKSXY":20,"PYCJCI":10,"ENZITS":20,"YVEVMK":10}', role: elevated-card}
-      type: ColumnPanel
-    - components:
-      - layout_properties: {grid_position: 'DJGMGS,MCYWGA IHKZCN,QQSGXM'}
-        name: label_30
-        properties: {align: center, bold: true, text: Látható felszerelés, underline: true}
-        type: Label
-      - layout_properties: {grid_position: 'DJGMGS,MCYWGA TDGHEL,NBNSRS'}
-        name: lathato_felszereles
-        properties: {item_template: Form1.felszereles, role: null}
-        type: RepeatingPanel
-      - components:
-        - event_bindings: {click: lathato_felszereles_del_click}
-          layout_properties: {}
-          name: lathato_felszereles_del
-          properties: {enabled: false, text: '-'}
-          type: Button
-        - event_bindings: {click: lathato_felszereles_add_click}
-          name: lathato_felszereles_add
-          properties: {text: +}
-          type: Button
-        layout_properties: {grid_position: 'DJGMGS,MCYWGA ZGKWXJ,QAMUCQ'}
-        name: flow_panel_3_copy_3
-        properties: {align: right, gap: tiny}
-        type: FlowPanel
-      - layout_properties: {grid_position: 'DJGMGS,PCTKLI YUABCD,WVAVZZ'}
-        name: label_31
-        properties: {align: center, bold: true, text: Nem látható felszerelés, underline: true}
-        type: Label
-      - data_bindings: []
-        layout_properties: {grid_position: 'DJGMGS,PCTKLI XJQDXL,OTJCQV'}
-        name: nem_lathato_felszereles
-        properties: {item_template: Form1.felszereles, role: null}
-        type: RepeatingPanel
-      - components:
-        - event_bindings: {click: felszereles_del_click}
-          layout_properties: {}
-          name: nem_lathato_felszereles_del
-          properties: {enabled: false, text: '-'}
-          type: Button
-        - event_bindings: {click: felszereles_add_click}
-          name: nem_lathato_felszereles_add
-          properties: {text: +}
-          type: Button
-        layout_properties: {grid_position: 'DJGMGS,PCTKLI EGORTS,ZLIUUA'}
-        name: flow_panel_3_copy_3_copy
-        properties: {align: right, gap: tiny}
-        type: FlowPanel
-      layout_properties: {grid_position: 'FYXLSL,NMVOGL'}
-      name: column_panel_25
-      properties: {role: elevated-card}
-      type: ColumnPanel
-    - components:
-      - components:
-        - layout_properties: {grid_position: 'LIIQDO,GRHWYA'}
-          name: label_32
-          properties: {align: center, bold: true, text: Képzettségek}
-          type: Label
-        - layout_properties: {grid_position: 'LIIQDO,JMUZFR'}
-          name: label_33
-          properties: {align: center, bold: true, text: Af/Mf}
-          type: Label
-        - layout_properties: {grid_position: 'YHLJEY,MEQEMC'}
-          name: kepzettsegek_1
-          properties:
-            item_template: Form1.kepzettsegek
-            margin: [null, '18', null, '0']
-          type: RepeatingPanel
-        - components:
-          - event_bindings: {click: kepzettseg1_del_click}
-            layout_properties: {}
-            name: kepzettseg1_del
-            properties: {enabled: false, text: '-'}
-            type: Button
-          - event_bindings: {click: kepzettseg1_add_click}
-            name: kepzettseg1_add
-            properties: {text: +}
-            type: Button
-          layout_properties: {grid_position: 'KIYVXN,DUWVLW'}
-          name: flow_panel_3_copy_2
-          properties: {align: right, gap: tiny}
-          type: FlowPanel
-        layout_properties: {grid_position: 'UUSAXH,GHIHFF'}
-        name: column_panel_26
-        properties: {col_widths: '{"GRHWYA":45,"JMUZFR":15}'}
-        type: ColumnPanel
-      - components:
-        - layout_properties: {grid_position: 'BIVTCF,UVYATC'}
-          name: label_34
-          properties: {align: center, bold: true, text: Képzettségek}
-          type: Label
-        - layout_properties: {grid_position: 'BIVTCF,UPYOZI'}
-          name: label_35
-          properties: {align: center, bold: true, text: Af/Mf}
-          type: Label
-        - layout_properties: {grid_position: 'SIAJVY,BXYEZW'}
-          name: kepzettsegek_2
-          properties:
-            item_template: Form1.kepzettsegek
-            margin: [null, '18', null, null]
-          type: RepeatingPanel
-        - components:
-          - event_bindings: {click: kepzettseg2_del_click}
-            layout_properties: {}
-            name: kepzettseg2_del
-            properties: {enabled: false, text: '-'}
-            type: Button
-          - event_bindings: {click: kepzettseg2_add_click}
-            name: kepzettseg2_add
-            properties: {text: +}
-            type: Button
-          layout_properties: {grid_position: 'IIYRYN,KAKZFH'}
-          name: flow_panel_3_copy_2_copy
-          properties: {align: right, gap: tiny}
-          type: FlowPanel
-        layout_properties: {grid_position: 'UUSAXH,TFQAOM'}
-        name: column_panel_27
-        properties: {col_widths: '{"UVYATC":45,"UPYOZI":15}'}
-        type: ColumnPanel
-      layout_properties: {grid_position: 'LLNCUB,FHTPAW'}
-      name: column_panel_18
-      properties: {col_widths: '{}', role: elevated-card}
-      type: ColumnPanel
-    - components:
-      - layout_properties: {grid_position: 'ZHFPLU,NQANGU'}
-        name: label_36
-        properties: {align: center, bold: true, text: Mérgek}
-        type: Label
-      - layout_properties: {grid_position: 'ZHFPLU,ABCCVN'}
-        name: label_37
-        properties: {align: center, bold: true, text: Szint}
-        type: Label
-      - layout_properties: {grid_position: 'ZHFPLU,HSZTNK'}
-        name: label_38
-        properties: {align: center, bold: true, text: Hatás 1.}
-        type: Label
-      - layout_properties: {grid_position: 'ZHFPLU,DKCTMF'}
-        name: label_39
-        properties: {align: center, bold: true, text: Hatás 2.}
-        type: Label
-      - layout_properties: {grid_position: 'NQZHKX,QHHVVO'}
-        name: mergek
-        properties: {item_template: Form1.mergek}
-        type: RepeatingPanel
-      layout_properties: {grid_position: 'LCPMYP,MQCYNW'}
-      name: column_panel_28
-      properties: {col_widths: '{"NQANGU":15,"ABCCVN":5,"HSZTNK":20,"DKCTMF":20}', role: elevated-card}
-      type: ColumnPanel
-    - components:
-      - layout_properties: {grid_position: 'APZYCU,ASNJZL KOUYCD,XHHTFW'}
-        name: label_50
-        properties: {align: center, bold: true, text: Társak}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,ASNJZL MVHIXZ,YXNKQP'}
-        name: label_62
-        properties: {align: center, bold: true, text: Állat}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,ASNJZL QNRBYE,HZBRQU'}
-        name: label_63
-        properties: {align: center, bold: true, text: Kísérő}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,YZKGZK XJHARV,EYGNLD'}
-        name: label_51
-        properties: {align: center, text: Faj}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,YZKGZK AFTDAV,KUHZUR'}
-        name: allat_faj
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,YZKGZK SIPDEP,GVCJAA'}
-        name: kisero_faj
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,BVUDEJ ONEKJY,UWOPPV'}
-        name: label_52
-        properties: {align: center, text: Név}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,BVUDEJ VUKFOQ,JAYRJM'}
-        name: allat_nev
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,BVUDEJ LMZQKV,RMBQSX'}
-        name: kisero_nev
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,EMNMQC NBFCMM,TQVMJI'}
-        name: label_53
-        properties: {align: center, text: Ép}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,EMNMQC OQVYPI,CBKAUJ'}
-        name: allat_ep
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,EMNMQC BXKIJD,ACTJIU'}
-        name: kisero_ep
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,WRCVTJ LBYORH,MGDFDW'}
-        name: label_54
-        properties: {align: center, text: Fp}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,WRCVTJ MGUFWB,ZDNXIH'}
-        name: allat_fp
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,WRCVTJ NQLNWI,LDOXIP'}
-        name: kisero_fp
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,SMBMJG PVCINL,HUZGXK'}
-        name: label_55
-        properties: {align: center, text: KÉ}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,SMBMJG QZIDNF,QEUGQO'}
-        name: allat_ke
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,SMBMJG OIXFLE,PVTLEI'}
-        name: kisero_ke
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,BXNDYZ OQUVBN,OASIAD'}
-        name: label_56
-        properties: {align: center, text: TÉ}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,BXNDYZ DGAPXK,IIDYWW'}
-        name: allat_te
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,BXNDYZ IQIMYU,NZSWJW'}
-        name: kisero_te
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,QPCVZC QLKAMK,QYIVLK'}
-        name: label_57
-        properties: {align: center, text: VÉ}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,QPCVZC OIPCNQ,XMTHIC'}
-        name: allat_ve
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,QPCVZC NTZJFZ,XRLPQR'}
-        name: kisero_ve
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,FTTMPK YBECTY,MAIAYZ'}
-        name: label_58
-        properties: {align: center, text: Tám/kör}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,FTTMPK XJVESZ,ZSCJQG'}
-        name: allat_tam
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,FTTMPK GRANOH,PJNTHB'}
-        name: kisero_tam
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,YHNDMN JFSWVJ,GKIXRO'}
-        name: label_59
-        properties: {align: center, text: Sebzés}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,YHNDMN JWJWCY,GLRWPE'}
-        name: allat_sebzes
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,YHNDMN EFXTWQ,GMTZRR'}
-        name: kisero_sebzes
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,ABISMG BRGOSC,VKDRTN'}
-        name: label_60
-        properties:
-          align: center
-          font_size: 12
-          spacing:
-            padding: [null, null, 11, null]
-          spacing_above: small
-          spacing_below: small
-          text: Max. teher
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,ABISMG KJAFKZ,RCCYSD'}
-        name: allat_teher
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,ABISMG VJBKNU,ZNYNXX'}
-        name: kisero_teher
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,HDYEOM LAVMPW,XNAXHB'}
-        name: label_61
-        properties: {align: center, text: Megjegyzés}
-        type: Label
-      - layout_properties: {grid_position: 'APZYCU,HDYEOM VVRNMN,DIVEHC'}
-        name: allat_megjegyzes
-        properties: {role: outlined}
-        type: TextBox
-      - layout_properties: {grid_position: 'APZYCU,HDYEOM TMOVOD,TETCIJ'}
-        name: kisero_megjegyzes
-        properties: {role: outlined}
-        type: TextBox
-      layout_properties: {full_width_row: false, grid_position: 'RYWKPA,NYZLJC'}
-      name: column_panel_31
-      properties: {col_spacing: tiny, col_widths: '{"ASNJZL":5,"YZKGZK":5,"BVUDEJ":5,"EMNMQC":5,"WRCVTJ":5,"SMBMJG":5,"BXNDYZ":5,"QPCVZC":5,"FTTMPK":5,"YHNDMN":5,"ABISMG":5,"HDYEOM":5}', role: elevated-card, spacing_above: small, spacing_below: small, wrap_on: mobile}
-      type: ColumnPanel
-    - components:
-      - layout_properties: {grid_position: 'YMKXNL,DTGXWJ'}
-        name: label_42
-        properties: {align: center, role: body, text: A karakter által átélt kalandok / teljesített találkozók}
-        type: Label
-      - layout_properties: {grid_position: 'KUSVZN,FSMINS'}
-        name: label_43
-        properties: {align: center, bold: true, text: Címe}
-        type: Label
-      - layout_properties: {grid_position: 'KUSVZN,VXSRFA'}
-        name: label_44
-        properties: {align: center, bold: true, text: Rendezvény}
-        type: Label
-      - layout_properties: {grid_position: 'KUSVZN,RANQRC'}
-        name: label_45
-        properties: {align: center, bold: true, text: Csapat}
-        type: Label
-      - layout_properties: {grid_position: 'KUSVZN,PSUIZA'}
-        name: label_46
-        properties: {align: center, bold: true, text: KM}
-        type: Label
-      - layout_properties: {grid_position: 'KUSVZN,GFCMKA'}
-        name: label_47
-        properties: {align: center, bold: true, text: Elismerés / Jutalom}
-        type: Label
-      - layout_properties: {grid_position: 'WWPIZZ,OPLQRL'}
-        name: rendezvenyek
-        properties: {item_template: Form1.rendezvenyek}
-        type: RepeatingPanel
-      - components:
-        - event_bindings: {click: rendezveny_del_click}
-          layout_properties: {}
-          name: rendezveny_del
-          properties: {enabled: false, text: '-'}
-          type: Button
-        - event_bindings: {click: rendezveny_add_click}
-          name: rendezveny_add
-          properties: {text: +}
-          type: Button
-        layout_properties: {grid_position: 'FSUIQD,OIUMSE'}
-        name: flow_panel_3_copy
-        properties: {align: right, gap: tiny}
-        type: FlowPanel
-      layout_properties: {grid_position: 'YHNXNK,JTKCAJ'}
-      name: column_panel_29
-      properties: {role: elevated-card}
-      type: ColumnPanel
-    - data_bindings:
-      - {code: 'self.item['''']', property: tag, writeback: false}
-      layout_properties: {grid_position: 'GZCDFS,QDJDDL'}
-      name: fegyver_2
-      properties: {item_template: Form1.fegyver, role: null}
-      type: RepeatingPanel
-    - data_bindings:
-      - {code: 'self.item['''']', property: tag, writeback: false}
-      layout_properties: {grid_position: 'GZCDFS,JMCDWI'}
-      name: fegyver_3
-      properties: {item_template: Form1.fegyver, role: null}
-      type: RepeatingPanel
-    - components:
-      - layout_properties: {grid_position: 'XANTPV,UAJOVH'}
-        name: label_48
-        properties: {align: center, bold: true, text: A küldetés tárgyai / Zsákmány}
-        type: Label
-      - layout_properties: {grid_position: 'XANTPV,DRGJHP'}
-        name: label_49
-        properties: {align: center, bold: true, text: db}
-        type: Label
-      - layout_properties: {grid_position: 'QSLLEO,DCNSCQ'}
-        name: zsakmany
-        properties: {item_template: Form1.zsakmany}
-        type: RepeatingPanel
-      - components:
-        - event_bindings: {click: zsakmany_del_click}
-          layout_properties: {}
-          name: zsakmany_del
-          properties: {enabled: false, text: '-'}
-          type: Button
-        - event_bindings: {click: zsakmany_add_click}
-          name: zsakmany_add
-          properties: {text: +}
-          type: Button
-        layout_properties: {grid_position: 'AYYTXA,BHMONL'}
-        name: flow_panel_3
-        properties: {align: right, gap: tiny}
-        type: FlowPanel
-      layout_properties: {grid_position: 'PREEIE,ZJWYQW'}
-      name: column_panel_30
-      properties: {col_widths: '{"UAJOVH":50,"DRGJHP":10}', role: elevated-card}
-      type: ColumnPanel
-    - event_bindings: {click: mentes_click}
-      layout_properties: {grid_position: 'RIYUCT,PQFHBB'}
-      name: mentes
-      properties: {icon: 'fa:download', icon_align: right, role: filled-button, text: Mentés}
-      type: Button
-    layout_properties: {col_xs: 0, row: OZBSGE, width_xs: 7}
-    name: column_panel_9
-    properties: {col_widths: '{"RRNLRS":35,"GNIWQA":25,"JGOJJQ":25}', role: tonal-card}
-    type: ColumnPanel
   layout_properties: {slot: default}
-  name: grid_panel_2
-  properties:
-    spacing:
-      padding: [null, '24', null, null]
-  type: GridPanel
-- layout_properties: {slot: title}
-  name: label_40
-  properties: {text: PDF Generátor v1.0}
-  type: Label
+  name: linear_panel_1
+  properties: {}
+  type: LinearPanel
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate

@@ -1,7 +1,24 @@
 /**
  This CSS implements the Material Design 3 look and feel for Anvil apps.
  **/
+.responsive-grid {
+    display: flex;
+    flex-wrap: wrap; /* Az elemek sorba törnek, ha nincs elég hely */
+    gap: 10px; /* Térköz az elemek között */
+}
 
+.responsive-grid-item {
+    flex: 1 1 45%; /* Nagyobb képernyQn 45%-os szélesség, tehát két elem fér el egymás mellett */
+    max-width: 45%; /* Nem haladja meg a hely felét */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .responsive-grid-item {
+        flex: 1 1 100%; /* Kisebb képernyQn a teljes szélességet kitölti */
+        max-width: 100%;
+    }
+}
 /* Stop panel-cols cutting off drop shadows */
 .anvil-panel-col {
   padding-bottom: 10px;
