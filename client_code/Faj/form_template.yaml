@@ -32,42 +32,17 @@ components:
       role: tonal-data-grid
     type: DataGrid
   - components:
-    - layout_properties: {grid_position: 'LIIQDO,EPBPEF'}
-      name: label_1
-      properties: {align: center, bold: true, text: Szint}
-      type: Label
-    - layout_properties: {grid_position: 'LIIQDO,GRHWYA'}
-      name: label_32
-      properties: {align: center, bold: true, text: Képzettségek}
-      type: Label
-    - layout_properties: {grid_position: 'LIIQDO,JMUZFR'}
-      name: label_33
-      properties: {align: center, bold: true, text: Af/Mf}
-      type: Label
-    - layout_properties: {grid_position: 'YHLJEY,MEQEMC'}
-      name: kepzettsegek_1
-      properties:
-        item_template: Faj.kepzettsegek
-        margin: [null, '18', null, '0']
+    - name: repeating_panel_3
+      properties: {item_template: Faj.RowTemplate6}
       type: RepeatingPanel
-    - components:
-      - event_bindings: {click: kepzettseg1_del_click}
-        layout_properties: {}
-        name: kepzettseg1_del
-        properties: {enabled: false, text: '-'}
-        type: Button
-      - event_bindings: {click: kepzettseg1_add_click}
-        name: kepzettseg1_add
-        properties: {text: +}
-        type: Button
-      layout_properties: {grid_position: 'KIYVXN,DUWVLW'}
-      name: flow_panel_3_copy_2
-      properties: {align: right, gap: tiny}
-      type: FlowPanel
-    layout_properties: {grid_position: 'FBAQLC,LAMGOT'}
-    name: column_panel_26
-    properties: {col_widths: '{"GRHWYA":60,"JMUZFR":15,"EPBPEF":5}'}
-    type: ColumnPanel
+    layout_properties: {full_width_row: false, grid_position: 'OOPRZU,UEXQQS'}
+    name: data_grid_3
+    properties:
+      columns:
+      - {data_key: column_1, id: JKSDUP, title: Előny}
+      - {data_key: column_2, id: VJQQOR, title: Hátrány}
+      role: tonal-data-grid
+    type: DataGrid
   layout_properties: {slot: default}
   name: content_panel
   properties: {}
