@@ -20,5 +20,5 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/tables.yml
-startup: {module: Form1, type: form}
+startup: {module: PDFgen, type: form}
 startup_form: null

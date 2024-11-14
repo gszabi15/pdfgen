@@ -1,0 +1,28 @@
+components:
+- layout_properties: {grid_position: 'ZCKBJQ,HMKPGL'}
+  name: kepzettseg
+  properties: {enabled: false, role: outlined}
+  type: TextBox
+- components:
+  - name: af
+    properties: {checked: false, enabled: false, text: ''}
+    type: CheckBox
+  - name: mf
+    properties: {enabled: false, text: ''}
+    type: CheckBox
+  layout_properties: {grid_position: 'ZCKBJQ,QIDMWR'}
+  name: flow_panel_1
+  properties: {}
+  type: FlowPanel
+- layout_properties: {grid_position: 'ZCKBJQ,EXFNBB'}
+  name: del
+  properties: {role: outlined-button, text: '-'}
+  type: Button
+- layout_properties: {grid_position: 'ZCKBJQ,LPBRRE'}
+  name: label_1
+  properties: {visible: false}
+  type: Label
+container:
+  properties: {col_widths: '{"HMKPGL":83,"QIDMWR":22,"EXFNBB":15,"LPBRRE":18}'}
+  type: ColumnPanel
+is_package: true

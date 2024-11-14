@@ -1,11 +1,11 @@
-from ._anvil_designer import Form1Template
+from ._anvil_designer import PDFgenTemplate
 from anvil import *
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 
-class Form1(Form1Template):
+class PDFgen(PDFgenTemplate):
   #def click(self, **properties):
   #  self.outlined_button_1.visible = 0
   def __init__(self, **properties):
@@ -274,3 +274,9 @@ class Form1(Form1Template):
       delete.enabled = True
     if len(rep.items) == 4:
       add.enabled = False
+
+  def button_2_click(self, **event_args):
+    open_form('Beallitasok')
+
+  def button_3_click(self, **event_args):
+    open_form('Egyszerusitett_kozos')
