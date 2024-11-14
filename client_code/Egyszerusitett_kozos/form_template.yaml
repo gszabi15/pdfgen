@@ -645,16 +645,16 @@ components:
         name: column_panel_40
         properties: {}
         type: ColumnPanel
-      - layout_properties: {grid_position: 'NJDTYJ,WLPBRI'}
-        name: mana
-        properties: {align: center, enabled: false, type: number}
-        type: TextBox
       - components:
         - components:
           - layout_properties: {grid_position: 'EVRYPB,YHMGPG'}
             name: label_18
             properties: {align: center, italic: false, text: 'Mana:'}
             type: Label
+          - layout_properties: {grid_position: 'XXJCZU,TCTIKZ'}
+            name: mana
+            properties: {align: center, enabled: false, type: number}
+            type: TextBox
           - layout_properties: {grid_position: 'HGQTFU,RTIUDP'}
             name: elet
             properties: {enabled: false, text: Élet}
