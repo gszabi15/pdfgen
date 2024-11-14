@@ -820,6 +820,7 @@ components:
           name: varazstargyak
           properties: {item_template: PDFgen.varazstargyak}
           type: RepeatingPanel
+        data_bindings: []
         layout_properties: {grid_position: 'SIWDHO,IPCUCR'}
         name: data_grid_1
         properties:
@@ -830,7 +831,7 @@ components:
           - {data_key: column_3, id: OJLQEN, title: MP}
           - {data_key: column_4, id: CLVIEP, title: db}
           foreground: ''
-          role: tonal-data-grid
+          role: [tonal-data-grid, datagrid-card-view]
           show_page_controls: false
           wrap_on: never
         type: DataGrid
