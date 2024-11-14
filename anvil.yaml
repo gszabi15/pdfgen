@@ -1,10 +1,35 @@
 allow_embedding: false
 db_schema:
-  table_1:
+  faj:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Nev
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: Elony
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: Kepzettsegek
+      type: simpleObject
+    - admin_ui: {order: 3, width: 200}
+      name: Faji_maximumok
+      type: simpleObject
+    - admin_ui: {order: 4, width: 200}
+      name: Elofordulas
+      type: string
+    server: full
+    title: Faj
+  faj_kaszt:
     client: none
     columns: []
     server: full
-    title: Table 1
+    title: Faj_Kaszt
+  kaszt:
+    client: none
+    columns: []
+    server: full
+    title: Kaszt
 dependencies: []
 name: PDFgen
 native_deps: null
