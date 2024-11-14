@@ -2,6 +2,15 @@
 /**
  This CSS implements the Material Design 3 look and feel for Anvil apps.
  **/
+@media (max-width: 768px) {
+    .datagrid-card-view {
+        display: block;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
 .responsive-grid {
     display: flex;
     flex-wrap: wrap; /* Az elemek sorba törnek, ha nincs elég hely */
