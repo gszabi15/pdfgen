@@ -44,11 +44,13 @@ components:
       name: column_panel_8
       properties: {role: outlined-card}
       type: ColumnPanel
-    - layout_properties: {grid_position: 'GDFNPX,RIZYAP TKWADH,GPVKUD'}
+    - event_bindings: {change: faj_change}
+      layout_properties: {grid_position: 'GDFNPX,RIZYAP TKWADH,GPVKUD'}
       name: faj
       properties: {include_placeholder: true, placeholder: Faj}
       type: DropDown
-    - layout_properties: {grid_position: 'GDFNPX,RIZYAP TKWADH,NPZNWV'}
+    - event_bindings: {change: kaszt_change}
+      layout_properties: {grid_position: 'GDFNPX,RIZYAP TKWADH,NPZNWV'}
       name: kaszt
       properties: {include_placeholder: true, placeholder: Kaszt, role: null}
       type: DropDown

@@ -10,5 +10,14 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    
     # Any code you write here will run before the form opens.
+  def panel1_visable(self):
+    if self.faj.selected_value != "Faj" and self.kaszt.selected_value != "Kaszt":
+      self.column_panel_3.visible = True
+  def faj_change(self, **event_args):
+    self.panel1_visable()
+
+  def kaszt_change(self, **event_args):
+   self.panel1_visable()
+    
