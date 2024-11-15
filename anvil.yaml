@@ -56,6 +56,14 @@ db_schema:
       type: simpleObject
     server: full
     title: kaszt
+  szarmazas:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Nev
+      type: string
+    server: full
+    title: szarmazas
 dependencies: []
 name: PDFgen
 native_deps: null

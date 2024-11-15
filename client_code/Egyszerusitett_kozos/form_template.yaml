@@ -19,6 +19,7 @@ components:
         properties: {align: center, bold: true, text: 'Szint:'}
         type: Label
       - data_bindings: []
+        event_bindings: {change: szint_change}
         layout_properties: {grid_position: 'LCQUZM,NINETX'}
         name: szint
         properties: {align: center, bold: false, role: outlined, text: '1', type: number}
@@ -66,9 +67,10 @@ components:
       name: spacer_4
       properties: {height: 32}
       type: Spacer
-    - layout_properties: {grid_position: 'GDFNPX,RIZYAP CJAAOF,PXMASV'}
+    - data_bindings: []
+      layout_properties: {grid_position: 'GDFNPX,RIZYAP CJAAOF,PXMASV'}
       name: penz
-      properties: {content: 'kezdő arany: 20AP', format: markdown}
+      properties: {content: 'kezdő arany: 20AP', enable_slots: true, format: markdown}
       type: RichText
     - layout_properties: {grid_position: 'GDFNPX,RIZYAP BYNZTX,JVPTLI'}
       name: outlined_button_1
@@ -86,7 +88,7 @@ components:
   - components:
     - components:
       - layout_properties: {grid_position: 'UQHUBL,UJXLMW'}
-        name: label_25
+        name: pontok
         properties: {align: center, bold: true, role: null, text: 23 pont + szépség}
         type: Label
       - components:
@@ -99,7 +101,7 @@ components:
               padding: [null, 0, null, null]
             text: 'Erő:'
           type: Label
-        - event_bindings: {pressed_enter: outlined_2_copy_6_pressed_enter}
+        - event_bindings: {change: pontok_change}
           layout_properties: {grid_position: 'UUSRTX,TFZOYT'}
           name: ero
           properties:
@@ -121,7 +123,8 @@ components:
           name: label_2_copy_5
           properties: {align: center, text: 'Szépség: '}
           type: Label
-        - layout_properties: {grid_position: 'NLPIQY,IVCEGA'}
+        - event_bindings: {change: pontok_change}
+          layout_properties: {grid_position: 'NLPIQY,IVCEGA'}
           name: szepseg
           properties:
             align: center
@@ -141,7 +144,8 @@ components:
           name: label_2_copy
           properties: {align: center, text: 'Gyorsaság: '}
           type: Label
-        - layout_properties: {grid_position: 'QHRCBR,FZNRDF'}
+        - event_bindings: {change: pontok_change}
+          layout_properties: {grid_position: 'QHRCBR,FZNRDF'}
           name: gyorsasag
           properties:
             align: center
@@ -161,7 +165,8 @@ components:
           name: label_2
           properties: {align: center, text: 'Intelligencia:'}
           type: Label
-        - layout_properties: {grid_position: 'KZSYSW,XWNKMB'}
+        - event_bindings: {change: pontok_change}
+          layout_properties: {grid_position: 'KZSYSW,XWNKMB'}
           name: intelligencia
           properties:
             align: center
@@ -181,7 +186,8 @@ components:
           name: label_2_copy_2
           properties: {align: center, text: 'Ügyesség: '}
           type: Label
-        - layout_properties: {grid_position: 'HTCCDB,GWOUTH'}
+        - event_bindings: {change: pontok_change}
+          layout_properties: {grid_position: 'HTCCDB,GWOUTH'}
           name: ugyesseg
           properties:
             align: center
@@ -201,7 +207,8 @@ components:
           name: label_2_copy_7
           properties: {align: center, text: 'Akaraterő:'}
           type: Label
-        - layout_properties: {grid_position: 'FOZJTU,AXLNRX'}
+        - event_bindings: {change: pontok_change}
+          layout_properties: {grid_position: 'FOZJTU,AXLNRX'}
           name: akaratero
           properties:
             align: center
@@ -221,7 +228,8 @@ components:
           name: label_2_copy_3
           properties: {align: center, text: 'Állóképesség: '}
           type: Label
-        - layout_properties: {grid_position: 'YUHUOJ,NVJYFK'}
+        - event_bindings: {change: pontok_change}
+          layout_properties: {grid_position: 'YUHUOJ,NVJYFK'}
           name: allokepesseg
           properties:
             align: center
@@ -241,7 +249,8 @@ components:
           name: label_2_copy_8
           properties: {align: center, text: 'Asztrál:'}
           type: Label
-        - layout_properties: {grid_position: 'IWGMNL,LNTGEE'}
+        - event_bindings: {change: pontok_change}
+          layout_properties: {grid_position: 'IWGMNL,LNTGEE'}
           name: asztral
           properties:
             align: center
@@ -261,7 +270,8 @@ components:
           name: label_2_copy_4
           properties: {align: center, text: 'Egészség: '}
           type: Label
-        - layout_properties: {grid_position: 'ADPBVL,AETCNG'}
+        - event_bindings: {change: pontok_change}
+          layout_properties: {grid_position: 'ADPBVL,AETCNG'}
           name: egeszseg
           properties:
             align: center
@@ -282,7 +292,8 @@ components:
           name: label_2_copy_8_copy
           properties: {align: center, font: ti, text: 'Észlelés:'}
           type: Label
-        - layout_properties: {grid_position: 'FBTSJG,PEASRR'}
+        - event_bindings: {change: pontok_change}
+          layout_properties: {grid_position: 'FBTSJG,PEASRR'}
           name: eszleles
           properties:
             align: center
@@ -671,7 +682,7 @@ components:
         type: ColumnPanel
       layout_properties: {grid_position: 'DDSRYP,EZFCOP'}
       name: column_panel_10
-      properties: {role: elevated-card}
+      properties: {role: outlined-card}
       type: ColumnPanel
     - components:
       - components:
@@ -746,7 +757,7 @@ components:
         type: ColumnPanel
       layout_properties: {grid_position: 'DDSRYP,DZTIJI'}
       name: column_panel_14
-      properties: {role: elevated-card}
+      properties: {role: outlined-card}
       type: ColumnPanel
     - components:
       - layout_properties: {grid_position: 'ZNFKQQ,ZSYTJG'}
