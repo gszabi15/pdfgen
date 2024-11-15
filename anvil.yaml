@@ -1,5 +1,19 @@
 allow_embedding: false
 db_schema:
+  enabled:
+    client: search
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Nev
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: enabled
+      type: bool
+    - admin_ui: {order: 2, width: 200}
+      name: index
+      type: number
+    server: full
+    title: enabled
   faj:
     client: none
     columns:
@@ -18,18 +32,30 @@ db_schema:
     - admin_ui: {order: 4, width: 200}
       name: Elofordulas
       type: string
+    - admin_ui: {order: 5, width: 200}
+      name: Forras
+      type: string
     server: full
-    title: Faj
+    title: faj
   faj_kaszt:
     client: none
     columns: []
     server: full
-    title: Faj_Kaszt
+    title: faj_kaszt
   kaszt:
     client: none
-    columns: []
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Nev
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: Forras
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: Harcertekek
+      type: simpleObject
     server: full
-    title: Kaszt
+    title: kaszt
 dependencies: []
 name: PDFgen
 native_deps: null
