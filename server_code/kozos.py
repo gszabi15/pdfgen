@@ -17,11 +17,12 @@ import anvil.server
 #
 @anvil.server.callable
 def egyszerusitett_kozos(typ, inp):
-  penz = {"1":30,"2":30}
   if typ == "pontok":
     return {"pont":131,"szabad":"szepseg"}
   elif typ == "penz":
+   
     if "szint" in inp:
+      print(inp)
       szint = inp["szint"]
       if szint < 4:
         return szint*20

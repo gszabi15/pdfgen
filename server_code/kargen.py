@@ -51,8 +51,8 @@ def get_kasztnev():
     kasztnev += [i['Nev']]
   return list(set(kasztnev))
 @anvil.server.callable
-def pontok(inp:None,kargen):
-  anvil.server.call(kargen,"pontok",inp)
+def pontok(kargen,inp:None):
+  return anvil.server.call(kargen,"pontok",inp)
 @anvil.server.callable
-def penz(inp:None,kargen):
-  anvil.server.call(kargen,,"penz",inp)
+def penz(kargen,inp:None):
+  return anvil.server.call(kargen,"penz",inp)
