@@ -13,9 +13,21 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
     self.faj.items = anvil.server.call('get_fajnev')
-    self.kaszt.items = anvil.server.call('get_kasztnev')
+    self.kasztok = anvil.server.call('get_kasztnev')
     self.pont = anvil.server.call("pontok","egyszerusitett_kozos",None)
+    self.szazalek_change()
+  def up10(self,inp):
+    if inp > 10:
+      return inp-10
+    else:
+      return 0
+  def szazalek_change(self,**event_args):
+    alap = self.ugyesseg.text
+    val = {"titkosajto_kereses":self.titkosajto_kereses,"ugras":self.ugras,"eses":self.eses,"maszas":self.maszas,"zsebmetszes":self.zsebmetszes,"zarnyitas":self.zarnyitas,"rejtozes":self.rejtozes,"koteltanc":self.koteltanc,"lopozas":self.lopozas,"csapdafelfedezes":self.csapdafelfedezes}
+    for i in list(val.keys()):
+      val[i].text = self.up10(alap) 
   def pontok_change(self, **event_args):
+    self.szazalek_change()
     if "pont" in self.pont:
       rempont = self.pont["pont"]
       text = ""
@@ -23,15 +35,17 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
       if "szabad" in self.pont:
         for i in val:
           pass
-        if self.szabad in val:
-          text = "+ "+self.pont["szabad"] + "("+str(val[self.pont["szabad"]].text)+")"
+        if self.pont["szabad"] in val:
+          if val[self.pont["szabad"]].text != None:
+            text = "+ "+self.pont["szabad"] + "("+str(val[self.pont["szabad"]].text)+")"
           for i in list(val.keys()):
-            if i != self.szabad:
-              rempont -= val[i].text
+            if i != self.pont["szabad"]:
+              if type(val[i].text) is int:
+                rempont -= val[i].text
       else:
         for i in list(val.keys()):
           rempont -= val[i].text
-      self.pontok.text = rempont + " " + text
+      self.pontok.text = str(rempont) + " " + text
   def panel1_visable(self):
     if self.faj.selected_value != None and self.kaszt.selected_value != None:
       self.column_panel_3.visible = True
@@ -41,6 +55,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.panel1_visable()
     if self.faj.selected_value != None:
       self.kaszt.enabled = True
+      self.kasztok
     else:
       self.kaszt.enabled = False
       self.kaszt.selected_value = None

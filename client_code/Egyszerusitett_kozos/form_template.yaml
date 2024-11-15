@@ -89,7 +89,7 @@ components:
     - components:
       - layout_properties: {grid_position: 'UQHUBL,UJXLMW'}
         name: pontok
-        properties: {align: center, bold: true, role: null, text: 23 pont + szépség}
+        properties: {align: center, bold: true, role: null, text: 23 pont + szépség (12)}
         type: Label
       - components:
         - layout_properties: {grid_position: 'JNPLSL,YHPJWJ'}
@@ -144,7 +144,7 @@ components:
           name: label_2_copy
           properties: {align: center, text: 'Gyorsaság: '}
           type: Label
-        - event_bindings: {change: pontok_change}
+        - event_bindings: {change: 'pontok_change, ugyesseg_change'}
           layout_properties: {grid_position: 'QHRCBR,FZNRDF'}
           name: gyorsasag
           properties:
@@ -337,7 +337,7 @@ components:
         - layout_properties: {grid_position: 'VEPRYZ,SZTCWG'}
           name: titkosajto_kereses
           properties:
-            align: left
+            align: center
             margin: [null, '100', null, null]
             role: outlined
             text: '0'
@@ -358,6 +358,7 @@ components:
         - layout_properties: {grid_position: 'SELSXA,LYCBLZ'}
           name: zarnyitas
           properties:
+            align: center
             margin: [null, '75', null, null]
             role: outlined
             text: '0'
@@ -378,6 +379,7 @@ components:
         - layout_properties: {grid_position: 'FUZDPG,PZHAZU'}
           name: ugras
           properties:
+            align: center
             margin: [null, '100', null, null]
             role: outlined
             text: '0'
@@ -398,6 +400,7 @@ components:
         - layout_properties: {grid_position: 'UEKALO,ZXVIFQ'}
           name: rejtozes
           properties:
+            align: center
             margin: [null, '100', null, null]
             role: outlined
             text: '0'
@@ -424,7 +427,7 @@ components:
         - layout_properties: {grid_position: 'JFSKRX,WPSOJN'}
           name: eses
           properties:
-            align: left
+            align: center
             margin: [null, '100', null, null]
             role: outlined
             text: '0'
@@ -445,6 +448,7 @@ components:
         - layout_properties: {grid_position: 'TCRVOO,GHVUET'}
           name: koteltanc
           properties:
+            align: center
             margin: [null, '100', null, null]
             role: outlined
             text: '0'
@@ -465,6 +469,7 @@ components:
         - layout_properties: {grid_position: 'UXDLYU,KZLDAZ'}
           name: maszas
           properties:
+            align: center
             margin: [null, '100', null, 0]
             role: outlined
             text: '0'
@@ -485,6 +490,7 @@ components:
         - layout_properties: {grid_position: 'KADETA,MMTZSN'}
           name: lopozas
           properties:
+            align: center
             margin: [null, '100', null, null]
             role: outlined
             text: '0'
@@ -505,6 +511,7 @@ components:
         - layout_properties: {grid_position: 'RZJOQE,AGFWIQ'}
           name: zsebmetszes
           properties:
+            align: center
             margin: [null, '100', null, null]
             role: outlined
             text: '0'
@@ -531,6 +538,7 @@ components:
         - layout_properties: {grid_position: 'DORMGA,DHVBVE'}
           name: csapdafelfedezes
           properties:
+            align: center
             margin: [null, '100', null, null]
             role: outlined
             text: '0'

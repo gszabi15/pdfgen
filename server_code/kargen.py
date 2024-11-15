@@ -37,11 +37,17 @@ def get_fajnev():
     fajnev += [i['Nev']]
   return list(set(fajnev))
 @anvil.server.callable
-def get_kaszt():
+def get_kaszt(faj:None):
   val = []
   for row in app_tables.kaszt.search():
     if row['Forras'] in get_enabled():
-      val += [row]
+      if faj != None:
+        for row2 in app_tables.faj_kaszt.search():
+          if row2['Faj'] == faj and row2["I/N"]:
+            row2[]
+      else:
+        val += [row]
+ 
   return val
 @anvil.server.callable
 def get_kasztnev():
