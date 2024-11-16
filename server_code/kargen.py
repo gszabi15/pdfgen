@@ -44,7 +44,7 @@ def get_kaszt(faj:None):
       if faj != None:
         for row2 in app_tables.faj_kaszt.search():
           if row2['Faj'] == faj and row2["I/N"]:
-            row2[]
+            pass
       else:
         val += [row]
  

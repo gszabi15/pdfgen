@@ -13,7 +13,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
     self.faj.items = anvil.server.call('get_fajnev')
-    self.kasztok = anvil.server.call('get_kasztnev')
+    #self.kasztok = anvil.server.call('get_kasztnev')
     self.pont = anvil.server.call("pontok","egyszerusitett_kozos",None)
     self.szazalek_change()
   def up10(self,inp):
@@ -36,7 +36,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
         for i in val:
           pass
         if self.pont["szabad"] in val:
-          if val[self.pont["szabad"]].text != None:
+          if val[self.pont["szabad"]].text is not None:
             text = "+ "+self.pont["szabad"] + "("+str(val[self.pont["szabad"]].text)+")"
           for i in list(val.keys()):
             if i != self.pont["szabad"]:
@@ -47,13 +47,13 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
           rempont -= val[i].text
       self.pontok.text = str(rempont) + " " + text
   def panel1_visable(self):
-    if self.faj.selected_value != None and self.kaszt.selected_value != None:
+    if self.faj.selected_value is not None and self.kaszt.selected_value is not None:
       self.column_panel_3.visible = True
     else:
       self.column_panel_3.visible = False
   def faj_change(self, **event_args):
     self.panel1_visable()
-    if self.faj.selected_value != None:
+    if self.faj.selected_value is not None:
       self.kaszt.enabled = True
       self.kasztok
     else:
