@@ -7,6 +7,7 @@ import anvil.media
 from io import BytesIO
 from PIL import Image, ImageFont, ImageDraw
 import json
+import binascii
 @anvil.server.callable
 def retgenpdf(data,name):
       instance = genpdf(data)
@@ -19,7 +20,7 @@ class genpdf:
         #asd = anvil.media.open("karakterlap1.jpg")
         self.url2 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap2.jpg").get_bytes())
         
-        self.lap = [Image.open(self.encrypt(data)), Image.open(self.url2)]
+        self.lap = [Image.open(self.encode_text_in_image(json.dumps(data))), Image.open(self.url2)]
         self.editlap = []
         print(data)
         for x in list(data.keys()):
@@ -62,6 +63,65 @@ class genpdf:
                     if len(data[x]["fegyver"]) >= 5:
                         self.fegyver(elap, 5, data[x]['fegyver'][4])
                 self.zsakmany(elap, data[x]['zsakmany'])
+    def text_to_bin(self,text):
+      binary = bin(int(binascii.hexlify(text.encode()), 16))[2:]
+      return binary
+    def length_to_bin(self,length):
+      return format(length, '032b')
+# Function to encode text into the image
+    def encode_text_in_image(self,text):
+    # Open the image
+      img = Image.open(self.url1)
+      # Convert the image to RGB (in case it's in another mode like RGBA)
+      img = img.convert('RGB')
+    
+    # Get image dimensions
+      width, height = img.size
+  
+      # Convert the text to binary
+      binary_text = self.text_to_bin(text)
+      # Add the length of the text in binary at the beginning (32 bits)
+      binary_length = self.length_to_bin(len(binary_text) // 8)  # Convert length to bits (1 byte = 8 bits)
+      
+      # Full binary data = length of text + the text itself
+      full_binary_data = binary_length + binary_text
+      binary_data_len = len(full_binary_data)
+  
+      # Create a list of pixels
+      pixels = img.load()
+  
+      # Track the position in the binary text
+      bin_index = 0
+  
+      # Loop through every pixel in the image
+      for y in range(height):
+          for x in range(width):
+              if bin_index < binary_data_len:
+                  # Get the RGB values of the pixel
+                  r, g, b = pixels[x, y]
+  
+                  # Modify the LSB of each color channel with the binary data
+                  r = (r & 0xFE) | int(full_binary_data[bin_index])  # Modify LSB of red
+                  bin_index += 1
+                  if bin_index < binary_data_len:
+                      g = (g & 0xFE) | int(full_binary_data[bin_index])  # Modify LSB of green
+                      bin_index += 1
+                  if bin_index < binary_data_len:
+                      b = (b & 0xFE) | int(full_binary_data[bin_index])  # Modify LSB of blue
+                      bin_index += 1
+  
+                  # Set the modified pixel back to the image
+                  pixels[x, y] = (r, g, b)
+  
+              # Stop if all text has been encoded
+              if bin_index >= binary_data_len:
+                  break
+  
+      # Save the new image with hidden text
+      img_save = BytesIO()
+      img.save(img_save, format="JPEG")
+      img_save.seek(0)
+      return img_save
     def encrypt(self,data):
         img = BytesIO()
         org_img = Image.open(self.url1)
