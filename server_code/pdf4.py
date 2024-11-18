@@ -20,8 +20,32 @@ class genpdf:
         #asd = anvil.media.open("karakterlap1.jpg")
         url2 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap2.jpg").get_bytes())
         pdf_bytes = BytesIO()
-        secret_image = lsb.hide(url1, data)
-        secret_image.save(pdf_bytes)
+        org_img = Image.open(url1)
+        org_pixelMap = org_img.load()
+        enc_img = Image.new( org_img.mode, org_img.size)
+        enc_pixelsMap = enc_img.load()
+        msg=data
+        msg_index=0
+        msg_len=len(msg)
+        for row in range(org_img.size[0]):
+            for col in range(org_img.size[1]):
+                list=org_pixelMap[row,col] 
+                r=list[0] 	# R value
+                g=list[1]	# G value
+                b=list[2]	# B value
+                if row==0 and col==0:		# 1st pixel is used to store the lenght of message
+                  ascii=msg_len
+                  enc_pixelsMap[row,col] = (ascii,g,b)
+                elif msg_index<=msg_len:	# Hiding our message inside the R values of the pixels
+                  c=msg[msg_index-1]
+                  ascii=ord(c)
+                  enc_pixelsMap[row,col] = (ascii,g,b)
+                else:				# Assigning the pixel values of old image to new image
+                  enc_pixelsMap[row,col] = (r,g,b)
+                  msg_index+=1
+        org_img.close()      
+        enc_img.save(pdf_bytes) 
+        enc_img.close()
         pdf_bytes.seek(0)
         self.lap = [Image.open(pdf_bytes), Image.open(url2)]
         self.editlap = []
