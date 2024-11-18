@@ -6,6 +6,7 @@ from anvil import BlobMedia
 import anvil.media
 from io import BytesIO
 from PIL import Image, ImageFont, ImageDraw
+from stegano import lsb
 import json
 @anvil.server.callable
 def retgenpdf(data,name):
@@ -18,7 +19,11 @@ class genpdf:
         url1 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap1.jpg").get_bytes())
         #asd = anvil.media.open("karakterlap1.jpg")
         url2 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap2.jpg").get_bytes())
-        self.lap = [Image.open(url1), Image.open(url2)]
+        pdf_bytes = BytesIO()
+        secret_image = lsb.hide(url1, data)
+        secret_image.save(pdf_bytes)
+        pdf_bytes.seek(0)
+        self.lap = [Image.open(pdf_bytes), Image.open(url2)]
         self.editlap = []
         for x in list(data.keys()):
                 elap = None
