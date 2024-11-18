@@ -6,7 +6,6 @@ from anvil import BlobMedia
 import anvil.media
 from io import BytesIO
 from PIL import Image, ImageFont, ImageDraw
-from stegano import lsb
 import json
 @anvil.server.callable
 def retgenpdf(data,name):
@@ -24,7 +23,7 @@ class genpdf:
         org_pixelMap = org_img.load()
         enc_img = Image.new( org_img.mode, org_img.size)
         enc_pixelsMap = enc_img.load()
-        msg=data
+        msg=str(data)
         msg_index=0
         msg_len=len(msg)
         for row in range(org_img.size[0]):
@@ -44,7 +43,7 @@ class genpdf:
                   enc_pixelsMap[row,col] = (r,g,b)
                   msg_index+=1
         org_img.close()      
-        enc_img.save(pdf_bytes) 
+        enc_img.save(pdf_bytes, format='JPEG') 
         enc_img.close()
         pdf_bytes.seek(0)
         self.lap = [Image.open(pdf_bytes), Image.open(url2)]
