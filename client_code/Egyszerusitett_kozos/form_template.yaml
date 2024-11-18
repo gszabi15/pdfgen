@@ -87,9 +87,10 @@ components:
           name: label_25
           properties: {align: center, role: input-prompt, text: 'Kor:'}
           type: Label
-        - layout_properties: {grid_position: 'ZFBORK,KRYKVO'}
+        - event_bindings: {lost_focus: korkategoria, pressed_enter: korkategoria}
+          layout_properties: {grid_position: 'ZFBORK,KRYKVO'}
           name: kor
-          properties: {align: center, spacing_below: small, text: '9999'}
+          properties: {align: center, spacing_below: small, text: ''}
           type: TextBox
         layout_properties: {grid_position: 'EFXOIW,WMKJBS'}
         name: column_panel_41
@@ -129,42 +130,42 @@ components:
           type: Label
         - layout_properties: {grid_position: 'XFBWOD,RBAISV'}
           name: korkat_ero
-          properties: {role: outlined}
+          properties: {align: center, enabled: false, role: outlined}
           type: TextBox
         - layout_properties: {grid_position: 'XFBWOD,FICJYP'}
           name: korkat_gyorsasag
-          properties: {role: outlined}
+          properties: {align: center, enabled: false, role: outlined}
           type: TextBox
         - layout_properties: {grid_position: 'XFBWOD,AXEWOR'}
           name: korkat_ugyesseg
-          properties: {role: outlined}
+          properties: {align: center, enabled: false, role: outlined}
           type: TextBox
         - layout_properties: {grid_position: 'XFBWOD,LOGMST'}
           name: korkat_allokepesseg
-          properties: {role: outlined}
+          properties: {align: center, enabled: false, role: outlined}
           type: TextBox
         - layout_properties: {grid_position: 'XFBWOD,YQTIUK'}
           name: korkat_egeszseg
-          properties: {role: outlined}
+          properties: {align: center, enabled: false, role: outlined}
           type: TextBox
         - layout_properties: {grid_position: 'XFBWOD,LQCMKD'}
           name: korkat_szepseg
-          properties: {role: outlined, type: text}
+          properties: {align: center, enabled: false, role: outlined, type: text}
           type: TextBox
         layout_properties: {grid_position: 'EFXOIW,JAEIYI'}
         name: column_panel_42
         properties: {}
         type: ColumnPanel
       - layout_properties: {grid_position: 'WSMHKT,JJZKGY'}
-        name: label_36
-        properties: {align: center, bold: false, text: II. Korkategória (Serdülőkor) 1801-1900 év}
+        name: korkat_label
+        properties: {align: center, bold: false, text: II. Korkategória (Serdülőkor) 17-30 év}
         type: Label
       layout_properties: {grid_position: 'YRSHVV,KWONKU'}
       name: column_panel_33
       properties: {col_widths: '{"WMKJBS":10,"JAEIYI":68,"XCMKLD":2}', role: outlined-card}
       type: ColumnPanel
     layout_properties: {grid_position: 'DFLZYG,TTKWWU'}
-    name: column_panel_24
+    name: korkat_panel
     properties: {}
     type: ColumnPanel
   - components:

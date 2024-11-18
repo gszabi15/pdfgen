@@ -61,22 +61,29 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.panel1_visable()
     if self.faj.selected_value is not None:
       self.korkat = anvil.server.call('get_korkat', self.faj.selected_value)
-      print(self.korkategoria())
+      self.kor.text = self.korkat[0]["2"][0]
+      self.korkategoria()
+      self.kor
       self.kaszt.enabled = True
       self.kaszt.items = anvil.server.call('get_kasztnev', self.faj.selected_value)
     else:
       self.kaszt.enabled = False
       self.kaszt.selected_value = None
-  def korkategoria(self):
+  def korkategoria(self, **event_args):
     val = 0
     for i in self.korkat:
       for y in i:
         print(i[y])
         if type(i[y][0]) is int and i[y][0]  <= int(self.kor.text) and (i[y][1] == "-" or ((int(self.kor.text) <= i[y][1]) if type(i[y][1]) is int else False)):
-          val = int(y)
-          break
-      if val != 0:
-        pass
+          mod = anvil.server.call("get_korkatmod",int(y)-1)
+          self.korkat_label.text = mod['szam'] + " " + "Korkategória " + "(" + mod['Nev'] + ") " + str(i[y][0]) + "-" + (str(i[y][1]) if type(i[y][1]) is int else " ") + " év"
+          self.korkat_ero.text = mod["mod"]["ero"]
+          self.korkat_gyorsasag.text = mod["mod"]["gyorsasag"]
+          self.korkat_ugyesseg.text = mod["mod"]["ugyesseg"]
+          self.korkat_allokepesseg.text = mod["mod"]["allokepessg"]
+          self.korkat_egeszseg.text = mod["mod"]["egeszseg"]
+          self.korkat_szepseg.text = mod["mod"]["szepseg"]
+          return int(y)
   def kaszt_change(self, **event_args):
    self.panel1_visable()
 

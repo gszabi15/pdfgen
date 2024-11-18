@@ -65,6 +65,11 @@ def get_korkat(faj):
       val += [row['Korkategoria']]
   return val
 @anvil.server.callable
+def get_korkatmod(i:None):
+  if i != None:
+    row = app_tables.korkategoria.search()[i]
+    return {'Nev':row['Nev'],'szam':row['szam'],'mod':{'ero':row['ero'],'gyorsasag':row['gyorsasag'],'ugyesseg':row['ugyesseg'],'allokepessg':row['allokepesseg'],'egeszseg':row['egeszseg'],'szepseg':row['szepseg']}}
+@anvil.server.callable
 def pontok(kargen,inp:None):
   return anvil.server.call(kargen,"pontok",inp)
 @anvil.server.callable

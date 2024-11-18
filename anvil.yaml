@@ -68,6 +68,35 @@ db_schema:
       type: simpleObject
     server: full
     title: kaszt
+  korkategoria:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Nev
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: ero
+      type: number
+    - admin_ui: {order: 2, width: 200}
+      name: gyorsasag
+      type: number
+    - admin_ui: {order: 3, width: 200}
+      name: ugyesseg
+      type: number
+    - admin_ui: {order: 4, width: 200}
+      name: allokepesseg
+      type: number
+    - admin_ui: {order: 5, width: 200}
+      name: egeszseg
+      type: number
+    - admin_ui: {order: 6, width: 200}
+      name: szepseg
+      type: number
+    - admin_ui: {order: -1, width: 200}
+      name: szam
+      type: string
+    server: full
+    title: korkategoria
   szarmazas:
     client: none
     columns:
