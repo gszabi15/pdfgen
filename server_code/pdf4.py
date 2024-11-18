@@ -23,7 +23,7 @@ class genpdf:
         org_pixelMap = org_img.load()
         enc_img = Image.new( org_img.mode, org_img.size)
         enc_pixelsMap = enc_img.load()
-        msg=str(data)
+        msg=str(data.copy())
         msg_index=0
         msg_len=len(msg)
         for row in range(org_img.size[0]):
