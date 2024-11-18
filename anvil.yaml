@@ -35,6 +35,9 @@ db_schema:
     - admin_ui: {order: 5, width: 200}
       name: Forras
       type: string
+    - admin_ui: {order: 3.5, width: 200}
+      name: Korkategoria
+      type: simpleObject
     server: full
     title: faj
   faj_kaszt:

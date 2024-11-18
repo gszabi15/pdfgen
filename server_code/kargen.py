@@ -58,6 +58,13 @@ def get_kasztnev(faj:None):
     kasztnev += [i['Nev']]
   return list(set(kasztnev))
 @anvil.server.callable
+def get_korkat(faj):
+  val = []
+  for row in app_tables.faj.search():
+    if row['Nev'] == faj and row['Korkategoria'] != None:
+      val += [row['Korkategoria']]
+  return val
+@anvil.server.callable
 def pontok(kargen,inp:None):
   return anvil.server.call(kargen,"pontok",inp)
 @anvil.server.callable

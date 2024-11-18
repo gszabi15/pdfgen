@@ -88,7 +88,7 @@ components:
           properties: {align: center, role: input-prompt, text: 'Kor:'}
           type: Label
         - layout_properties: {grid_position: 'ZFBORK,KRYKVO'}
-          name: text_box_1
+          name: kor
           properties: {align: center, spacing_below: small, text: '9999'}
           type: TextBox
         layout_properties: {grid_position: 'EFXOIW,WMKJBS'}
