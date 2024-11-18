@@ -61,19 +61,22 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.panel1_visable()
     if self.faj.selected_value is not None:
       self.korkat = anvil.server.call('get_korkat', self.faj.selected_value)
-      self.korkategoria()
+      print(self.korkategoria())
       self.kaszt.enabled = True
       self.kaszt.items = anvil.server.call('get_kasztnev', self.faj.selected_value)
     else:
       self.kaszt.enabled = False
       self.kaszt.selected_value = None
   def korkategoria(self):
+    val = 0
     for i in self.korkat:
       for y in i:
-        print(y)
-      
-      #if i[0] <= self.kor.text and i[1] < self.kor.text:
-        
+        print(i[y])
+        if type(i[y][0]) is int and i[y][0]  <= int(self.kor.text) and (i[y][1] == "-" or ((int(self.kor.text) <= i[y][1]) if type(i[y][1]) is int else False)):
+          val = int(y)
+          break
+      if val != 0:
+        pass
   def kaszt_change(self, **event_args):
    self.panel1_visable()
 
