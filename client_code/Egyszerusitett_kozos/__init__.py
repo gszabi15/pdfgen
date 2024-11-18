@@ -63,11 +63,12 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
       self.korkat = anvil.server.call('get_korkat', self.faj.selected_value)
       self.kor.text = self.korkat[0]["2"][0]
       self.korkategoria()
-      self.kor
+      self.korkat_panel.visible = True
       self.kaszt.enabled = True
       self.kaszt.items = anvil.server.call('get_kasztnev', self.faj.selected_value)
     else:
       self.kaszt.enabled = False
+      self.korkat_panel.visible = False
       self.kaszt.selected_value = None
   def korkategoria(self, **event_args):
     val = 0

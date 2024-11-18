@@ -82,91 +82,86 @@ components:
     type: ColumnPanel
   - components:
     - components:
-      - components:
-        - layout_properties: {grid_position: 'UHWPNY,MLFWSY'}
-          name: label_25
-          properties: {align: center, role: input-prompt, text: 'Kor:'}
-          type: Label
-        - event_bindings: {lost_focus: korkategoria, pressed_enter: korkategoria}
-          layout_properties: {grid_position: 'ZFBORK,KRYKVO'}
-          name: kor
-          properties: {align: center, spacing_below: small, text: ''}
-          type: TextBox
-        layout_properties: {grid_position: 'EFXOIW,WMKJBS'}
-        name: column_panel_41
-        properties:
-          col_widths: '{"KRYKVO":45}'
-          spacing:
-            padding: [null, '5', null, '5']
-        type: ColumnPanel
-      - layout_properties: {grid_position: 'EFXOIW,XCMKLD'}
-        name: spacer_5
-        properties: {height: 32}
-        type: Spacer
-      - components:
-        - layout_properties: {grid_position: 'CNCYKU,PRHPCS'}
-          name: label_37
-          properties: {align: center, role: input-prompt, text: Erő}
-          type: Label
-        - layout_properties: {grid_position: 'CNCYKU,TNCDGX'}
-          name: label_38
-          properties: {align: center, role: input-prompt, text: Gyorsaság}
-          type: Label
-        - layout_properties: {grid_position: 'CNCYKU,CZLKXD'}
-          name: label_39
-          properties: {align: center, role: input-prompt, text: Ügyesség}
-          type: Label
-        - layout_properties: {grid_position: 'CNCYKU,PLMBFS'}
-          name: label_40
-          properties: {align: center, role: input-prompt, text: Állóképesség}
-          type: Label
-        - layout_properties: {grid_position: 'CNCYKU,WUYTBX'}
-          name: label_41
-          properties: {align: center, role: input-prompt, text: Egészség}
-          type: Label
-        - layout_properties: {grid_position: 'CNCYKU,QIEEOH'}
-          name: label_42
-          properties: {align: center, role: input-prompt, text: Szépség}
-          type: Label
-        - layout_properties: {grid_position: 'XFBWOD,RBAISV'}
-          name: korkat_ero
-          properties: {align: center, enabled: false, role: outlined}
-          type: TextBox
-        - layout_properties: {grid_position: 'XFBWOD,FICJYP'}
-          name: korkat_gyorsasag
-          properties: {align: center, enabled: false, role: outlined}
-          type: TextBox
-        - layout_properties: {grid_position: 'XFBWOD,AXEWOR'}
-          name: korkat_ugyesseg
-          properties: {align: center, enabled: false, role: outlined}
-          type: TextBox
-        - layout_properties: {grid_position: 'XFBWOD,LOGMST'}
-          name: korkat_allokepesseg
-          properties: {align: center, enabled: false, role: outlined}
-          type: TextBox
-        - layout_properties: {grid_position: 'XFBWOD,YQTIUK'}
-          name: korkat_egeszseg
-          properties: {align: center, enabled: false, role: outlined}
-          type: TextBox
-        - layout_properties: {grid_position: 'XFBWOD,LQCMKD'}
-          name: korkat_szepseg
-          properties: {align: center, enabled: false, role: outlined, type: text}
-          type: TextBox
-        layout_properties: {grid_position: 'EFXOIW,JAEIYI'}
-        name: column_panel_42
-        properties: {}
-        type: ColumnPanel
-      - layout_properties: {grid_position: 'WSMHKT,JJZKGY'}
-        name: korkat_label
-        properties: {align: center, bold: false, text: II. Korkategória (Serdülőkor) 17-30 év}
+      - layout_properties: {grid_position: 'UHWPNY,MLFWSY'}
+        name: label_25
+        properties: {align: center, role: input-prompt, text: 'Kor:'}
         type: Label
-      layout_properties: {grid_position: 'YRSHVV,KWONKU'}
-      name: column_panel_33
-      properties: {col_widths: '{"WMKJBS":10,"JAEIYI":68,"XCMKLD":2}', role: outlined-card}
+      - event_bindings: {lost_focus: korkategoria, pressed_enter: korkategoria}
+        layout_properties: {grid_position: 'ZFBORK,KRYKVO'}
+        name: kor
+        properties: {align: center, spacing_below: small, text: '', type: number}
+        type: TextBox
+      layout_properties: {grid_position: 'EFXOIW,WMKJBS'}
+      name: column_panel_41
+      properties:
+        col_widths: '{"KRYKVO":45}'
+        spacing:
+          padding: [null, '5', null, '5']
       type: ColumnPanel
-    layout_properties: {grid_position: 'DFLZYG,TTKWWU'}
+    - layout_properties: {grid_position: 'EFXOIW,XCMKLD'}
+      name: spacer_5
+      properties: {height: 32}
+      type: Spacer
+    - components:
+      - layout_properties: {grid_position: 'CNCYKU,PRHPCS'}
+        name: label_37
+        properties: {align: center, role: input-prompt, text: Erő}
+        type: Label
+      - layout_properties: {grid_position: 'CNCYKU,TNCDGX'}
+        name: label_38
+        properties: {align: center, role: input-prompt, text: Gyorsaság}
+        type: Label
+      - layout_properties: {grid_position: 'CNCYKU,CZLKXD'}
+        name: label_39
+        properties: {align: center, role: input-prompt, text: Ügyesség}
+        type: Label
+      - layout_properties: {grid_position: 'CNCYKU,PLMBFS'}
+        name: label_40
+        properties: {align: center, role: input-prompt, text: Állóképesség}
+        type: Label
+      - layout_properties: {grid_position: 'CNCYKU,WUYTBX'}
+        name: label_41
+        properties: {align: center, role: input-prompt, text: Egészség}
+        type: Label
+      - layout_properties: {grid_position: 'CNCYKU,QIEEOH'}
+        name: label_42
+        properties: {align: center, role: input-prompt, text: Szépség}
+        type: Label
+      - layout_properties: {grid_position: 'XFBWOD,RBAISV'}
+        name: korkat_ero
+        properties: {align: center, enabled: false, role: outlined, type: number}
+        type: TextBox
+      - layout_properties: {grid_position: 'XFBWOD,FICJYP'}
+        name: korkat_gyorsasag
+        properties: {align: center, enabled: false, role: outlined, type: number}
+        type: TextBox
+      - layout_properties: {grid_position: 'XFBWOD,AXEWOR'}
+        name: korkat_ugyesseg
+        properties: {align: center, enabled: false, role: outlined, type: number}
+        type: TextBox
+      - layout_properties: {grid_position: 'XFBWOD,LOGMST'}
+        name: korkat_allokepesseg
+        properties: {align: center, enabled: false, role: outlined, type: number}
+        type: TextBox
+      - layout_properties: {grid_position: 'XFBWOD,YQTIUK'}
+        name: korkat_egeszseg
+        properties: {align: center, enabled: false, role: outlined, type: number}
+        type: TextBox
+      - layout_properties: {grid_position: 'XFBWOD,LQCMKD'}
+        name: korkat_szepseg
+        properties: {align: center, enabled: false, role: outlined, type: number}
+        type: TextBox
+      layout_properties: {grid_position: 'EFXOIW,JAEIYI'}
+      name: column_panel_42
+      properties: {}
+      type: ColumnPanel
+    - layout_properties: {grid_position: 'WSMHKT,JJZKGY'}
+      name: korkat_label
+      properties: {align: center, bold: false, text: II. Korkategória (Serdülőkor) 17-30 év}
+      type: Label
+    layout_properties: {grid_position: 'GDNIYD,ZCPKZQ'}
     name: korkat_panel
-    properties: {}
+    properties: {col_widths: '{"WMKJBS":10,"JAEIYI":68,"XCMKLD":2}', role: outlined-card, visible: false}
     type: ColumnPanel
   - components:
     - components:
@@ -1067,7 +1062,7 @@ components:
       type: ColumnPanel
     layout_properties: {grid_position: 'DSRRQC,JJVXTE'}
     name: column_panel_3
-    properties: {visible: true}
+    properties: {visible: false}
     type: ColumnPanel
   layout_properties: {slot: default}
   name: content_panel
