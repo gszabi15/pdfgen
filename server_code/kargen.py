@@ -15,6 +15,7 @@ import anvil.server
 #   print("Hello, " + name + "!")
 #   return 42
 #
+@anvil.server.callable
 def get_enabled():
   enabled = []
   for row in app_tables.enabled.search():
@@ -47,8 +48,8 @@ def get_kaszt(faj:None):
             val += [row]
       else:
         val += [row]
- 
   return val
+
 @anvil.server.callable
 def get_kasztnev(faj:None):
   kaszt = get_kaszt(faj)

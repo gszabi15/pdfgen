@@ -15,6 +15,12 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.faj.items = anvil.server.call('get_fajnev')
     
     self.pont = anvil.server.call("pontok","egyszerusitett_kozos",None)
+    self.enabled = anvil.server.call("get_enabled")
+    if "UT" in self.enabled:
+      self.eszleles_column.visible = True
+    else:
+      self.eszleles_column.visible = False
+      self.eszleles = 0
     self.szazalek_change()
   def up10(self,inp):
     if inp > 10:
