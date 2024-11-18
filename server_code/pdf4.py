@@ -12,42 +12,16 @@ def retgenpdf(data,name):
       instance = genpdf(data)
       return instance(name)
 class genpdf:
-    def __init__(self, data):
+    def __init__(self, data:dict):
         self.kepz = 0
         print(dir(anvil.media))
-        url1 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap1.jpg").get_bytes())
+        self.url1 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap1.jpg").get_bytes())
         #asd = anvil.media.open("karakterlap1.jpg")
-        url2 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap2.jpg").get_bytes())
-        pdf_bytes = BytesIO()
-        org_img = Image.open(url1)
-        org_pixelMap = org_img.load()
-        enc_img = Image.new( org_img.mode, org_img.size)
-        enc_pixelsMap = enc_img.load()
-        msg=str(data.copy())
-        msg_index=0
-        msg_len=len(msg)
-        for row in range(org_img.size[0]):
-            for col in range(org_img.size[1]):
-                list=org_pixelMap[row,col] 
-                r=list[0] 	# R value
-                g=list[1]	# G value
-                b=list[2]	# B value
-                if row==0 and col==0:		# 1st pixel is used to store the lenght of message
-                  ascii=msg_len
-                  enc_pixelsMap[row,col] = (ascii,g,b)
-                elif msg_index<=msg_len:	# Hiding our message inside the R values of the pixels
-                  c=msg[msg_index-1]
-                  ascii=ord(c)
-                  enc_pixelsMap[row,col] = (ascii,g,b)
-                else:				# Assigning the pixel values of old image to new image
-                  enc_pixelsMap[row,col] = (r,g,b)
-                  msg_index+=1
-        org_img.close()      
-        enc_img.save(pdf_bytes, format='JPEG') 
-        enc_img.close()
-        pdf_bytes.seek(0)
-        self.lap = [Image.open(pdf_bytes), Image.open(url2)]
+        self.url2 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap2.jpg").get_bytes())
+        
+        self.lap = [Image.open(self.encrypt(data)), Image.open(self.url2)]
         self.editlap = []
+        print(data)
         for x in list(data.keys()):
                 elap = None
                 self.editlap += [self.lap[0].copy()]
@@ -88,6 +62,35 @@ class genpdf:
                     if len(data[x]["fegyver"]) >= 5:
                         self.fegyver(elap, 5, data[x]['fegyver'][4])
                 self.zsakmany(elap, data[x]['zsakmany'])
+    def encrypt(self,data):
+        img = BytesIO()
+        org_img = Image.open(self.url1)
+        org_pixelMap = org_img.load()
+        enc_img = Image.new( org_img.mode, org_img.size)
+        enc_pixelsMap = enc_img.load()
+        msg=json.dumps(data)
+        msg_index=0
+        msg_len=len(msg)
+        for row in range(org_img.size[0]):
+            for col in range(org_img.size[1]):
+                list=org_pixelMap[row,col] 
+                r=list[0] 	# R value
+                g=list[1]	# G value
+                b=list[2]	# B value
+                if row==0 and col==0:		# 1st pixel is used to store the lenght of message
+                  ascii=msg_len
+                  enc_pixelsMap[row,col] = (ascii,g,b)
+                elif msg_index<=msg_len:	# Hiding our message inside the R values of the pixels
+                  c=msg[msg_index-1]
+                  ascii=ord(c)
+                  enc_pixelsMap[row,col] = (ascii,g,b)
+                else:				# Assigning the pixel values of old image to new image
+                  enc_pixelsMap[row,col] = (r,g,b)
+                msg_index+=1
+        org_img.close()      
+        enc_img.save(img, format='JPEG') 
+        img.seek(0)
+        return img
     def __call__(self, filename):
       pdf_bytes = BytesIO()
       self.editlap[0].save(pdf_bytes,  format="PDF", save_all=True, append_images=self.editlap[1:],quality=100, subsampling=0)
