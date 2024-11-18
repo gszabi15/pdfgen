@@ -43,15 +43,15 @@ def get_kaszt(faj:None):
     if row['Forras'] in get_enabled():
       if faj != None:
         for row2 in app_tables.faj_kaszt.search():
-          if row2['Faj'] == faj and row2["I/N"]:
-            pass
+          if row2['Faj'] == faj and row2["I/N"] and (row['Nev'] == row2['Kaszt'] or row2['Kaszt'] == "*"):
+            val += [row]
       else:
         val += [row]
  
   return val
 @anvil.server.callable
-def get_kasztnev():
-  kaszt = get_kaszt()
+def get_kasztnev(faj:None):
+  kaszt = get_kaszt(faj)
   kasztnev = []
   for i in kaszt:
     kasztnev += [i['Nev']]

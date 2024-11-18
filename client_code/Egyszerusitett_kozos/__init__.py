@@ -13,7 +13,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
     self.faj.items = anvil.server.call('get_fajnev')
-    #self.kasztok = anvil.server.call('get_kasztnev')
+    
     self.pont = anvil.server.call("pontok","egyszerusitett_kozos",None)
     self.szazalek_change()
   def up10(self,inp):
@@ -55,7 +55,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.panel1_visable()
     if self.faj.selected_value is not None:
       self.kaszt.enabled = True
-      self.kasztok
+      self.kaszt.items = anvil.server.call('get_kasztnev', self.faj.selected_value)
     else:
       self.kaszt.enabled = False
       self.kaszt.selected_value = None
