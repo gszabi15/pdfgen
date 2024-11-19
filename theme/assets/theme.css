@@ -8,7 +8,7 @@
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
-
+.anvil-role-canvas-crosshair: { cursor: crosshair; } 
 /* Mobil nézethez átalakítás kártya stílusra */
 @media (max-width: 768px) {
     .datagrid-card-view {

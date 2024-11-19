@@ -165,59 +165,550 @@ components:
     type: ColumnPanel
   - components:
     - layout_properties: {grid_position: 'VHZUEW,WMDHWZ'}
-      name: label_36
+      name: elony_label
       properties: {align: center, text: 'Előnyök: 0'}
       type: Label
     - components:
-      - layout_properties: {grid_position: 'IKZODY,AWFVXO'}
-        name: label_43
-        properties: {}
-        type: Label
       - components:
-        - layout_properties: {grid_position: 'NCFRTK,CERKQE'}
-          name: outlined_button_4_copy
-          properties: {role: outlined-button, text: '-'}
-          type: Button
-        - layout_properties: {grid_position: 'NCFRTK,BSVBUF'}
-          name: outlined_9_copy
-          properties: {role: outlined}
-          type: TextBox
-        - layout_properties: {grid_position: 'NCFRTK,TFKLZK'}
-          name: outlined_button_5_copy
-          properties: {role: outlined-button, text: +}
-          type: Button
-        - layout_properties: {grid_position: 'NCFRTK,QNEQLU'}
-          name: spacer_6
-          properties: {height: 32}
-          type: Spacer
-        layout_properties: {grid_position: 'IKZODY,YZLTAH'}
-        name: column_panel_33
-        properties: {col_widths: '{"CERKQE":10,"BSVBUF":10,"TFKLZK":10,"QNEQLU":45}'}
+        - data_bindings: []
+          layout_properties: {full_width_row: false, grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_3
+          properties:
+            bold: false
+            icon: fa:info
+            italic: false
+            role: [input-prompt]
+            text: Profi
+            tooltip: Egyszeri 75 arany a karakteralkotó mérleg induló tőkéhez pluszba
+          type: Label
+        - components:
+          - event_bindings: {click: elony_profi_del_click}
+            layout_properties: {}
+            name: elony_profi_del
+            properties: {enabled: false, role: outlined-button, text: '-'}
+            type: Button
+          - event_bindings: {change: elony_profi_change}
+            layout_properties: {width: 71}
+            name: elony_profi
+            properties: {align: center, enabled: false, role: outlined, text: '0', type: text}
+            type: TextBox
+          - event_bindings: {click: elony_profi_add_click}
+            layout_properties: {}
+            name: elony_profi_add
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_3
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'MRCBJJ,JFTLHK'}
+        name: column_panel_24_copy_3
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
         type: ColumnPanel
       - components:
-        - layout_properties: {}
-          name: outlined_button_4
-          properties: {role: outlined-button, text: '-'}
-          type: Button
-        - layout_properties: {width: 71}
-          name: outlined_9
-          properties: {role: outlined}
-          type: TextBox
-        - layout_properties: {}
-          name: outlined_button_5
-          properties: {role: outlined-button, text: +}
-          type: Button
-        layout_properties: {grid_position: 'NVVTZR,CMARSW'}
-        name: flow_panel_1
-        properties: {}
-        type: FlowPanel
-      layout_properties: {grid_position: 'GFFPRQ,RIIHID'}
-      name: column_panel_24
-      properties: {col_widths: '{"AWFVXO":10,"YZLTAH":50}'}
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43
+          properties: {icon: 'fa:info', role: input-prompt, text: Képzés, tooltip: Egyszeri 10 Kp a vásároltakon felül.}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: elony_kepzes_del
+            properties: {enabled: false, role: outlined-button, text: '-'}
+            type: Button
+          - layout_properties: {width: 71}
+            name: elony_kepzes
+            properties: {align: center, enabled: false, role: outlined, text: '0'}
+            type: TextBox
+          - layout_properties: {}
+            name: elony_kepzes_add
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'BFOUCE,LWTOLF'}
+        name: column_panel_24
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy
+          properties: {icon: 'fa:info', text: Edzett, tooltip: Egyszeri +3 szabadon elosztható képességpont a faji és életkor kereteken belül..}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: elony_edzett_del
+            properties: {enabled: false, role: outlined-button, text: '-'}
+            type: Button
+          - layout_properties: {width: 71}
+            name: elony_edzett
+            properties: {align: center, enabled: false, role: outlined, text: '0'}
+            type: TextBox
+          - layout_properties: {}
+            name: elony_edzett_add
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'DGDEVS,AZUSUB'}
+        name: column_panel_24_copy
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_9
+          properties: {icon: 'fa:info', role: input-prompt, text: Idős, tooltip: 'A karakter eggyel magasabb korkaterógiába kerül, elszenvedi az ETK szerinti élet- kor módosítókat képességeire, ugyanakkor tapasztalatát tükrözendő kap plusz egy szintnyi KFP-t. (Életvízzel legfeljebb két korkategóriát lehet regenerálni.)'}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: elony_idos_del
+            properties: {role: outlined-button, text: '-'}
+            type: Button
+          - layout_properties: {width: 71}
+            name: elony_idos
+            properties: {align: center, role: outlined, text: '0'}
+            type: TextBox
+          - layout_properties: {}
+            name: elony_idos_add
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_5
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'UTJXLV,TADJEP'}
+        name: column_panel_24_copy_9
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}', visible: false}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_2
+          properties: {icon: 'fa:info', role: input-prompt, text: Híres, tooltip: 'A karakter híre messzire elér, országon belül vagy közösségen belül (pl.: gladiáto- rok, nép hőse, alvilági), tárt karokkal fogadják, olcsóbb a lakhatása, könnyebben szerez információkat stb. Dobás a találkozáskor: célszám 50 + Szépség, ha alá dob, akkor pozitív, fölé nega- tív - hiszen mindenkinek lehetnek irigyei.'}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_5
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - layout_properties: {}
+            name: elony_hires_add
+            properties: {enabled: true, role: outlined-button, text: +, visible: true}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_2
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'GFZOFX,ZWWKXH'}
+        name: column_panel_24_copy_2
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_4
+          properties: {icon: '', role: input-prompt, text: Harci stílus}
+          type: Label
+        - components:
+          - data_bindings: []
+            layout_properties: {grid_position: 'BDANJO,CYRRJV'}
+            name: label_44
+            properties: {icon: 'fa:info', role: input-prompt, text: Kétkezes fegyveres, tooltip: '+1 célpont felvételkor, utána minden 5. TSz után +1 cél- pont. A célpontoknak elérhető távolságban kell lenniük, KM megítélése szerint és ugyanazzal az egy támadó dobással kell összehasonlítani a VÉ-jüket.'}
+            type: Label
+          - components:
+            - layout_properties: {}
+              name: button_1
+              properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+              type: Button
+            - layout_properties: {}
+              name: outlined_button_5_copy_4
+              properties: {role: outlined-button, text: +}
+              type: Button
+            layout_properties: {grid_position: 'BDANJO,XSCHWJ'}
+            name: flow_panel_1_copy_4
+            properties: {}
+            type: FlowPanel
+          layout_properties: {grid_position: 'POOONS,IKRGZL WXAKXQ,OBPFWJ'}
+          name: column_panel_45
+          properties: {col_widths: '{"CYRRJV":20,"XSCHWJ":40}'}
+          type: ColumnPanel
+        - components:
+          - layout_properties: {grid_position: 'AXYZDU,HBBDPG'}
+            name: label_44_copy
+            properties: {icon: 'fa:info', role: input-prompt, text: Pajzsos, tooltip: '+10 TÉ-t kap pajzs használatakor, valamint körönkét egyszer a pajzs védőjével bevédhet egy személyt egy támadás ellen. Csak pajzzsal működik, al- karvédővel nem.'}
+            type: Label
+          - components:
+            - layout_properties: {}
+              name: button_1_copy
+              properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+              type: Button
+            - layout_properties: {}
+              name: outlined_button_5_copy_4_copy
+              properties: {role: outlined-button, text: +}
+              type: Button
+            layout_properties: {grid_position: 'AXYZDU,WGFHVY'}
+            name: flow_panel_1_copy_4_copy
+            properties: {}
+            type: FlowPanel
+          layout_properties: {grid_position: 'POOONS,IKRGZL AYXUWL,MNESIQ'}
+          name: column_panel_44
+          properties: {col_widths: '{"HBBDPG":20,"WGFHVY":40}'}
+          type: ColumnPanel
+        - components:
+          - layout_properties: {grid_position: 'RETSZI,XFYXTB'}
+            name: label_44_copy_2
+            properties: {icon: 'fa:info', role: input-prompt, text: Vértes, tooltip: pikkelyvért és a fölött +1 SFÉ és túlütésküszöb +10.}
+            type: Label
+          - components:
+            - layout_properties: {}
+              name: button_1_copy_2
+              properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+              type: Button
+            - layout_properties: {}
+              name: outlined_button_5_copy_4_copy_2
+              properties: {enabled: false, role: outlined-button, text: +}
+              type: Button
+            layout_properties: {grid_position: 'RETSZI,HKAVEH'}
+            name: flow_panel_1_copy_4_copy_2
+            properties: {}
+            type: FlowPanel
+          layout_properties: {grid_position: 'POOONS,IKRGZL NVAXYP,WUOHCE'}
+          name: column_panel_46
+          properties: {col_widths: '{"XFYXTB":20,"HKAVEH":40}'}
+          type: ColumnPanel
+        - components:
+          - layout_properties: {grid_position: 'ETQNNA,ZAOXHF'}
+            name: label_44_copy_3
+            properties: {icon: 'fa:info', role: input-prompt, text: Íjász, tooltip: 'kapáslövésekben jártas a karakter, minden bevállalt -20 CÉ-ért cserébe +1 lövést adhat le a körben.'}
+            type: Label
+          layout_properties: {grid_position: 'POOONS,IKRGZL YSWUII,TCZOTC'}
+          name: column_panel_47
+          properties: {}
+          type: ColumnPanel
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_3
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - layout_properties: {}
+            name: outlined_button_5_copy_4_copy_3
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL YSWUII,JFOYOM'}
+          name: flow_panel_1_copy_4_copy_3
+          properties: {}
+          type: FlowPanel
+        - components:
+          - layout_properties: {grid_position: 'DRBUJC,UOGDJA'}
+            name: label_44_copy_4
+            properties: {icon: 'fa:info', role: input-prompt, text: Pusztakezes, tooltip: 'A Mf fegyverhasználat bónuszai fegyvertelenül (bárki felveheti, akinek Ökölharc Mf-je van, vagy harcművész).'}
+            type: Label
+          - components:
+            - layout_properties: {}
+              name: button_1_copy_4
+              properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+              type: Button
+            - layout_properties: {}
+              name: outlined_button_5_copy_4_copy_4
+              properties: {enabled: false, role: outlined-button, text: +}
+              type: Button
+            layout_properties: {grid_position: 'DRBUJC,XXZNIC'}
+            name: flow_panel_1_copy_4_copy_4
+            properties: {}
+            type: FlowPanel
+          layout_properties: {grid_position: 'POOONS,IKRGZL GOZRTL,YJZXUW'}
+          name: column_panel_48
+          properties: {col_widths: '{"UOGDJA":20,"XXZNIC":40}'}
+          type: ColumnPanel
+        layout_properties: {grid_position: 'RAZBUY,ZBKXII'}
+        name: column_panel_24_copy_4
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40,"TCZOTC":20,"JFOYOM":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_5
+          properties: {icon: 'fa:info', role: input-prompt, text: Különleges képzés, tooltip: 'A karakter választhat egyszeri felvételre egyet az alábbiakból:'}
+          type: Label
+        - components:
+          - components:
+            - name: outlined_button_6
+              properties: {role: outlined-button, text: Alternatívák harcművészetekre}
+              type: Button
+            - name: button_1_copy_4_copy_8
+              properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: ''}
+              type: Button
+            layout_properties: {grid_position: 'UGAPTE,DKSRLH'}
+            name: flow_panel_2
+            properties: {align: center}
+            type: FlowPanel
+          - components:
+            - name: outlined_button_7
+              properties: {role: outlined-button, text: Egyéb különleges képzések}
+              type: Button
+            - name: button_1_copy_4_copy_11
+              properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: ''}
+              type: Button
+            layout_properties: {grid_position: 'IXLMMY,BIIMXH'}
+            name: flow_panel_3
+            properties: {align: center}
+            type: FlowPanel
+          layout_properties: {grid_position: 'POOONS,IKRGZL SMTMSZ,ALNCRY'}
+          name: column_panel_49
+          properties: {col_widths: '{}'}
+          type: ColumnPanel
+        layout_properties: {grid_position: 'WHSIMV,VCPDWE'}
+        name: column_panel_24_copy_5
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}', visible: false}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_6
+          properties: {icon: 'fa:info', role: input-prompt, text: Kívül tágasabb, tooltip: 'Szándékos leütés esetén a megfelelő céleszközzel az ETK 83.o.-án található leütés szabály táblázatán további 10 pontot kap a karakter, mintha sebzés lenne, de nem okoz +Sp veszteséget.'}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: outlined_button_4_copy_6
+            properties: {enabled: false, role: outlined-button, text: '-'}
+            type: Button
+          - layout_properties: {width: 71}
+            name: outlined_9_copy_6
+            properties: {align: center, enabled: false, role: outlined, text: '0'}
+            type: TextBox
+          - layout_properties: {}
+            name: outlined_button_5_copy_6
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_6
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'BWOMAC,IOBINR'}
+        name: column_panel_24_copy_6
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_7
+          properties: {icon: 'fa:info', role: input-prompt, text: Mégegellenállás, tooltip: 'Egy a karakter által választott méreghez elkezdte hozzászoktatni szervezetét. Hosszú hónapokon, éveken át adagolta magának apró dózisokban, hogy ellenál- lóvá váljon. Amennyiben fel van tüntetve a méregnél a hatási mechanizmus típu- sa (I-től IV-ig, ETK 381.o.), úgy mindenképpen eggyel enyhébb hatást szenved el a karakter, valamint eleve kap +4-et az ellenállásdobásra. Al-Bahra-kahremre fel- venni tilos és az enyhébb hatás miatt értelmetlen is.'}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_4_copy_10
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - name: outlined_button_5_copy_4_copy_4_copy_10
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,ONXHXJ'}
+          name: flow_panel_1_copy_7
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'YLXUJG,PLIZDD'}
+        name: column_panel_24_copy_7
+        properties: {col_widths: '{"DTQMZU":15,"ONXHXJ":31}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_8
+          properties: {icon: 'fa:info', role: input-prompt, text: Mágiaellenállás, tooltip: 'Asztrális és mentális támadások esetén a +k10 dobás nem a támadást erősíti, hanem a karakter védelmét emeli.'}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_4_copy_9
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - name: outlined_button_5_copy_4_copy_4_copy_9
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_8
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'TBRUXT,XZHEVJ'}
+        name: column_panel_24_copy_8
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_8_copy
+          properties: {icon: 'fa:info', role: input-prompt, text: Elűzés, tooltip: 'A karakter hite, túlvilági tudása néha oly páratlan, hogy puszta jelenlétükkel fe- nyegetést jelentenek az élőholtakra. Napi 1 × Akaraterő számú körig, az Akarat- erő tíz feletti részének fele nekrográfiai osztályba tartozó lényre van hatással (16- os akaraterő esetén ez azt jelenti, hogy 1 db 3-as vagy 3 db 1-es osztályba tartozó lényre). A lény(ek) harc félelem hatása alatt küzdenek, ezen felül sebződik(nek) 1k3 ÉP-t minden körben.'}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_4_copy_9_copy
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - name: outlined_button_5_copy_4_copy_4_copy_9_copy
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_8_copy
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'KOKKDY,PEYAKC'}
+        name: column_panel_24_copy_8_copy
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      layout_properties: {grid_position: 'IHLFIP,GRCAUH'}
+      name: column_panel_43
+      properties: {}
+      type: ColumnPanel
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_10
+          properties: {icon: 'fa:info', role: input-prompt, text: Szerpap, tooltip: 'A karakter elkötelezett és bizonyos mértékig beavatott híve, diakónusa egy istennek. Rendelkezik Szent Szimbólummal, saját istenére Vallásismeret Af-al és a papokhoz hasonlatos imával naponta egyszer képes feltölteni elméjét ma- ximum 18 manaponttal, amiből csak a Papmágia, Általános Varázslatok részből (ETK 154.o.) a Kis Arkánum Litániáit, illetve az Egyedi varázslatok közül az is- tenspecifikus varázslatok Kis Arkánum Litániáit és Rituáléit képes alkalmazni, saját tapasztalati szintje szerint. A Szférikus Varázslatokat fejezetben leírtakat nem. Adron követése ilyen módon nem választható. Ő nem foglalkozik mágikus érte- lemben vett amatőrökkel. A Mp-okat (max. 18) KFP-ből kell megvenni, illetve, ha a karakter egyéb forrás- ból rendelkezik már Mp-al, akkor a felhasználásra az MTK 46.oldalán, az Több- kasztúság fejezet, Mágiahasználat bekezdése vonatkozik.'}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_4_copy_7
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - name: outlined_button_5_copy_4_copy_4_copy_7
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_10
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'TQZASU,RDPBIU'}
+        name: column_panel_24_copy_10
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_11
+          properties: {bold: false, icon: 'fa:info', italic: false, role: input-prompt, text: Sugallat, tooltip: Egy kalandmodul végigvitele során a JK kérheti egy saját vagy egy KM általi dobás újradobását.}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_4_copy_6
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - name: outlined_button_5_copy_4_copy_4_copy_6
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_11
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'ZFDYBY,SEHCJS'}
+        name: column_panel_24_copy_11
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_12
+          properties: {icon: 'fa:info', role: input-prompt, text: A kobra fürgesége, tooltip: 'Ha számít a lövésre, minden pontért, amivel a gyorsasága meghaladja a 16-ot, +10 VÉ-t adhat a célzással szemben állított védőértékéhez.'}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_4_copy_5
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - name: outlined_button_5_copy_4_copy_4_copy_5
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_12
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'OWNAWP,KDPVMS'}
+        name: column_panel_24_copy_12
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_13
+          properties: {icon: 'fa:info', role: input-prompt, text: Skorpiókirály, tooltip: 'A távolsági VÉ-hez a pajzs teljes VÉ-je számolható és a használt fegyver harcér- téke is védelmet adhat lövéssel szemben, ha számít rá a karakter.'}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_4_copy_4
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - name: outlined_button_5_copy_4_copy_4_copy_4
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_13
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'ZWGNNJ,IUEYWJ'}
+        name: column_panel_24_copy_13
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_14
+          properties: {icon: 'fa:info', role: input-prompt, text: Erős Lélek, tooltip: A karakter EGO értéke ereklyékkel szemben +TSz x 2-vel magasabbnak számít.}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_4_copy_3
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - name: outlined_button_5_copy_4_copy_4_copy_3
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_14
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'WOKDYP,RAVCVH'}
+        name: column_panel_24_copy_14
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_15
+          properties: {icon: 'fa:info', role: input-prompt, text: Macskatalp, tooltip: 'Zuhanás esetén nem kettő, hanem három lábanként szenvedi el a zuhanásból adódó k6 Sp sebzést.'}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_4_copy_2
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - name: outlined_button_5_copy_4_copy_4_copy_2
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_15
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'NUWURE,SIHIMT'}
+        name: column_panel_24_copy_15
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: label_43_copy_16
+          properties: {icon: 'fa:info', role: input-prompt, text: Mágiaérzékenység, tooltip: A karakter a varázslókhoz hasonlóan koncentrációval képes lesz megérezni a leplezetlen mágia jelenlétét 20 láb sugarú körben. Pontos információval azon- ban annak hollétéről nem rendelkezik.}
+          type: Label
+        - components:
+          - layout_properties: {}
+            name: button_1_copy_4_copy
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            type: Button
+          - name: outlined_button_5_copy_4_copy_4_copy
+            properties: {role: outlined-button, text: +}
+            type: Button
+          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          name: flow_panel_1_copy_16
+          properties: {}
+          type: FlowPanel
+        layout_properties: {grid_position: 'BWKTYF,HUXBTO'}
+        name: column_panel_24_copy_16
+        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        type: ColumnPanel
+      layout_properties: {grid_position: 'DMYFUY,AZBTNG'}
+      name: column_panel_33
+      properties: {}
       type: ColumnPanel
     layout_properties: {grid_position: 'PMYSTG,XPQBYW'}
     name: column_panel_23
-    properties: {col_widths: '{"RIIHID":15}', role: outlined-card}
+    properties: {col_widths: '{"VEXBJG":40}', role: outlined-card, visible: true}
     type: ColumnPanel
   - components:
     - components:

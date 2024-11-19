@@ -330,3 +330,4 @@ roles:
 - components: [TextBox, TextArea, DatePicker, DropDown]
   name: outlined-error
 - {components: null, name: max-width}
+- {components: null, display_in_toolbox: false, name: canvas-crosshair}

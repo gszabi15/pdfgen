@@ -22,6 +22,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
       self.eszleles_column.visible = False
       self.eszleles = 0
     self.szazalek_change()
+    self.elonynum = anvil.server.call("egyszerusitett_kozos","get_elony",{"szint":self.szint.text})
   def up10(self,inp):
     if inp > 10:
       return inp-10
@@ -90,6 +91,31 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
 
   def szint_change(self, **event_args):
     if type(self.szint.text) is int:
+      self.elonynum = anvil.server.call("egyszerusitett_kozos","get_elony",{"szint":int(self.szint.text)})
+      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
       self.penz.content = "kezdő arany: " + str(anvil.server.call('penz',"egyszerusitett_kozos",{"szint":int(self.szint.text)}))+"AP"
+
+  def elony_profi_add_click(self, **event_args):
+    if self.elonynum != 0:
+      self.elonynum -= 1
+      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
+      self.elony_profi.text = int(self.elony_profi.text) + 1
+      self.elony_profi_del.enabled = True
+      if self.elonynum == 0:
+        self.elony_profi_add.enabled = False
+  def elony_profi_del_click(self, **event_args):
+    if int(self.elony_profi.text) > 0:
+      self.elonynum += 1
+      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
+      self.elony_profi.text = int(self.elony_profi.text) - 1
+      if self.elony_profi.text == "0":
+        self.elony_profi_del.enabled = False
+    if self.elonynum != 0:
+      self.elony_profi_add.enabled = True
+ 
+  def elony_profi_change(self, **event_args):
+    self.pontok_change()
+
+      
 
 
