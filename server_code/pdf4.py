@@ -93,35 +93,6 @@ class genpdf:
       img.save(img_save, format="JPEG")
       img_save.seek(0)
       return img_save
-    def encrypt(self,data):
-        img = BytesIO()
-        org_img = Image.open(self.url1)
-        org_pixelMap = org_img.load()
-        enc_img = Image.new( org_img.mode, org_img.size)
-        enc_pixelsMap = enc_img.load()
-        msg=json.dumps(data)
-        msg_index=0
-        msg_len=len(msg)
-        for row in range(org_img.size[0]):
-            for col in range(org_img.size[1]):
-                list=org_pixelMap[row,col] 
-                r=list[0] 	# R value
-                g=list[1]	# G value
-                b=list[2]	# B value
-                if row==0 and col==0:		# 1st pixel is used to store the lenght of message
-                  ascii=msg_len
-                  enc_pixelsMap[row,col] = (ascii,g,b)
-                elif msg_index<=msg_len:	# Hiding our message inside the R values of the pixels
-                  c=msg[msg_index-1]
-                  ascii=ord(c)
-                  enc_pixelsMap[row,col] = (ascii,g,b)
-                else:				# Assigning the pixel values of old image to new image
-                  enc_pixelsMap[row,col] = (r,g,b)
-                msg_index+=1
-        org_img.close()      
-        enc_img.save(img, format='JPEG') 
-        img.seek(0)
-        return img
     def __call__(self, filename):
       pdf_bytes = BytesIO()
       self.editlap[0].save(pdf_bytes,  format="PDF", save_all=True, append_images=self.editlap[1:],quality=100, subsampling=0)
