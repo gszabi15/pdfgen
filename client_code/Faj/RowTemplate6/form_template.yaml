@@ -1,0 +1,11 @@
+components:
+- layout_properties: {column: JKSDUP}
+  name: elony
+  properties: {}
+  type: TextBox
+- layout_properties: {column: VJQQOR}
+  name: hatrany
+  properties: {}
+  type: TextBox
+container: {type: DataRowPanel}
+is_package: true

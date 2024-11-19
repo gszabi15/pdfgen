@@ -1,0 +1,22 @@
+components:
+- layout_properties: {column: JKSDUP}
+  name: varazstargy
+  properties: {role: outlined}
+  type: TextBox
+- layout_properties: {column: VJQQOR}
+  name: hatas
+  properties: {role: outlined}
+  type: TextBox
+- layout_properties: {column: OJLQEN}
+  name: mp
+  properties: {role: outlined, type: text}
+  type: TextBox
+- layout_properties: {column: CLVIEP}
+  name: db
+  properties: {role: outlined, type: text}
+  type: TextBox
+container:
+  data_bindings: []
+  properties: {auto_display_data: false, spacing_above: none, spacing_below: none, visible: true}
+  type: DataRowPanel
+is_package: true

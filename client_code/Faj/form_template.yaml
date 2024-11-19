@@ -1,0 +1,74 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'XXITBI,WQQOSD'}
+    name: faj
+    properties: {align: center, text: Faj}
+    type: Label
+  - components:
+    - name: repeating_panel_1
+      properties: {item_template: Faj.RowTemplate3}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'EGDSOA,JGZVOS'}
+    name: data_grid_1
+    properties:
+      columns:
+      - {data_key: column_1, id: JKSDUP, title: ''}
+      - {data_key: column_2, id: VJQQOR, title: Tól}
+      - {data_key: column_3, id: OJLQEN, title: Ig}
+      role: tonal-data-grid
+    type: DataGrid
+  - components:
+    - layout_properties: {}
+      name: repeating_panel_2
+      properties: {item_template: Faj.kepzettsegek}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'XWHUYD,YKZQBY'}
+    name: data_grid_2
+    properties:
+      columns:
+      - {data_key: column_1, expand: false, id: JKSDUP, title: Szint, width: 74}
+      - {data_key: column_2, expand: false, id: VJQQOR, title: Képzettségek, width: 770}
+      - {data_key: column_3, id: OJLQEN, title: Af  /  Mf}
+      role: tonal-data-grid
+    type: DataGrid
+  - components:
+    - name: repeating_panel_3
+      properties: {item_template: Faj.RowTemplate6}
+      type: RepeatingPanel
+    layout_properties: {full_width_row: false, grid_position: 'OOPRZU,UEXQQS'}
+    name: data_grid_3
+    properties:
+      columns:
+      - {data_key: column_1, id: JKSDUP, title: Előny}
+      - {data_key: column_2, id: VJQQOR, title: Hátrány}
+      role: tonal-data-grid
+    type: DataGrid
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'YVYYAE,OVLSGS'}
+    name: button_1
+    properties: {align: center, text: Karaktergenerátor}
+    type: Button
+  - layout_properties: {grid_position: 'YXXISE,GJSHWS'}
+    name: button_3
+    properties: {text: Közös karaktergenerátor}
+    type: Button
+  - layout_properties: {grid_position: 'GEOTGH,JOILDC'}
+    name: button_2
+    properties: {text: Beállítások}
+    type: Button
+  layout_properties: {slot: left-nav}
+  name: column_panel_46
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

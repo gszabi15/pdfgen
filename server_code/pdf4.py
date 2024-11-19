@@ -1,22 +1,28 @@
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 import anvil.server
 from anvil import BlobMedia
 import anvil.media
 from io import BytesIO
 from PIL import Image, ImageFont, ImageDraw
 import json
+import binascii
 @anvil.server.callable
 def retgenpdf(data,name):
       instance = genpdf(data)
       return instance(name)
 class genpdf:
-    def __init__(self, data):
+    def __init__(self, data:dict):
         self.kepz = 0
         print(dir(anvil.media))
-        url1 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap1.jpg").get_bytes())
+        self.url1 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap1.jpg").get_bytes())
         #asd = anvil.media.open("karakterlap1.jpg")
-        url2 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap2.jpg").get_bytes())
-        self.lap = [Image.open(url1), Image.open(url2)]
+        self.url2 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap2.jpg").get_bytes())
+        
+        self.lap = [Image.open(self.encode_text_in_image(json.dumps(data))).convert("RGB"), Image.open(self.url2)]
         self.editlap = []
+        print(data)
         for x in list(data.keys()):
                 elap = None
                 self.editlap += [self.lap[0].copy()]
@@ -57,6 +63,36 @@ class genpdf:
                     if len(data[x]["fegyver"]) >= 5:
                         self.fegyver(elap, 5, data[x]['fegyver'][4])
                 self.zsakmany(elap, data[x]['zsakmany'])
+    def encode_text_in_image(self, text):
+      img = Image.open(self.url1)
+      if img.mode != 'RGB':
+          img = img.convert('RGB')
+      
+      # Convert text to binary and add a delimiter to indicate the end of text
+      binary_text = ''.join(format(ord(char), '08b') for char in text) + '1111111111111110'
+      binary_iter = iter(binary_text)
+      
+      # Encode text into the image
+      pixels = list(img.getdata())
+      new_pixels = []
+      
+      for pixel in pixels:
+          new_pixel = []
+          for value in pixel:
+              try:
+                  bit = next(binary_iter)
+                  new_value = (value & ~1) | int(bit)  # Modify the LSB
+              except StopIteration:
+                  new_value = value  # No more bits to encode, keep the pixel unchanged
+              new_pixel.append(new_value)
+          new_pixels.append(tuple(new_pixel))
+      
+      # Create a new image with modified pixels
+      img.putdata(new_pixels)
+      img_save = BytesIO()
+      img.save(img_save, format="JPEG")
+      img_save.seek(0)
+      return img_save
     def __call__(self, filename):
       pdf_bytes = BytesIO()
       self.editlap[0].save(pdf_bytes,  format="PDF", save_all=True, append_images=self.editlap[1:],quality=100, subsampling=0)
