@@ -1,0 +1,100 @@
+components:
+- layout_properties: {column: JKSDUP}
+  name: label_1
+  properties:
+    role: input-prompt
+    spacing:
+      margin: [null, null, '9', null]
+      padding: [null, null, '8', null]
+    text: I. Serdülőkor
+  type: Label
+- layout_properties: {column: JKSDUP}
+  name: label_2
+  properties:
+    role: input-prompt
+    spacing:
+      margin: [null, null, '9', null]
+    text: II. jfjúkor
+  type: Label
+- layout_properties: {column: JKSDUP}
+  name: label_3
+  properties:
+    role: input-prompt
+    spacing:
+      margin: [null, null, '9', null]
+    text: III. középkor
+  type: Label
+- layout_properties: {column: JKSDUP}
+  name: label_4
+  properties:
+    role: input-prompt
+    spacing:
+      margin: [null, null, '9', null]
+    text: IV. meglett kor
+  type: Label
+- layout_properties: {column: JKSDUP}
+  name: label_5
+  properties:
+    role: input-prompt
+    spacing:
+      margin: [null, null, '10', null]
+    text: V. időskor
+  type: Label
+- layout_properties: {column: JKSDUP}
+  name: label_6
+  properties:
+    role: input-prompt
+    spacing:
+      margin: [null, null, '9', null]
+    text: VI. aggastyánkor
+  type: Label
+- layout_properties: {column: VJQQOR}
+  name: text_box_1
+  properties: {}
+  type: TextBox
+- layout_properties: {column: VJQQOR}
+  name: text_box_2
+  properties: {}
+  type: TextBox
+- layout_properties: {column: VJQQOR}
+  name: text_box_3
+  properties: {}
+  type: TextBox
+- layout_properties: {column: VJQQOR}
+  name: text_box_4
+  properties: {}
+  type: TextBox
+- layout_properties: {column: VJQQOR}
+  name: text_box_5
+  properties: {}
+  type: TextBox
+- layout_properties: {column: VJQQOR}
+  name: text_box_6
+  properties: {}
+  type: TextBox
+- layout_properties: {column: OJLQEN}
+  name: text_box_7
+  properties: {}
+  type: TextBox
+- layout_properties: {column: OJLQEN}
+  name: text_box_8
+  properties: {}
+  type: TextBox
+- layout_properties: {column: OJLQEN}
+  name: text_box_9
+  properties: {}
+  type: TextBox
+- layout_properties: {column: OJLQEN}
+  name: text_box_10
+  properties: {}
+  type: TextBox
+- layout_properties: {column: OJLQEN}
+  name: text_box_11
+  properties: {}
+  type: TextBox
+- layout_properties: {column: OJLQEN}
+  name: text_box_12
+  properties: {}
+  type: TextBox
+container: {type: DataRowPanel}
+is_package: true
