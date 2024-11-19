@@ -20,7 +20,7 @@ class genpdf:
         #asd = anvil.media.open("karakterlap1.jpg")
         self.url2 = BytesIO(anvil.URLMedia(anvil.server.get_app_origin() + "/_/theme/karakterlap2.jpg").get_bytes())
         
-        self.lap = [Image.open(self.encode_text_in_image(json.dumps(data))), Image.open(self.url2)]
+        self.lap = [Image.open(self.encode_text_in_image(json.dumps(data))).convert("RGB"), Image.open(self.url2)]
         self.editlap = []
         print(data)
         for x in list(data.keys()):
