@@ -107,7 +107,7 @@ db_schema:
     title: szarmazas
 dependencies: []
 name: PDFgen
-native_deps: null
+native_deps: {head_html: ''}
 package_name: PDFgen
 renamed: true
 runtime_options:
