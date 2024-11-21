@@ -2,9 +2,7 @@ unique_ids:
   assets:
     karakterlap1.jpg: '1731349065970652900992396.3047'
     karakterlap2.jpg: '1731349098507372764927890.5483'
-    server/.gitkeep: '1732194927222938387674892.6554'
-    server/local/.gitkeep: '1732194968769136985891466.1497'
-    server/remote/.gitkeep: '1732194963362441142588579.3774'
+    remote_server/.gitkeep: '1732194927222938387674892.6554'
     standard-page.html: I7Y47UDXZFFLB47ZLXR2YLUQVV6FYMQ2
     theme.css: JIGC7TL7KSQBFS6LJ6JAIBR6FL4BJ5RH
   forms:
