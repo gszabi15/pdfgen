@@ -8,13 +8,12 @@ from anvil.tables import app_tables
 class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
 
   def __init__(self, **properties):
-    
+    self.karakteralkotas = "egyszerusitett_kozos"
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
     self.faj.items = anvil.server.call('get_fajnev')
-    
-    self.pont = anvil.server.call("pontok","egyszerusitett_kozos",None) #anvil.server.call("pontok","egyszerusitett_kozos",None)
+    self.pont = anvil.server.call("pontok",self.karakteralkotas,None) #anvil.server.call("pontok","egyszerusitett_kozos",None)
     self.enabled = anvil.server.call("get_enabled")
     if "UT" in self.enabled:
       self.eszleles_column.visible = True
@@ -88,19 +87,21 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
           return int(y)
   def kaszt_change(self, **event_args):
    self.panel1_visable()
-
+  def uipenz(self):
+    self.penz.content = "kezdő arany: " + str(anvil.server.call('penz',self.karakteralkotas,{"szint":int(self.szint.text)}))+"AP"
   def szint_change(self, **event_args):
     if type(self.szint.text) is int:
-      self.elonynum = anvil.server.call("egyszerusitett_kozos","get_elony",{"szint":int(self.szint.text)})
+      self.elonynum = anvil.server.call("egyszerusitett_kozos","get_elony",{"szint":int(self.szint.text),"profi":int(self.elony_profi.text)})
       self.elony_label.text = "Előnyök: "+ str(self.elonynum)
-      self.penz.content = "kezdő arany: " + str(anvil.server.call('penz',"egyszerusitett_kozos",{"szint":int(self.szint.text)}))+"AP"
-
+      self.uipenz()
+  
   def elony_profi_add_click(self, **event_args):
     if self.elonynum != 0:
       self.elonynum -= 1
       self.elony_label.text = "Előnyök: "+ str(self.elonynum)
       self.elony_profi.text = int(self.elony_profi.text) + 1
       self.elony_profi_del.enabled = True
+      anvil.server.call("egyszerusitett_kozos","elony",{"profi":int(self.elony_profi.text)})
       if self.elonynum == 0:
         self.elony_profi_add.enabled = False
   def elony_profi_del_click(self, **event_args):
@@ -114,7 +115,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
       self.elony_profi_add.enabled = True
  
   def elony_profi_change(self, **event_args):
-    self.pontok_change()
+    self.self.uipenz()
 
       
 

@@ -121,6 +121,6 @@ services:
 - client_config: {enable_v2: true}
   server_config: {}
   source: /runtime/services/tables.yml
-startup: {module: PDFgen, type: form}
+startup: {module: Egyszerusitett_kozos, type: form}
 startup_form: null
 uplink_visible: true
