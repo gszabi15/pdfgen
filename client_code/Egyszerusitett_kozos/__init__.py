@@ -5,21 +5,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-import anvil.http
-import json
-
-
-
 class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
-  def call_server_function(self, func_name, params):
-    url = "https://szabyte.hu/api"
-    response = anvil.http.request(
-          url,
-          method="POST",
-          data={"function": func_name, "params": params},
-          json=True
-    )
-    return response
+
   def __init__(self, **properties):
     
     # Set Form properties and Data Bindings.
@@ -27,7 +14,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     # Any code you write here will run before the form opens.
     self.faj.items = anvil.server.call('get_fajnev')
     
-    self.pont = call_server_function("pontok",("egyszerusitett_kozos",None)) #anvil.server.call("pontok","egyszerusitett_kozos",None)
+    self.pont = anvil.server.call("pontok","egyszerusitett_kozos",None) #anvil.server.call("pontok","egyszerusitett_kozos",None)
     self.enabled = anvil.server.call("get_enabled")
     if "UT" in self.enabled:
       self.eszleles_column.visible = True
