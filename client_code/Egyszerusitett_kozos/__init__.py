@@ -13,7 +13,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
     self.faj.items = anvil.server.call('get_fajnev')
-    self.pont = anvil.server.call("pontok",self.karakteralkotas,None) #anvil.server.call("pontok","egyszerusitett_kozos",None)
+    self.pont = anvil.server.call("pontok",self.karakteralkotas,{"edzett":int(self.elony_edzett.text)}) #anvil.server.call("pontok","egyszerusitett_kozos",None)
     self.enabled = anvil.server.call("get_enabled")
     if "UT" in self.enabled:
       self.eszleles_column.visible = True
@@ -22,11 +22,21 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
       self.eszleles = 0
     self.szazalek_change()
     self.elonynum = anvil.server.call("egyszerusitett_kozos","get_elony",{"szint":self.szint.text})
+    self.kp_change()
   def up10(self,inp):
     if inp > 10:
       return inp-10
     else:
       return 0
+  def kp_change(self):
+    self.tudomanyos_kp_label.text = "(Csak) Tudományos KP: "+str(self.up10(self.intelligencia.text))
+    self.nem_tudomanyos_kp_label.text = "(Csak) Nem tudományos KP: "+str(self.up10(self.ugyesseg.text))
+    self.tkp = self.up10(self.intelligencia.text)
+    self.ntkp = self.up10(self.ugyesseg.text)
+    """{
+  "alap": 10,
+  "szintenkent": 4
+}"""
   def szazalek_change(self,**event_args):
     alap = self.ugyesseg.text
     val = {"titkosajto_kereses":self.titkosajto_kereses,"ugras":self.ugras,"eses":self.eses,"maszas":self.maszas,"zsebmetszes":self.zsebmetszes,"zarnyitas":self.zarnyitas,"rejtozes":self.rejtozes,"koteltanc":self.koteltanc,"lopozas":self.lopozas,"csapdafelfedezes":self.csapdafelfedezes}
@@ -34,24 +44,22 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
       val[i].text = self.up10(alap) 
   def pontok_change(self, **event_args):
     self.szazalek_change()
+    self.kp_change()
     if "pont" in self.pont:
       rempont = self.pont["pont"]
       text = ""
-      val = {"ero":self.ero,"gyorsasag":self.gyorsasag,"ugyesseg":self.ugyesseg,"allokepesseg":self.allokepesseg,"egeszseg":self.egeszseg,"szepseg":self.szepseg,"intelligencia":self.intelligencia,"akaratero":self.akaratero,"asztral":self.asztral,"eszleles":self.eszleles}
-      if "szabad" in self.pont:
-        for i in val:
-          pass
-        if self.pont["szabad"] in val:
-          if val[self.pont["szabad"]].text is not None:
-            text = "+ "+self.pont["szabad"] + "("+str(val[self.pont["szabad"]].text)+")"
-          for i in list(val.keys()):
-            if i != self.pont["szabad"]:
-              if type(val[i].text) is int:
-                rempont -= val[i].text
+      val = {"ero":self.ero,"gyorsasag":self.gyorsasag,"ugyesseg":self.ugyesseg,"allokepesseg":self.allokepesseg,"egeszseg":self.egeszseg,"szépség":self.szepseg,"intelligencia":self.intelligencia,"akaratero":self.akaratero,"asztral":self.asztral,"eszleles":self.eszleles}
+      if "szabad" in self.pont and self.pont["szabad"] in val:
+        if val[self.pont["szabad"]].text is not None:
+           text = "+ "+self.pont["szabad"] + " ("+str(val[self.pont["szabad"]].text)+")"
+        for i in list(val.keys()):
+          if i != self.pont["szabad"]:
+            if type(val[i].text) is int:
+              rempont -= val[i].text
       else:
         for i in list(val.keys()):
           rempont -= val[i].text
-      self.pontok.text = str(rempont) + " " + text
+      self.pontok.text = str(rempont) + " pont " + text
   def panel1_visable(self):
     if self.faj.selected_value is not None and self.kaszt.selected_value is not None:
       self.column_panel_3.visible = True
@@ -88,34 +96,108 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
   def kaszt_change(self, **event_args):
    self.panel1_visable()
   def uipenz(self):
-    self.penz.content = "kezdő arany: " + str(anvil.server.call('penz',self.karakteralkotas,{"szint":int(self.szint.text)}))+"AP"
+    self.penz.content = "kezdő arany: " + str(anvil.server.call('penz',self.karakteralkotas,{"szint":int(self.szint.text), "profi":int(self.elony_profi.text)}))+"AP"
   def szint_change(self, **event_args):
     if type(self.szint.text) is int:
-      self.elonynum = anvil.server.call("egyszerusitett_kozos","get_elony",{"szint":int(self.szint.text),"profi":int(self.elony_profi.text)})
+      self.elonynum = anvil.server.call("egyszerusitett_kozos","get_elony",{"szint":int(self.szint.text)})
       self.elony_label.text = "Előnyök: "+ str(self.elonynum)
+      self.reset_elonyok()
+      if self.elonynum > 0:
+        self.elonyok_panel.visible = True
+      else:
+        self.elonyok_panel.visible = False
       self.uipenz()
-  
+      
+  def elony_bool(self,b,res):
+    if res:
+      self.elony_hires_add.visible = True
+      self.elony_hires_del.visable = False
+  def reset_elonyok(self):
+    self.elony_profi.text = 0
+    self.elony_profi_del.enabled = False
+    self.elony_profi_add.enabled = True
+    self.elony_kepzes.text = 0
+    self.elony_kepzes_del.enabled = False
+    self.elony_kepzes_add.enabled = True
+    self.elony_edzett.text = 0
+    self.elony_edzett_del.enabled = False
+    self.elony_edzett_add.enabled = True
+    self.elony_idos.text = 0
+    self.elony_idos_del.enabled = False
+    self.elony_idos_add.enabled = True
+    self.elony_kivul_tagasabb.text = 0
+    self.elony_kivul_tagasabb_del.enabled = False
+    self.elony_kivul_tagasabb_add.enabled = True
+    
   def elony_profi_add_click(self, **event_args):
+    obj = self.elony_profi
+    add = self.elony_profi_add
+    delete = self.elony_profi_del
     if self.elonynum != 0:
       self.elonynum -= 1
       self.elony_label.text = "Előnyök: "+ str(self.elonynum)
-      self.elony_profi.text = int(self.elony_profi.text) + 1
-      self.elony_profi_del.enabled = True
-      anvil.server.call("egyszerusitett_kozos","elony",{"profi":int(self.elony_profi.text)})
+      
+      obj.text = int(obj.text) + 1
+      delete.enabled = True
+      anvil.server.call("egyszerusitett_kozos","elony",{"profi":int(obj.text)})
       if self.elonynum == 0:
-        self.elony_profi_add.enabled = False
+        add.enabled = False
+    self.uipenz()
   def elony_profi_del_click(self, **event_args):
-    if int(self.elony_profi.text) > 0:
+    obj = self.elony_profi
+    add = self.elony_profi_add
+    delete = self.elony_profi_del
+    if int(obj.text) > 0:
       self.elonynum += 1
       self.elony_label.text = "Előnyök: "+ str(self.elonynum)
-      self.elony_profi.text = int(self.elony_profi.text) - 1
-      if self.elony_profi.text == "0":
-        self.elony_profi_del.enabled = False
+      obj.text = int(obj.text) - 1
+      if obj.text == "0":
+        delete.enabled = False
     if self.elonynum != 0:
-      self.elony_profi_add.enabled = True
- 
-  def elony_profi_change(self, **event_args):
-    self.self.uipenz()
+      add.enabled = True
+    self.uipenz()
+    
+  def elony_kepzes_add_click(self, **event_args):
+    obj = self.elony_kepzes
+    add = self.elony_kepzes_add
+    delete = self.elony_kepzes_del
+    
+  def elony_kepzes_del_click(self, **event_args):
+    obj = self.elony_kepzes
+    add = self.elony_kepzes_add
+    delete = self.elony_kepzes_del
+    
+
+
+  def elony_edzett_add_click(self, **event_args):
+    obj = self.elony_edzett
+    add = self.elony_edzett_add
+    delete = self.elony_edzett_del
+    if self.elonynum != 0:
+      self.elonynum -= 1
+      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
+      
+      obj.text = int(obj.text) + 1
+      delete.enabled = True
+      #anvil.server.call("egyszerusitett_kozos","elony",{"kepzes":int(obj.text)})
+      if self.elonynum == 0:
+        add.enabled = False
+    self.pont = anvil.server.call("pontok",self.karakteralkotas,{"edzett":int(obj.text)})
+    self.pontok_change()
+  def elony_edzett_del_click(self, **event_args):
+    obj = self.elony_edzett
+    add = self.elony_edzett_add
+    delete = self.elony_edzett_del
+    if int(obj.text) > 0:
+      self.elonynum += 1
+      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
+      obj.text = int(obj.text) - 1
+      if obj.text == "0":
+        delete.enabled = False
+    if self.elonynum != 0:
+      add.enabled = True
+    self.pont = anvil.server.call("pontok",self.karakteralkotas,{"edzett":int(obj.text)})
+    self.pontok_change()
 
       
 
