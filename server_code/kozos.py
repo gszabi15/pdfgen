@@ -16,17 +16,17 @@ import anvil.server
 #   return 42
 #
 
-class kozos():
-  def __init__(self):
-    self.elony =""
-    self.edzett = 0
-    self.profi = 0
-  
-  def egyszerusitett_kozos(self,typ, inp):
+
+@anvil.server.callable
+def egyszerusitett_kozos(typ, inp):
     if typ == "pontok":
-      return {"pont":131+self.edzett,"szabad":"szepseg"}
+      if inp != None and "edzett" in inp and type(inp["edzett"]) is int:
+        print("asd")
+        return {"pont":131+inp["edzett"]*3,"szabad":"szépség"}
+      else:
+        print(inp)
+        return {"pont":131,"szabad":"szepseg"}
     elif typ == "penz":
-    
       if "szint" in inp:
         print(inp)
         szint = inp["szint"]
@@ -37,21 +37,22 @@ class kozos():
           penz = szint*30
         elif szint > 7:
           penz = szint*40
-        penz += self.profi
+        if "profi" in inp and type(inp["profi"]) is int:
+          penz += inp["profi"]*75
         return penz
     elif typ == "elony":
       if "profi" in inp:
-        if inp["profi"] > 0 and type(inp["profi"] is int):
-          profi = 75* inp["profi"]
+        if type(inp["profi"] is int):
+          pass#self.profi = 75* inp["profi"]
       if "edzett" in inp:
-        if inp["edzett"] > 0 and type(inp["edzett"] is int):
-          edzett = 3 * inp["edzett"]
+        if type(inp["edzett"] is int):
+          pass#self.edzett = 3 * inp["edzett"]
       if "kepzes" in inp:
-        if inp["kepzes"] > 0 and type(inp["kepzes"] is int):
-          edzett = 10 * inp["kepzes"]
+        if type(inp["kepzes"] is int):
+          pass#self.kepzes = 10 * inp["kepzes"]
       if "hires" in inp:
         if inp["hires"] != False and type(inp["kepzes"] is bool):
-          self.elony += "Híres\n"
+          pass#self.elony += "Híres\n"
     elif typ == "get_elony":
       if "szint" in inp:
         return int(inp["szint"])// 5

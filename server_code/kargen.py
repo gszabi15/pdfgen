@@ -72,6 +72,7 @@ def get_korkatmod(i:None):
 @anvil.server.callable
 def pontok(kargen,inp:None):
   return anvil.server.call(kargen,"pontok",inp)
+
 @anvil.server.callable
 def penz(kargen,inp:None):
   return anvil.server.call(kargen,"penz",inp)
