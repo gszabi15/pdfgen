@@ -211,7 +211,8 @@ components:
           properties: {icon: 'fa:info', role: input-prompt, text: Képzés, tooltip: Egyszeri 10 Kp a vásároltakon felül.}
           type: Label
         - components:
-          - layout_properties: {}
+          - event_bindings: {click: elony_kepzes_del_click}
+            layout_properties: {}
             name: elony_kepzes_del
             properties: {enabled: false, role: outlined-button, text: '-'}
             type: Button
@@ -219,7 +220,8 @@ components:
             name: elony_kepzes
             properties: {align: center, enabled: false, role: outlined, text: '0'}
             type: TextBox
-          - layout_properties: {}
+          - event_bindings: {click: elony_kepzes_add_click}
+            layout_properties: {}
             name: elony_kepzes_add
             properties: {role: outlined-button, text: +}
             type: Button
@@ -237,7 +239,8 @@ components:
           properties: {icon: 'fa:info', text: Edzett, tooltip: Egyszeri +3 szabadon elosztható képességpont a faji és életkor kereteken belül..}
           type: Label
         - components:
-          - layout_properties: {}
+          - event_bindings: {click: elony_edzett_del_click}
+            layout_properties: {}
             name: elony_edzett_del
             properties: {enabled: false, role: outlined-button, text: '-'}
             type: Button
@@ -245,7 +248,8 @@ components:
             name: elony_edzett
             properties: {align: center, enabled: false, role: outlined, text: '0'}
             type: TextBox
-          - layout_properties: {}
+          - event_bindings: {click: elony_edzett_add_click}
+            layout_properties: {}
             name: elony_edzett_add
             properties: {role: outlined-button, text: +}
             type: Button
@@ -290,7 +294,7 @@ components:
           type: Label
         - components:
           - layout_properties: {}
-            name: button_1_copy_5
+            name: elony_hires_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
           - layout_properties: {}
@@ -468,19 +472,19 @@ components:
           type: Label
         - components:
           - layout_properties: {}
-            name: outlined_button_4_copy_6
+            name: elony_kivul_tagasabb_del
             properties: {enabled: false, role: outlined-button, text: '-'}
             type: Button
           - layout_properties: {width: 71}
-            name: outlined_9_copy_6
+            name: elony_kivul_tagasabb
             properties: {align: center, enabled: false, role: outlined, text: '0'}
             type: TextBox
           - layout_properties: {}
-            name: outlined_button_5_copy_6
+            name: elony_kivul_tagasabb_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL'}
-          name: flow_panel_1_copy_6
+          name: kivul_tagasabb_del
           properties: {}
           type: FlowPanel
         layout_properties: {grid_position: 'BWOMAC,IOBINR'}
@@ -707,7 +711,7 @@ components:
       properties: {}
       type: ColumnPanel
     layout_properties: {grid_position: 'PMYSTG,XPQBYW'}
-    name: column_panel_23
+    name: elonyok_panel
     properties: {col_widths: '{"VEXBJG":40}', role: outlined-card, visible: true}
     type: ColumnPanel
   - components:
@@ -727,7 +731,7 @@ components:
             text: Erő
           type: Label
         - event_bindings: {change: pontok_change}
-          layout_properties: {grid_position: 'UUSRTX,TFZOYT'}
+          layout_properties: {grid_position: 'JHOSRF,YXCINY'}
           name: ero
           properties:
             align: center
@@ -736,6 +740,10 @@ components:
             text: '12'
             type: number
           type: TextBox
+        - layout_properties: {grid_position: 'LHOZBG,UVDXXD'}
+          name: ero_label
+          properties: {}
+          type: Label
         layout_properties: {grid_position: 'NWLLUN,WPESAI EGSBUB,YNHHBJ'}
         name: column_panel_46_copy
         properties:
@@ -749,7 +757,7 @@ components:
           properties: {align: center, text: Szépség}
           type: Label
         - event_bindings: {change: pontok_change}
-          layout_properties: {grid_position: 'NLPIQY,IVCEGA'}
+          layout_properties: {grid_position: 'VDDWFL,OGZZRJ'}
           name: szepseg
           properties:
             align: center
@@ -758,6 +766,10 @@ components:
             text: '12'
             type: number
           type: TextBox
+        - layout_properties: {grid_position: 'WICHHG,MZTETW'}
+          name: szepseg_label
+          properties: {}
+          type: Label
         layout_properties: {grid_position: 'NWLLUN,WPESAI GENYDT,TSRWZZ'}
         name: column_panel_19
         properties:
@@ -769,8 +781,8 @@ components:
           name: label_2_copy
           properties: {align: center, text: Gyorsaság}
           type: Label
-        - event_bindings: {change: 'pontok_change, ugyesseg_change'}
-          layout_properties: {grid_position: 'QHRCBR,FZNRDF'}
+        - event_bindings: {change: pontok_change}
+          layout_properties: {grid_position: 'PUYWAT,MYMUSE'}
           name: gyorsasag
           properties:
             align: center
@@ -779,6 +791,10 @@ components:
             text: '12'
             type: number
           type: TextBox
+        - layout_properties: {grid_position: 'YTKIGT,EUVWVS'}
+          name: gyorsasag_label
+          properties: {}
+          type: Label
         layout_properties: {grid_position: 'NWLLUN,SXYJHM FHCGIS,HAQQMQ'}
         name: column_panel_4
         properties:
@@ -791,7 +807,7 @@ components:
           properties: {align: center, text: Intelligencia}
           type: Label
         - event_bindings: {change: pontok_change}
-          layout_properties: {grid_position: 'KZSYSW,XWNKMB'}
+          layout_properties: {grid_position: 'TTOLQX,MGORKO'}
           name: intelligencia
           properties:
             align: center
@@ -800,6 +816,10 @@ components:
             text: '12'
             type: number
           type: TextBox
+        - layout_properties: {grid_position: 'MIBYKR,ARMGSW'}
+          name: intelligencia_label
+          properties: {}
+          type: Label
         layout_properties: {grid_position: 'NWLLUN,SXYJHM GXMRID,DRNZVT'}
         name: column_panel_20
         properties:
@@ -821,6 +841,10 @@ components:
             text: '12'
             type: number
           type: TextBox
+        - layout_properties: {grid_position: 'WAJYKY,UZIDXS'}
+          name: ugyesseg_label
+          properties: {}
+          type: Label
         layout_properties: {grid_position: 'NWLLUN,VUDWOA GAEGVN,ETHLIV'}
         name: column_panel_5
         properties:
@@ -833,7 +857,7 @@ components:
           properties: {align: center, text: Akaraterő}
           type: Label
         - event_bindings: {change: pontok_change}
-          layout_properties: {grid_position: 'FOZJTU,AXLNRX'}
+          layout_properties: {grid_position: 'TRBYEQ,IUDNHY'}
           name: akaratero
           properties:
             align: center
@@ -842,6 +866,10 @@ components:
             text: '12'
             type: number
           type: TextBox
+        - layout_properties: {grid_position: 'ZBPDBQ,ODXOMY'}
+          name: akaratero_label
+          properties: {}
+          type: Label
         layout_properties: {grid_position: 'NWLLUN,VUDWOA KJWZVO,VLHDHX'}
         name: column_panel_21
         properties:
@@ -854,7 +882,7 @@ components:
           properties: {align: center, text: Állóképesség}
           type: Label
         - event_bindings: {change: pontok_change}
-          layout_properties: {grid_position: 'YUHUOJ,NVJYFK'}
+          layout_properties: {grid_position: 'UHCVQS,QJGZDI'}
           name: allokepesseg
           properties:
             align: center
@@ -863,6 +891,10 @@ components:
             text: '12'
             type: number
           type: TextBox
+        - layout_properties: {grid_position: 'BEXZIK,LVNYSO'}
+          name: allokepesseg_label
+          properties: {}
+          type: Label
         layout_properties: {grid_position: 'NWLLUN,DWAZNE CQZBAA,EQBNVH'}
         name: column_panel_9
         properties:
@@ -875,7 +907,7 @@ components:
           properties: {align: center, text: Asztrál}
           type: Label
         - event_bindings: {change: pontok_change}
-          layout_properties: {grid_position: 'IWGMNL,LNTGEE'}
+          layout_properties: {grid_position: 'ALXXUQ,SUDCYD'}
           name: asztral
           properties:
             align: center
@@ -884,6 +916,10 @@ components:
             text: '12'
             type: number
           type: TextBox
+        - layout_properties: {grid_position: 'MNFTBV,HZSKLM'}
+          name: asztral_label
+          properties: {}
+          type: Label
         layout_properties: {grid_position: 'NWLLUN,DWAZNE YAOLIV,BTRVCV'}
         name: column_panel_22
         properties:
@@ -896,7 +932,7 @@ components:
           properties: {align: center, text: Egészség}
           type: Label
         - event_bindings: {change: pontok_change}
-          layout_properties: {grid_position: 'ADPBVL,AETCNG'}
+          layout_properties: {grid_position: 'XTTWEA,HLELMI'}
           name: egeszseg
           properties:
             align: center
@@ -905,6 +941,10 @@ components:
             text: '12'
             type: number
           type: TextBox
+        - layout_properties: {grid_position: 'FPHGPN,ARBAZR'}
+          name: egeszseg_label
+          properties: {}
+          type: Label
         layout_properties: {grid_position: 'NWLLUN,THBPPX UIVKMI,KMBQXA'}
         name: column_panel_18
         properties:
@@ -918,7 +958,7 @@ components:
           properties: {align: center, font: ti, text: Észlelés}
           type: Label
         - event_bindings: {change: pontok_change}
-          layout_properties: {grid_position: 'FBTSJG,PEASRR'}
+          layout_properties: {grid_position: 'CZAUVQ,ZHFTCK'}
           name: eszleles
           properties:
             align: center
@@ -927,6 +967,10 @@ components:
             text: '12'
             type: number
           type: TextBox
+        - layout_properties: {grid_position: 'VSGRGC,JCTKVR'}
+          name: eszleles_label
+          properties: {}
+          type: Label
         layout_properties: {grid_position: 'NWLLUN,THBPPX UOJQWG,NWUAZQ'}
         name: eszleles_column
         properties:
@@ -938,6 +982,7 @@ components:
       name: column_panel_2
       properties:
         border: ''
+        col_widths: '{"ETHLIV":45}'
         role: outlined-card
         spacing:
           margin: [null, 0, null, null]
@@ -1394,15 +1439,15 @@ components:
       type: ColumnPanel
     - components:
       - layout_properties: {grid_position: 'ZNFKQQ,ZSYTJG'}
-        name: label_22
+        name: szabad_kp_label
         properties: {align: center, text: 'Szabad KP: 0 '}
         type: Label
       - layout_properties: {grid_position: 'ZNFKQQ,SAOKKB'}
-        name: label_23
+        name: tudomanyos_kp_label
         properties: {align: center, text: '(Csak) Tudományos KP: 0'}
         type: Label
       - layout_properties: {grid_position: 'ZNFKQQ,HRSNZO'}
-        name: label_24
+        name: nem_tudomanyos_kp_label
         properties: {align: center, text: '(Csak) Nem tudományos KP: 0'}
         type: Label
       - layout_properties: {grid_position: 'HDTSRR,GIHCQV'}
@@ -1609,7 +1654,7 @@ components:
       type: ColumnPanel
     layout_properties: {grid_position: 'DSRRQC,JJVXTE'}
     name: column_panel_3
-    properties: {visible: false}
+    properties: {visible: true}
     type: ColumnPanel
   layout_properties: {slot: default}
   name: content_panel
