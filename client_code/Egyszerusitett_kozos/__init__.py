@@ -11,6 +11,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.karakteralkotas = "egyszerusitett_kozos"
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.elonyelosztva = 0
     # Any code you write here will run before the form opens.
     self.faj.items = anvil.server.call('get_fajnev')
     self.pont = anvil.server.call("pontok",self.karakteralkotas,{"edzett":int(self.elony_edzett.text)}) #anvil.server.call("pontok","egyszerusitett_kozos",None)
@@ -101,7 +102,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     if type(self.szint.text) is int:
       old = self.elonynum
       self.elonynum = anvil.server.call("egyszerusitett_kozos","get_elony",{"szint":int(self.szint.text)})
-      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
+      self.elony_label.text = "Előnyök: "+ str(self.elonynum - self.elonyelosztva)
       if old > self.elonynum or self.elonynum <= 0:
         self.reset_elonyok()
       if self.elonynum > 0:
@@ -130,23 +131,24 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.elony_kivul_tagasabb.text = 0
     self.elony_kivul_tagasabb_del.enabled = False
     self.elony_kivul_tagasabb_add.enabled = True
+    self.elonyelosztva = 0
   def del_elony_button(self,obj,add,delete):
     if int(obj.text) > 0:
-      self.elonynum += 1
-      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
+      self.elonyelosztva -= 1
+      self.elony_label.text = "Előnyök: "+ str(self.elonynum - self.elonyelosztva)
       obj.text = int(obj.text) - 1
       if obj.text == "0":
         delete.enabled = False
-    if self.elonynum != 0:
+    if self.elonynum - self.elonyelosztva > 0:
       add.enabled = True
   def add_elony_button(self,obj,add,delete):
-    if self.elonynum != 0:
-      self.elonynum -= 1
-      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
+    if self.elonynum > 0 and (self.elonynum - self.elonyelosztva) > 0:
+      self.elonyelosztva += 1
+      self.elony_label.text = "Előnyök: "+ str(self.elonynum - self.elonyelosztva)
       obj.text = int(obj.text) + 1
       delete.enabled = True
       
-      if self.elonynum == 0:
+      if self.elonynum - self.elonyelosztva == 0:
         add.enabled = False
 
   
@@ -191,6 +193,12 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.del_elony_button(obj,add,delete)
     self.pont = anvil.server.call("pontok",self.karakteralkotas,{"edzett":int(obj.text)})
     self.pontok_change()
+
+  def link_1_click(self, **event_args):
+    self.elony_profi_info.visible = not self.elony_profi_info.visible
+
+  def elony_meregellenallas_link_click(self, **event_args):
+    self.elony_meregellenallas_info.visible = not self.elony_meregellenallas_info.visible
 
       
 

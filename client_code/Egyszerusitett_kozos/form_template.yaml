@@ -19,7 +19,7 @@ components:
         properties: {align: center, bold: true, text: 'Szint:'}
         type: Label
       - data_bindings: []
-        event_bindings: {change: szint_change}
+        event_bindings: {lost_focus: szint_change, pressed_enter: szint_change}
         layout_properties: {grid_position: 'LCQUZM,NINETX'}
         name: szint
         properties: {align: center, bold: false, role: outlined, text: '1', type: number}
@@ -170,17 +170,25 @@ components:
       type: Label
     - components:
       - components:
-        - data_bindings: []
-          layout_properties: {full_width_row: false, grid_position: 'POOONS,DTQMZU'}
-          name: label_43_copy_3
+        - event_bindings: {click: link_1_click}
+          layout_properties: {grid_position: 'POOONS,DVRCKD CEEVTF,BCLQTW'}
+          name: link_1
+          properties: {icon: 'fa:info', role: input-prompt, text: Profi}
+          type: Link
+        - components:
+          - layout_properties: {grid_position: 'MSBOLE,OZVHCK'}
+            name: rich_text_1
+            properties:
+              content: |
+                Egyszeri 75 arany a karakteralkotó mérleg induló tőkéhez pluszba.
+            type: RichText
+          layout_properties: {grid_position: 'POOONS,DVRCKD IOVYDJ,VMSXYM'}
+          name: elony_profi_info
           properties:
-            bold: false
-            icon: fa:info
-            italic: false
-            role: [input-prompt]
-            text: Profi
-            tooltip: Egyszeri 75 arany a karakteralkotó mérleg induló tőkéhez pluszba
-          type: Label
+            spacing:
+              padding: [null, null, null, '15']
+            visible: false
+          type: ColumnPanel
         - components:
           - event_bindings: {click: elony_profi_del_click}
             layout_properties: {}
@@ -197,13 +205,13 @@ components:
             name: elony_profi_add
             properties: {role: outlined-button, text: +}
             type: Button
-          layout_properties: {grid_position: 'POOONS,IKRGZL'}
+          layout_properties: {grid_position: 'POOONS,AUWBTH'}
           name: flow_panel_1_copy_3
           properties: {}
           type: FlowPanel
         layout_properties: {grid_position: 'MRCBJJ,JFTLHK'}
         name: column_panel_24_copy_3
-        properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
+        properties: {col_widths: '{"DVRCKD":20,"AUWBTH":40}'}
         type: ColumnPanel
       - components:
         - layout_properties: {grid_position: 'POOONS,DTQMZU'}
@@ -492,10 +500,11 @@ components:
         properties: {col_widths: '{"DTQMZU":20,"IKRGZL":40}'}
         type: ColumnPanel
       - components:
-        - layout_properties: {grid_position: 'POOONS,DTQMZU'}
-          name: label_43_copy_7
-          properties: {icon: 'fa:info', role: input-prompt, text: Mégegellenállás, tooltip: 'Egy a karakter által választott méreghez elkezdte hozzászoktatni szervezetét. Hosszú hónapokon, éveken át adagolta magának apró dózisokban, hogy ellenál- lóvá váljon. Amennyiben fel van tüntetve a méregnél a hatási mechanizmus típu- sa (I-től IV-ig, ETK 381.o.), úgy mindenképpen eggyel enyhébb hatást szenved el a karakter, valamint eleve kap +4-et az ellenállásdobásra. Al-Bahra-kahremre fel- venni tilos és az enyhébb hatás miatt értelmetlen is.'}
-          type: Label
+        - event_bindings: {click: elony_meregellenallas_link_click}
+          layout_properties: {grid_position: 'POOONS,DTQMZU'}
+          name: elony_meregellenallas_link
+          properties: {icon: 'fa:info', role: input-prompt, text: Méregellenállás}
+          type: Link
         - components:
           - layout_properties: {}
             name: button_1_copy_4_copy_10
@@ -508,6 +517,22 @@ components:
           name: flow_panel_1_copy_7
           properties: {}
           type: FlowPanel
+        - components:
+          - layout_properties: {grid_position: 'MSBOLE,OZVHCK'}
+            name: rich_text_1_copy
+            properties:
+              align: left
+              content: |+
+                Egy a karakter által választott méreghez elkezdte hozzászoktatni szervezetét. Hosszú hónapokon, éveken át adagolta magának apró dózisokban, hogy ellenállóvá váljon. Amennyiben fel van tüntetve a méregnél a hatási mechanizmus típusa (I-től IV-ig, ETK 381.o.), úgy mindenképpen eggyel enyhébb hatást szenved el a karakter, valamint eleve kap +4-et az ellenállásdobásra. Al-Bahra-kahremre felvenni tilos és az enyhébb hatás miatt értelmetlen is.
+
+            type: RichText
+          layout_properties: {grid_position: 'YEMEAG,WCXNVH'}
+          name: elony_meregellenallas_info
+          properties:
+            spacing:
+              padding: [null, null, null, '15']
+            visible: false
+          type: ColumnPanel
         layout_properties: {grid_position: 'YLXUJG,PLIZDD'}
         name: column_panel_24_copy_7
         properties: {col_widths: '{"DTQMZU":15,"ONXHXJ":31}'}
@@ -556,7 +581,7 @@ components:
         type: ColumnPanel
       layout_properties: {grid_position: 'IHLFIP,GRCAUH'}
       name: column_panel_43
-      properties: {}
+      properties: {col_widths: '{"JFTLHK":40}'}
       type: ColumnPanel
     - components:
       - components:

@@ -281,7 +281,7 @@ color_scheme:
       - {color: 'rgba(255, 181, 155, 0.11)', name: Primary Overlay 3}
       name: Manarola Dark
 roles:
-- components: [Label]
+- components: [Label, Link]
   name: input-prompt
 - components: [Link]
   name: selected
