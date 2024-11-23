@@ -99,9 +99,11 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.penz.content = "kezdő arany: " + str(anvil.server.call('penz',self.karakteralkotas,{"szint":int(self.szint.text), "profi":int(self.elony_profi.text)}))+"AP"
   def szint_change(self, **event_args):
     if type(self.szint.text) is int:
+      old = self.elonynum
       self.elonynum = anvil.server.call("egyszerusitett_kozos","get_elony",{"szint":int(self.szint.text)})
       self.elony_label.text = "Előnyök: "+ str(self.elonynum)
-      self.reset_elonyok()
+      if old > self.elonynum or self.elonynum <= 0:
+        self.reset_elonyok()
       if self.elonynum > 0:
         self.elonyok_panel.visible = True
       else:
@@ -128,25 +130,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.elony_kivul_tagasabb.text = 0
     self.elony_kivul_tagasabb_del.enabled = False
     self.elony_kivul_tagasabb_add.enabled = True
-    
-  def elony_profi_add_click(self, **event_args):
-    obj = self.elony_profi
-    add = self.elony_profi_add
-    delete = self.elony_profi_del
-    if self.elonynum != 0:
-      self.elonynum -= 1
-      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
-      
-      obj.text = int(obj.text) + 1
-      delete.enabled = True
-      anvil.server.call("egyszerusitett_kozos","elony",{"profi":int(obj.text)})
-      if self.elonynum == 0:
-        add.enabled = False
-    self.uipenz()
-  def elony_profi_del_click(self, **event_args):
-    obj = self.elony_profi
-    add = self.elony_profi_add
-    delete = self.elony_profi_del
+  def del_elony_button(self,obj,add,delete):
     if int(obj.text) > 0:
       self.elonynum += 1
       self.elony_label.text = "Előnyök: "+ str(self.elonynum)
@@ -155,47 +139,56 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
         delete.enabled = False
     if self.elonynum != 0:
       add.enabled = True
+  def add_elony_button(self,obj,add,delete):
+    if self.elonynum != 0:
+      self.elonynum -= 1
+      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
+      obj.text = int(obj.text) + 1
+      delete.enabled = True
+      
+      if self.elonynum == 0:
+        add.enabled = False
+
+  
+  def elony_profi_add_click(self, **event_args):
+    obj = self.elony_profi
+    add = self.elony_profi_add
+    delete = self.elony_profi_del
+    self.add_elony_button(obj,add,delete)
+    anvil.server.call("egyszerusitett_kozos","elony",{"profi":int(obj.text)})
+    self.uipenz()
+  def elony_profi_del_click(self, **event_args):
+    obj = self.elony_profi
+    add = self.elony_profi_add
+    delete = self.elony_profi_del
+    self.del_elony_button(obj,add,delete)
     self.uipenz()
     
   def elony_kepzes_add_click(self, **event_args):
     obj = self.elony_kepzes
     add = self.elony_kepzes_add
     delete = self.elony_kepzes_del
+    self.add_elony_button(obj,add,delete)
     
   def elony_kepzes_del_click(self, **event_args):
     obj = self.elony_kepzes
     add = self.elony_kepzes_add
     delete = self.elony_kepzes_del
-    
+    self.del_elony_button(obj,add,delete)
 
 
   def elony_edzett_add_click(self, **event_args):
     obj = self.elony_edzett
     add = self.elony_edzett_add
     delete = self.elony_edzett_del
-    if self.elonynum != 0:
-      self.elonynum -= 1
-      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
-      
-      obj.text = int(obj.text) + 1
-      delete.enabled = True
-      #anvil.server.call("egyszerusitett_kozos","elony",{"kepzes":int(obj.text)})
-      if self.elonynum == 0:
-        add.enabled = False
+    self.add_elony_button(obj,add,delete)
     self.pont = anvil.server.call("pontok",self.karakteralkotas,{"edzett":int(obj.text)})
     self.pontok_change()
   def elony_edzett_del_click(self, **event_args):
     obj = self.elony_edzett
     add = self.elony_edzett_add
     delete = self.elony_edzett_del
-    if int(obj.text) > 0:
-      self.elonynum += 1
-      self.elony_label.text = "Előnyök: "+ str(self.elonynum)
-      obj.text = int(obj.text) - 1
-      if obj.text == "0":
-        delete.enabled = False
-    if self.elonynum != 0:
-      add.enabled = True
+    self.del_elony_button(obj,add,delete)
     self.pont = anvil.server.call("pontok",self.karakteralkotas,{"edzett":int(obj.text)})
     self.pontok_change()
 
