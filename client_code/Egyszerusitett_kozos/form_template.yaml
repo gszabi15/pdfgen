@@ -301,11 +301,13 @@ components:
           properties: {icon: 'fa:info', role: input-prompt, text: Híres, tooltip: 'A karakter híre messzire elér, országon belül vagy közösségen belül (pl.: gladiáto- rok, nép hőse, alvilági), tárt karokkal fogadják, olcsóbb a lakhatása, könnyebben szerez információkat stb. Dobás a találkozáskor: célszám 50 + Szépség, ha alá dob, akkor pozitív, fölé nega- tív - hiszen mindenkinek lehetnek irigyei.'}
           type: Label
         - components:
-          - layout_properties: {}
+          - event_bindings: {click: elony_hires_del_click}
+            layout_properties: {}
             name: elony_hires_del
-            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: true}
             type: Button
-          - layout_properties: {}
+          - event_bindings: {click: elony_hires_add_click}
+            layout_properties: {}
             name: elony_hires_add
             properties: {enabled: true, role: outlined-button, text: +, visible: true}
             type: Button

@@ -30,10 +30,13 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     else:
       return 0
   def kp_change(self):
+    self.kp = anvil.server.call("getkp",self.karakteralkotas,{"faj":self.faj.selected_value,"kaszt":self.kaszt.selected_value,"szint":int(self.szint.text),"kepzes":int(self.elony_kepzes.text)})
+    self.szabad_kp_label.text = "Szabad KP: " + str(self.kp)
     self.tudomanyos_kp_label.text = "(Csak) Tudományos KP: "+str(self.up10(self.intelligencia.text))
     self.nem_tudomanyos_kp_label.text = "(Csak) Nem tudományos KP: "+str(self.up10(self.ugyesseg.text))
     self.tkp = self.up10(self.intelligencia.text)
     self.ntkp = self.up10(self.ugyesseg.text)
+    
     """{
   "alap": 10,
   "szintenkent": 4
@@ -96,6 +99,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
           return int(y)
   def kaszt_change(self, **event_args):
    self.panel1_visable()
+   self.kp_change()
   def uipenz(self):
     self.penz.content = "kezdő arany: " + str(anvil.server.call('penz',self.karakteralkotas,{"szint":int(self.szint.text), "profi":int(self.elony_profi.text)}))+"AP"
   def szint_change(self, **event_args):
@@ -110,6 +114,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
       else:
         self.elonyok_panel.visible = False
       self.uipenz()
+      self.kp_change()
       
   def elony_bool(self,b,res):
     if res:
@@ -171,12 +176,14 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     add = self.elony_kepzes_add
     delete = self.elony_kepzes_del
     self.add_elony_button(obj,add,delete)
+    self.kp_change()
     
   def elony_kepzes_del_click(self, **event_args):
     obj = self.elony_kepzes
     add = self.elony_kepzes_add
     delete = self.elony_kepzes_del
     self.del_elony_button(obj,add,delete)
+    self.kp_change()
 
 
   def elony_edzett_add_click(self, **event_args):
@@ -199,6 +206,20 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
 
   def elony_meregellenallas_link_click(self, **event_args):
     self.elony_meregellenallas_info.visible = not self.elony_meregellenallas_info.visible
+
+  def elony_change_button(self,add,delete):
+    add.visible = not add.visible
+    delete.visable = not delete.visible
+  
+  def elony_hires_add_click(self, **event_args):
+    add = self.elony_hires_add
+    delete = self.elony_hires_del
+    self.elony_change_button(add,delete)
+
+  def elony_hires_del_click(self, **event_args):
+    add = self.elony_hires_add
+    delete = self.elony_hires_del
+    self.elony_change_button(add,delete)
 
       
 
