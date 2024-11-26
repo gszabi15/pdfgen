@@ -209,7 +209,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
 
   def elony_change_button(self,add,delete):
     add.visible = not add.visible
-    delete.visable = not delete.visible
+    delete.visible = not delete.visible
   
   def elony_hires_add_click(self, **event_args):
     add = self.elony_hires_add

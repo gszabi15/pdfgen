@@ -304,7 +304,7 @@ components:
           - event_bindings: {click: elony_hires_del_click}
             layout_properties: {}
             name: elony_hires_del
-            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: true}
+            properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
           - event_bindings: {click: elony_hires_add_click}
             layout_properties: {}
