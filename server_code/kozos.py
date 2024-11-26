@@ -40,6 +40,14 @@ def egyszerusitett_kozos(typ, inp):
         if "profi" in inp and type(inp["profi"]) is int:
           penz += inp["profi"]*75
         return penz
+    elif typ == "get_kp":
+      kepzes = 0
+      if inp != None and "kepzes" in inp and type(inp["kepzes"]) is int:
+        kepzes = inp["kepzes"]*10
+      if "kp" in inp:
+        print(inp["kp"])
+        return kepzes+inp["kp"]
+      else: return 0
     elif typ == "elony":
       if "profi" in inp:
         if type(inp["profi"] is int):

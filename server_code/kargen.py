@@ -76,3 +76,11 @@ def pontok(kargen,inp:None):
 @anvil.server.callable
 def penz(kargen,inp:None):
   return anvil.server.call(kargen,"penz",inp)
+
+@anvil.server.callable
+def getkp(kargen,inp):
+  if inp != None and "faj" in inp and "kaszt" in inp and "szint" in inp:
+    for row in app_tables.kaszt.search():
+      if row['Nev'] == inp["kaszt"]:
+        inp.update({"kp":row["Kp"]["alap"] + row["Kp"]["szintenkent"]*inp["szint"]})
+  return anvil.server.call(kargen,"get_kp",inp)
