@@ -208,8 +208,16 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     self.elony_meregellenallas_info.visible = not self.elony_meregellenallas_info.visible
 
   def elony_change_button(self,add,delete):
-    add.visible = not add.visible
-    delete.visible = not delete.visible
+    if add.visible and  self.elonynum > 0 and (self.elonynum - self.elonyelosztva) > 0:
+      self.elonyelosztva += 1
+      self.elony_label.text = "Előnyök: "+ str(self.elonynum - self.elonyelosztva)
+      add.visible = not add.visible
+      delete.visible = not delete.visible
+    elif delete.visible:
+      self.elonyelosztva -= 1
+      self.elony_label.text = "Előnyök: "+ str(self.elonynum - self.elonyelosztva)
+      add.visible = not add.visible
+      delete.visible = not delete.visible
   
   def elony_hires_add_click(self, **event_args):
     add = self.elony_hires_add
