@@ -229,6 +229,16 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     delete = self.elony_hires_del
     self.elony_change_button(add,delete)
 
+  def elony_meregellenallas_click(self, **event_args):
+    add = self.elony_meregellenallas_add
+    delete = self.elony_meregellenallas_del
+    self.elony_change_button(add,delete)
+
+  def elony_magiaellenallas_click(self, **event_args):
+    add = self.elony_magiaellenallas_add
+    delete = self.elony_magiaellenallas_del
+    self.elony_change_button(add,delete)
+
       
 
 

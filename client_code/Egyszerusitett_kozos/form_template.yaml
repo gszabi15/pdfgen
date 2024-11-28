@@ -332,11 +332,11 @@ components:
             type: Label
           - components:
             - layout_properties: {}
-              name: button_1
+              name: elony_ketkezes_fegyveres_del
               properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
               type: Button
             - layout_properties: {}
-              name: outlined_button_5_copy_4
+              name: elony_ketkezes_fegyveres_add
               properties: {role: outlined-button, text: +}
               type: Button
             layout_properties: {grid_position: 'BDANJO,XSCHWJ'}
@@ -354,11 +354,11 @@ components:
             type: Label
           - components:
             - layout_properties: {}
-              name: button_1_copy
+              name: elony_pajzsos_del
               properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
               type: Button
             - layout_properties: {}
-              name: outlined_button_5_copy_4_copy
+              name: elony_pajzsos_add
               properties: {role: outlined-button, text: +}
               type: Button
             layout_properties: {grid_position: 'AXYZDU,WGFHVY'}
@@ -376,11 +376,11 @@ components:
             type: Label
           - components:
             - layout_properties: {}
-              name: button_1_copy_2
+              name: elony_vertes_del
               properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
               type: Button
             - layout_properties: {}
-              name: outlined_button_5_copy_4_copy_2
+              name: elony_vertes_add
               properties: {enabled: false, role: outlined-button, text: +}
               type: Button
             layout_properties: {grid_position: 'RETSZI,HKAVEH'}
@@ -402,11 +402,11 @@ components:
           type: ColumnPanel
         - components:
           - layout_properties: {}
-            name: button_1_copy_3
+            name: elony_ijasz_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
           - layout_properties: {}
-            name: outlined_button_5_copy_4_copy_3
+            name: elony_ijasz_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL YSWUII,JFOYOM'}
@@ -420,11 +420,11 @@ components:
             type: Label
           - components:
             - layout_properties: {}
-              name: button_1_copy_4
+              name: elony_pusztakezes_del
               properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
               type: Button
             - layout_properties: {}
-              name: outlined_button_5_copy_4_copy_4
+              name: elony_pusztakezes_add
               properties: {enabled: false, role: outlined-button, text: +}
               type: Button
             layout_properties: {grid_position: 'DRBUJC,XXZNIC'}
@@ -481,7 +481,8 @@ components:
           properties: {icon: 'fa:info', role: input-prompt, text: Kívül tágasabb, tooltip: 'Szándékos leütés esetén a megfelelő céleszközzel az ETK 83.o.-án található leütés szabály táblázatán további 10 pontot kap a karakter, mintha sebzés lenne, de nem okoz +Sp veszteséget.'}
           type: Label
         - components:
-          - layout_properties: {}
+          - event_bindings: {click: elony_kivul_tagasabb_del_click}
+            layout_properties: {}
             name: elony_kivul_tagasabb_del
             properties: {enabled: false, role: outlined-button, text: '-'}
             type: Button
@@ -489,7 +490,8 @@ components:
             name: elony_kivul_tagasabb
             properties: {align: center, enabled: false, role: outlined, text: '0'}
             type: TextBox
-          - layout_properties: {}
+          - event_bindings: {click: elony_kivul_tagasabb_add_click}
+            layout_properties: {}
             name: elony_kivul_tagasabb_add
             properties: {role: outlined-button, text: +}
             type: Button
@@ -508,11 +510,13 @@ components:
           properties: {icon: 'fa:info', role: input-prompt, text: Méregellenállás}
           type: Link
         - components:
-          - layout_properties: {}
-            name: button_1_copy_4_copy_10
+          - event_bindings: {click: elony_meregellenallas_click}
+            layout_properties: {}
+            name: elony_meregellenallas_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
-          - name: outlined_button_5_copy_4_copy_4_copy_10
+          - event_bindings: {click: elony_meregellenallas_click}
+            name: elony_meregellenallas_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,ONXHXJ'}
@@ -545,11 +549,13 @@ components:
           properties: {icon: 'fa:info', role: input-prompt, text: Mágiaellenállás, tooltip: 'Asztrális és mentális támadások esetén a +k10 dobás nem a támadást erősíti, hanem a karakter védelmét emeli.'}
           type: Label
         - components:
-          - layout_properties: {}
-            name: button_1_copy_4_copy_9
+          - event_bindings: {click: elony_magiaellenallas_click}
+            layout_properties: {}
+            name: elony_magiaellenallas_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
-          - name: outlined_button_5_copy_4_copy_4_copy_9
+          - event_bindings: {click: elony_magiaellenallas_click}
+            name: elony_magiaellenallas_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL'}
@@ -567,10 +573,10 @@ components:
           type: Label
         - components:
           - layout_properties: {}
-            name: button_1_copy_4_copy_9_copy
+            name: elony_eluzes_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
-          - name: outlined_button_5_copy_4_copy_4_copy_9_copy
+          - name: elony_eluzes_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL'}
@@ -593,10 +599,10 @@ components:
           type: Label
         - components:
           - layout_properties: {}
-            name: button_1_copy_4_copy_7
+            name: elony_szerpap_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
-          - name: outlined_button_5_copy_4_copy_4_copy_7
+          - name: elony_szerpap_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL'}
@@ -614,10 +620,10 @@ components:
           type: Label
         - components:
           - layout_properties: {}
-            name: button_1_copy_4_copy_6
+            name: elony_sugallat_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
-          - name: outlined_button_5_copy_4_copy_4_copy_6
+          - name: elony_sugallat_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL'}
@@ -635,10 +641,10 @@ components:
           type: Label
         - components:
           - layout_properties: {}
-            name: button_1_copy_4_copy_5
+            name: elony_kobra_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
-          - name: outlined_button_5_copy_4_copy_4_copy_5
+          - name: elony_kobra_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL'}
@@ -656,10 +662,10 @@ components:
           type: Label
         - components:
           - layout_properties: {}
-            name: button_1_copy_4_copy_4
+            name: elony_skorpiokiraly_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
-          - name: outlined_button_5_copy_4_copy_4_copy_4
+          - name: elony_skorpiokiraly_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL'}
@@ -677,10 +683,10 @@ components:
           type: Label
         - components:
           - layout_properties: {}
-            name: button_1_copy_4_copy_3
+            name: elony_eros_lelek_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
-          - name: outlined_button_5_copy_4_copy_4_copy_3
+          - name: elony_eros_lelek_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL'}
@@ -698,10 +704,10 @@ components:
           type: Label
         - components:
           - layout_properties: {}
-            name: button_1_copy_4_copy_2
+            name: elony_macskatalp_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
-          - name: outlined_button_5_copy_4_copy_4_copy_2
+          - name: elony_macskatalp_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL'}
@@ -719,10 +725,10 @@ components:
           type: Label
         - components:
           - layout_properties: {}
-            name: button_1_copy_4_copy
+            name: elony_magiaerzekenyseg_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
-          - name: outlined_button_5_copy_4_copy_4_copy
+          - name: elony_magiaerzekenyseg_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL'}
