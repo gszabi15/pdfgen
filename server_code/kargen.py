@@ -84,3 +84,6 @@ def getkp(kargen,inp):
       if row['Nev'] == inp["kaszt"]:
         inp.update({"kp":row["Kp"]["alap"] + row["Kp"]["szintenkent"]*inp["szint"]})
   return anvil.server.call(kargen,"get_kp",inp)
+@anvil.server.callable
+def getego(kargen,inp):
+  return anvil.server.call(kargen,"ego",inp)

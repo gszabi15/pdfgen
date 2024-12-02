@@ -26,6 +26,14 @@ def egyszerusitett_kozos(typ, inp):
       else:
         print(inp)
         return {"pont":131,"szabad":"szepseg"}
+    elif typ == "ego":
+      if "akaratero" in inp and "intelligencia" in inp and "asztral" in inp:
+        if "szint" in inp and "eros_lelek" in inp and inp["eros_lelek"] == 1:
+          return inp["akaratero"]*2 + inp["intelligencia"] + inp["asztral"] + inp["szint"]*2
+        else:
+          return inp["akaratero"]*2 + inp["intelligencia"] + inp["asztral"]
+      else:
+        return 0
     elif typ == "penz":
       if "szint" in inp:
         print(inp)
