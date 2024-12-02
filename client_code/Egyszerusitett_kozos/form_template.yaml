@@ -682,11 +682,13 @@ components:
           properties: {icon: 'fa:info', role: input-prompt, text: Erős Lélek, tooltip: A karakter EGO értéke ereklyékkel szemben +TSz x 2-vel magasabbnak számít.}
           type: Label
         - components:
-          - layout_properties: {}
+          - event_bindings: {click: elony_eros_lelek_click}
+            layout_properties: {}
             name: elony_eros_lelek_del
             properties: {background: '#e01b24', bold: false, font_size: 15, foreground: 'theme:On Secondary', icon: 'fa:trash', text: '', visible: false}
             type: Button
-          - name: elony_eros_lelek_add
+          - event_bindings: {click: elony_eros_lelek_click}
+            name: elony_eros_lelek_add
             properties: {role: outlined-button, text: +}
             type: Button
           layout_properties: {grid_position: 'POOONS,IKRGZL'}
@@ -1387,6 +1389,10 @@ components:
           name: me_mental
           properties: {enabled: false, role: outlined, type: number}
           type: TextBox
+        - layout_properties: {grid_position: 'HTNYHM,VORHHT'}
+          name: ego
+          properties: {align: center, text: 'EGO: 0'}
+          type: Label
         layout_properties: {grid_position: 'FRNNSR,VHMHBI'}
         name: column_panel_13
         properties: {role: outlined-card}
