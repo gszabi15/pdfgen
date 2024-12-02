@@ -12,6 +12,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.elonyelosztva = 0
+    self.egoint = 0
     # Any code you write here will run before the form opens.
     self.faj.items = anvil.server.call('get_fajnev')
     self.pont = anvil.server.call("pontok",self.karakteralkotas,{"edzett":int(self.elony_edzett.text)}) #anvil.server.call("pontok","egyszerusitett_kozos",None)
@@ -64,6 +65,7 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
         for i in list(val.keys()):
           rempont -= val[i].text
       self.pontok.text = str(rempont) + " pont " + text
+      self.setego()
   def panel1_visable(self):
     if self.faj.selected_value is not None and self.kaszt.selected_value is not None:
       self.column_panel_3.visible = True
@@ -115,6 +117,8 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
         self.elonyok_panel.visible = False
       self.uipenz()
       self.kp_change()
+      if self.elony_eros_lelek_del.visible:
+        self.setego()
       
   def elony_bool(self,b,res):
     if res:
@@ -239,6 +243,15 @@ class Egyszerusitett_kozos(Egyszerusitett_kozosTemplate):
     delete = self.elony_magiaellenallas_del
     self.elony_change_button(add,delete)
 
+  def elony_eros_lelek_click(self, **event_args):
+    add = self.elony_eros_lelek_add
+    delete = self.elony_eros_lelek_del
+    self.elony_change_button(add,delete)
+    self.setego()
+    
+  def setego(self):
+    self.egoint = anvil.server.call("getego",self.karakteralkotas,{"szint":int(self.szint.text),"eros_lelek":int(self.elony_eros_lelek_del.visible),"akaratero":int(self.akaratero.text),"asztral":int(self.asztral.text),"intelligencia":int(self.intelligencia.text)})
+    self.ego.text = "EGO: "+ str(self.egoint)
       
 
 
