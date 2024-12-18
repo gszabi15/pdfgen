@@ -1,11 +1,11 @@
 components:
 - layout_properties: {grid_position: 'QJJQXL,SXQJEB'}
   name: zsakmany
-  properties: {role: outlined}
+  properties: {placeholder: zsákmány, role: outlined}
   type: TextBox
 - layout_properties: {grid_position: 'QJJQXL,JHQRAK'}
   name: db
-  properties: {role: outlined}
+  properties: {placeholder: db, role: outlined}
   type: TextBox
 container:
   properties: {col_widths: '{"SXQJEB":50,"JHQRAK":10}'}

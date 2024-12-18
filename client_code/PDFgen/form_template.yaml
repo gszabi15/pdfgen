@@ -1021,106 +1021,190 @@ components:
           properties: {col_widths: '{"EXZCUC":15,"YZXGNQ":15,"OSSDIF":15,"DGQNCM":24,"TGLWCX":3}', role: outlined-card}
           type: ColumnPanel
         - components:
-          - layout_properties: {grid_position: 'SMNQYS,DPKSXY KTOZEH,ADHKBI'}
+          - layout_properties: {grid_position: 'KTOZEH,ADHKBI'}
             name: label_26
             properties: {align: center, text: Nyelv}
             type: Label
-          - layout_properties: {grid_position: 'SMNQYS,DPKSXY MNXIFJ,SDNYUW'}
-            name: nyelv_1
-            properties: {role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,DPKSXY LHZRVN,KTIDAD'}
-            name: nyelv_2
-            properties: {role: outlined}
-            type: TextBox
-          - event_bindings: {pressed_enter: nyelv_3_pressed_enter}
-            layout_properties: {grid_position: 'SMNQYS,DPKSXY AJHMRQ,QEXEAR'}
-            name: nyelv_3
-            properties: {role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,DPKSXY ZEPJKB,YHAGOS'}
-            name: nyelv_4
-            properties: {role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,DPKSXY TFGPYZ,OXXGPI'}
-            name: nyelv_5
-            properties: {role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,PYCJCI XGLECF,KNFLKG'}
-            name: label_27
-            properties: {align: center, text: Szint}
-            type: Label
-          - layout_properties: {grid_position: 'SMNQYS,PYCJCI AMEADJ,BNKOBQ'}
-            name: nyelv_1_szint
-            properties: {align: center, role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,PYCJCI QYKXJE,TXRVPQ'}
-            name: nyelv_2_szint
-            properties: {align: center, role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,PYCJCI NGWSVP,PAHECF'}
-            name: nyelv_3_szint
-            properties: {align: center, role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,PYCJCI GABQKS,ZHNMBK'}
-            name: nyelv_4_szint
-            properties: {align: center, role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,PYCJCI GPMIXB,HBNHBG'}
-            name: nyelv_5_szint
-            properties: {align: center, role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,ENZITS FTFSMJ,IVBSGG'}
-            name: label_28
-            properties: {align: center, text: Nyelv}
-            type: Label
-          - layout_properties: {grid_position: 'SMNQYS,ENZITS IDVUIT,LKSHMF'}
-            name: nyelv_6
-            properties: {role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,ENZITS GXEBKI,REHNZJ'}
-            name: nyelv_7
-            properties: {role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,ENZITS RTFSNK,QBLOGN'}
-            name: nyelv_8
-            properties: {role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,ENZITS UEWDPG,MNYGQX'}
-            name: nyelv_9
-            properties: {role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,ENZITS WKJWGJ,PZMXAV'}
-            name: nyelv_10
-            properties: {role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,YVEVMK IFTMKV,IMWHXV'}
-            name: label_29
-            properties: {align: center, text: Szint}
-            type: Label
-          - layout_properties: {grid_position: 'SMNQYS,YVEVMK DMTFSR,FGHBIR'}
-            name: nyelv_6_szint
-            properties: {align: center, role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,YVEVMK OLNXJP,RYSOXC'}
-            name: nyelv_7_szint
-            properties: {align: center, role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,YVEVMK MVHKEQ,BQOQMG'}
-            name: nyelv_8_szint
-            properties: {align: center, role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,YVEVMK WTTLAC,XETNNI'}
-            name: nyelv_9_szint
-            properties: {align: center, role: outlined}
-            type: TextBox
-          - layout_properties: {grid_position: 'SMNQYS,YVEVMK AAEOVS,JHKPDC'}
-            name: nyelv_10_szint
-            properties: {align: center, role: outlined}
-            type: TextBox
+          - components:
+            - components:
+              - components:
+                - layout_properties: {expand: true, width: 155}
+                  name: nyelv_1
+                  properties:
+                    margin: [null, '120', null, null]
+                    placeholder: nyelv
+                    role: outlined
+                  type: TextBox
+                - layout_properties: {width: 77}
+                  name: nyelv_1_szint
+                  properties: {align: center, placeholder: szint, role: outlined}
+                  type: TextBox
+                layout_properties: {expand: true}
+                name: flow_panel_30
+                properties:
+                  spacing:
+                    margin: [null, null, null, null]
+                type: FlowPanel
+              - components:
+                - layout_properties: {expand: true, width: 155}
+                  name: nyelv_2
+                  properties:
+                    margin: [null, '120', null, null]
+                    placeholder: nyelv
+                    role: outlined
+                  type: TextBox
+                - layout_properties: {width: 77}
+                  name: nyelv_2_szint
+                  properties: {align: center, placeholder: szint, role: outlined}
+                  type: TextBox
+                layout_properties: {expand: true}
+                name: flow_panel_30_copy
+                properties: {}
+                type: FlowPanel
+              - components:
+                - layout_properties: {expand: true, width: 155}
+                  name: nyelv_3
+                  properties:
+                    margin: [null, '120', null, null]
+                    placeholder: nyelv
+                    role: outlined
+                  type: TextBox
+                - layout_properties: {width: 77}
+                  name: nyelv_3_szint
+                  properties: {align: center, placeholder: szint, role: outlined}
+                  type: TextBox
+                layout_properties: {expand: true}
+                name: flow_panel_30_copy_2
+                properties: {}
+                type: FlowPanel
+              - components:
+                - layout_properties: {expand: true, width: 155}
+                  name: nyelv_4
+                  properties:
+                    margin: [null, '120', null, null]
+                    placeholder: nyelv
+                    role: outlined
+                  type: TextBox
+                - layout_properties: {width: 77}
+                  name: nyelv_4_szint
+                  properties: {align: center, placeholder: szint, role: outlined}
+                  type: TextBox
+                layout_properties: {expand: true}
+                name: flow_panel_30_copy_3
+                properties: {}
+                type: FlowPanel
+              - components:
+                - layout_properties: {expand: true, width: 155}
+                  name: nyelv_5
+                  properties:
+                    margin: [null, '120', null, null]
+                    placeholder: nyelv
+                    role: outlined
+                  type: TextBox
+                - layout_properties: {width: 77}
+                  name: nyelv_5_szint
+                  properties: {align: center, placeholder: szint, role: outlined}
+                  type: TextBox
+                layout_properties: {expand: true}
+                name: flow_panel_30_copy_4
+                properties: {}
+                type: FlowPanel
+              layout_properties: {width: 320}
+              name: flow_panel_31
+              properties: {}
+              type: FlowPanel
+            - components:
+              - components:
+                - layout_properties: {expand: true, width: 155}
+                  name: nyelv_6
+                  properties:
+                    margin: [null, '120', null, null]
+                    placeholder: nyelv
+                    role: outlined
+                  type: TextBox
+                - layout_properties: {width: 77}
+                  name: nyelv_6_szint
+                  properties: {align: center, placeholder: szint, role: outlined}
+                  type: TextBox
+                layout_properties: {expand: true}
+                name: flow_panel_30_copy_5
+                properties: {}
+                type: FlowPanel
+              - components:
+                - layout_properties: {expand: true, width: 155}
+                  name: nyelv_7_copy
+                  properties:
+                    margin: [null, '120', null, null]
+                    placeholder: nyelv
+                    role: outlined
+                  type: TextBox
+                - layout_properties: {width: 77}
+                  name: nyelv_7_szint
+                  properties: {align: center, placeholder: szint, role: outlined}
+                  type: TextBox
+                layout_properties: {expand: true}
+                name: flow_panel_30_copy_copy
+                properties: {}
+                type: FlowPanel
+              - components:
+                - layout_properties: {expand: true, width: 155}
+                  name: nyelv_8
+                  properties:
+                    margin: [null, '120', null, null]
+                    placeholder: nyelv
+                    role: outlined
+                  type: TextBox
+                - layout_properties: {width: 77}
+                  name: nyelv_8_szint
+                  properties: {align: center, placeholder: szint, role: outlined}
+                  type: TextBox
+                layout_properties: {expand: true}
+                name: flow_panel_30_copy_2_copy
+                properties: {}
+                type: FlowPanel
+              - components:
+                - layout_properties: {expand: true, width: 155}
+                  name: nyelv_9
+                  properties:
+                    margin: [null, '120', null, null]
+                    placeholder: nyelv
+                    role: outlined
+                  type: TextBox
+                - layout_properties: {width: 77}
+                  name: nyelv_9_szint
+                  properties: {align: center, placeholder: szint, role: outlined}
+                  type: TextBox
+                layout_properties: {expand: true}
+                name: flow_panel_30_copy_3_copy
+                properties: {}
+                type: FlowPanel
+              - components:
+                - layout_properties: {expand: true, width: 155}
+                  name: nyelv_10
+                  properties:
+                    margin: [null, '120', null, null]
+                    placeholder: nyelv
+                    role: outlined
+                  type: TextBox
+                - layout_properties: {width: 77}
+                  name: nyelv_10_szint
+                  properties: {align: center, placeholder: szint, role: outlined}
+                  type: TextBox
+                layout_properties: {expand: true}
+                name: flow_panel_30_copy_4_copy
+                properties: {}
+                type: FlowPanel
+              layout_properties: {width: 320}
+              name: flow_panel_31_copy
+              properties: {}
+              type: FlowPanel
+            layout_properties: {grid_position: 'FYSRYA,ACPDOU'}
+            name: flow_panel_32
+            properties: {align: center}
+            type: FlowPanel
           layout_properties: {grid_position: 'XQRYMW,FTSNON'}
           name: column_panel_24
-          properties: {col_widths: '{"DPKSXY":20,"PYCJCI":10,"ENZITS":20,"YVEVMK":10}', role: elevated-card}
+          properties: {col_widths: '{"DPKSXY":20,"SMFDYT":25}', role: elevated-card}
           type: ColumnPanel
         - components:
           - components:
@@ -1300,31 +1384,49 @@ components:
               name: label_8
               properties: {bold: false, role: null, text: 'Új diszciplinák:'}
               type: Label
-            - layout_properties: {}
-              name: pszi_af
-              properties: {text: Af}
-              type: CheckBox
-            - layout_properties: {}
-              name: pszi_mf
-              properties: {text: Mf}
-              type: CheckBox
+            - components:
+              - name: pszi_af
+                properties: {text: Af}
+                type: CheckBox
+              - name: pszi_mf
+                properties: {text: Mf}
+                type: CheckBox
+              name: flow_panel_28
+              properties: {}
+              type: FlowPanel
             layout_properties: {grid_position: 'DTHDBC,RJKAHJ'}
             name: flow_panel_18
             properties: {align: center}
             type: FlowPanel
           - components:
-            - layout_properties: {grid_position: 'JSLLFM,GFIPWM GKVRBN,ARVJYA'}
-              name: pszi_pyarroni
-              properties: {text: Pyarroni}
-              type: CheckBox
-            - layout_properties: {grid_position: 'JSLLFM,SLNEKH GMNLSX,AIBOYX'}
-              name: pszi_slan
-              properties: {text: Slan}
-              type: CheckBox
-            - layout_properties: {grid_position: 'JSLLFM,SLNEKH DSPRRP,QUASMR'}
-              name: pszi_siopa
-              properties: {text: Siopa}
-              type: CheckBox
+            - components:
+              - layout_properties: {grid_position: 'JSLLFM,GFIPWM GKVRBN,ARVJYA'}
+                name: pszi_pyarroni
+                properties:
+                  spacing:
+                    margin: [null, '0', null, null]
+                  text: Pyarroni
+                type: CheckBox
+              - layout_properties: {grid_position: 'JSLLFM,SLNEKH GMNLSX,AIBOYX'}
+                name: pszi_slan
+                properties: {text: Slan}
+                type: CheckBox
+              - layout_properties: {grid_position: 'JSLLFM,SLNEKH DSPRRP,QUASMR'}
+                name: pszi_siopa
+                properties: {text: Siopa}
+                type: CheckBox
+              - layout_properties: {grid_position: 'JSLLFM,GFIPWM SYGBAI,HTSRYU'}
+                name: pszi_kyr
+                properties: {text: Kyr}
+                type: CheckBox
+              layout_properties: {expand: false, width: 180}
+              name: column_panel_11
+              properties:
+                col_widths: '{"GFIPWM":20,"SLNEKH":25}'
+                spacing:
+                  margin: [null, '0', null, null]
+                  padding: [null, null, null, null]
+              type: ColumnPanel
             - components:
               - layout_properties: {grid_position: 'LILALN,OIYPQZ'}
                 name: label_9
@@ -1332,61 +1434,93 @@ components:
                 type: Label
               - layout_properties: {grid_position: 'NYXDTA,BIXJLZ'}
                 name: pszi
-                properties: {align: center, type: number}
+                properties:
+                  align: center
+                  margin: [null, '110', null, null]
+                  type: number
                 type: TextBox
-              layout_properties: {grid_position: 'JSLLFM,CLRMXO'}
+              layout_properties: {expand: true, width: 170}
               name: column_panel_12
-              properties: {role: outlined-card}
+              properties:
+                role: outlined-card
+                spacing:
+                  margin: [null, '0', null, null]
               type: ColumnPanel
-            - layout_properties: {grid_position: 'JSLLFM,GFIPWM SYGBAI,HTSRYU'}
-              name: pszi_kyr
-              properties: {text: Kyr}
-              type: CheckBox
-            layout_properties: {grid_position: 'OFPUTA,NZGYQP'}
-            name: column_panel_11
-            properties: {col_widths: '{"GFIPWM":20,"CLRMXO":35,"SLNEKH":25}'}
-            type: ColumnPanel
+            layout_properties: {grid_position: 'LPILBY,FUJTAB'}
+            name: flow_panel_27
+            properties: {align: center}
+            type: FlowPanel
           - components:
-            - layout_properties: {grid_position: 'CSPZFO,CXXANW KKLSBE,MEYPFM'}
-              name: label_11
-              properties: {align: center, bold: true, text: asztrál}
-              type: Label
-            - layout_properties: {grid_position: 'CSPZFO,CXXANW YWGIET,IJNVZA'}
-              name: termeszetes_asztral
-              properties: {align: center, placeholder: természetes, role: outlined, type: number}
-              type: TextBox
-            - layout_properties: {grid_position: 'CSPZFO,CXXANW CPDZHU,IJGXYO'}
-              name: statikus_asztral
-              properties: {align: center, placeholder: statikus, role: outlined, type: number}
-              type: TextBox
-            - layout_properties: {grid_position: 'CSPZFO,CXXANW MDPFVE,CUZYSX'}
-              name: dinamikus_asztral
-              properties: {align: center, placeholder: dinamikus, role: outlined, type: number}
-              type: TextBox
-            - layout_properties: {grid_position: 'CSPZFO,CXXANW GTZSIR,AFJAMY'}
-              name: me_asztral
-              properties: {align: center, placeholder: ME, role: outlined, type: number}
-              type: TextBox
-            - layout_properties: {grid_position: 'CSPZFO,MAGTYJ IVYOIJ,XDAANV'}
-              name: label_12
-              properties: {align: center, bold: true, text: mentál}
-              type: Label
-            - layout_properties: {grid_position: 'CSPZFO,MAGTYJ VNIFHY,KCLVSC'}
-              name: termeszetes_mental
-              properties: {align: center, placeholder: természetes, role: outlined, type: number}
-              type: TextBox
-            - layout_properties: {grid_position: 'CSPZFO,MAGTYJ QOCVQD,LSHXAQ'}
-              name: statikus_mental
-              properties: {align: center, placeholder: statikus, role: outlined, type: number}
-              type: TextBox
-            - layout_properties: {grid_position: 'CSPZFO,MAGTYJ NUPZOO,QAHTGZ'}
-              name: dinamikus_mental
-              properties: {align: center, placeholder: dinamikus, role: outlined, type: number}
-              type: TextBox
-            - layout_properties: {grid_position: 'CSPZFO,MAGTYJ ABNJTN,JNFQPO'}
-              name: me_mental
-              properties: {align: center, placeholder: ME, role: outlined, type: number}
-              type: TextBox
+            - components:
+              - components:
+                - layout_properties: {grid_position: 'UIKTFV,WVRRMR'}
+                  name: label_11
+                  properties: {align: center, bold: true, text: asztrál}
+                  type: Label
+                - layout_properties: {grid_position: 'UIKTFV,WVRRMR'}
+                  name: termeszetes_asztral
+                  properties:
+                    align: center
+                    margin: [null, '100', null, null]
+                    placeholder: természetes
+                    role: outlined
+                    type: number
+                  type: TextBox
+                - layout_properties: {grid_position: 'UIKTFV,WVRRMR'}
+                  name: statikus_asztral
+                  properties: {align: center, placeholder: statikus, role: outlined, type: number}
+                  type: TextBox
+                - layout_properties: {grid_position: 'UIKTFV,WVRRMR'}
+                  name: dinamikus_asztral
+                  properties: {align: center, placeholder: dinamikus, role: outlined, type: number}
+                  type: TextBox
+                - layout_properties: {grid_position: 'UIKTFV,WVRRMR'}
+                  name: me_asztral
+                  properties: {align: center, placeholder: ME, role: outlined, type: number}
+                  type: TextBox
+                layout_properties: {expand: true, width: 155}
+                name: column_panel_7
+                properties: {}
+                type: ColumnPanel
+              - components:
+                - layout_properties: {grid_position: 'LFFGIP,SOWYHY'}
+                  name: label_12
+                  properties:
+                    align: center
+                    bold: true
+                    spacing:
+                      margin: [null, '0', null, null]
+                    text: mentál
+                  type: Label
+                - layout_properties: {grid_position: 'LFFGIP,SOWYHY'}
+                  name: termeszetes_mental
+                  properties:
+                    align: center
+                    margin: [null, '100', null, null]
+                    placeholder: természetes
+                    role: outlined
+                    type: number
+                  type: TextBox
+                - layout_properties: {grid_position: 'LFFGIP,SOWYHY'}
+                  name: statikus_mental
+                  properties: {align: center, placeholder: statikus, role: outlined, type: number}
+                  type: TextBox
+                - layout_properties: {grid_position: 'LFFGIP,SOWYHY'}
+                  name: dinamikus_mental
+                  properties: {align: center, placeholder: dinamikus, role: outlined, type: number}
+                  type: TextBox
+                - layout_properties: {grid_position: 'LFFGIP,SOWYHY'}
+                  name: me_mental
+                  properties: {align: center, placeholder: ME, role: outlined, type: number}
+                  type: TextBox
+                layout_properties: {expand: true, width: 155}
+                name: column_panel_8
+                properties: {}
+                type: ColumnPanel
+              layout_properties: {grid_position: 'VZIMLW,WUXRQZ'}
+              name: flow_panel_29
+              properties: {align: center}
+              type: FlowPanel
             layout_properties: {grid_position: 'FRNNSR,VHMHBI'}
             name: column_panel_13
             properties: {role: outlined-card}
@@ -1501,9 +1635,12 @@ components:
                 type: Label
               - layout_properties: {grid_position: 'GMMWJH,XNYTQG'}
                 name: ep
-                properties: {align: center, type: number}
+                properties:
+                  align: center
+                  margin: [null, '100', null, null]
+                  type: number
                 type: TextBox
-              layout_properties: {width: 119}
+              layout_properties: {expand: true, width: 119}
               name: column_panel_20
               properties: {role: outlined-card}
               type: ColumnPanel
@@ -1515,7 +1652,7 @@ components:
               - layout_properties: {grid_position: 'VPGGRC,UAVZUP'}
                 name: vert
                 properties:
-                  margin: [null, '120', null, null]
+                  margin: [null, '130', null, null]
                 type: TextBox
               - components:
                 - name: nehezvert_af
@@ -1534,7 +1671,7 @@ components:
               type: ColumnPanel
             layout_properties: {grid_position: 'VFAVJB,BDBNEW'}
             name: flow_panel_22
-            properties: {}
+            properties: {align: center}
             type: FlowPanel
           - components:
             - components:
@@ -1544,9 +1681,12 @@ components:
                 type: Label
               - layout_properties: {grid_position: 'FUFQPN,UFCZIO'}
                 name: sfe
-                properties: {align: center, type: number}
+                properties:
+                  align: center
+                  margin: [null, '80', null, null]
+                  type: number
                 type: TextBox
-              layout_properties: {width: 90}
+              layout_properties: {expand: true, width: 90}
               name: column_panel_22
               properties: {}
               type: ColumnPanel
@@ -1557,11 +1697,16 @@ components:
                 type: Label
               - layout_properties: {grid_position: 'DVTWIR,XEKRJO'}
                 name: mgt
-                properties: {align: center, type: number}
+                properties:
+                  align: center
+                  margin: [null, '80', null, null]
+                  type: number
                 type: TextBox
-              layout_properties: {width: 90}
+              layout_properties: {expand: true, width: 90}
               name: column_panel_23
-              properties: {}
+              properties:
+                spacing:
+                  margin: [null, '0', null, null]
               type: ColumnPanel
             - components:
               - layout_properties: {grid_position: 'PFORGC,XYUDIR'}
@@ -1570,9 +1715,12 @@ components:
                 type: Label
               - layout_properties: {grid_position: 'VNGEOS,VTQBBS'}
                 name: fp
-                properties: {align: center, type: number}
+                properties:
+                  align: center
+                  margin: [null, '120', null, null]
+                  type: number
                 type: TextBox
-              layout_properties: {width: 145}
+              layout_properties: {expand: true, width: 145}
               name: column_panel_21
               properties: {role: outlined-card}
               type: ColumnPanel

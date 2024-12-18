@@ -1,19 +1,29 @@
 components:
 - layout_properties: {column: JKSDUP}
   name: varazstargy
-  properties: {role: outlined}
+  properties: {placeholder: varázstárgy, role: outlined}
   type: TextBox
 - layout_properties: {column: VJQQOR}
   name: hatas
-  properties: {role: outlined}
+  properties: {placeholder: hatás, role: outlined}
   type: TextBox
 - layout_properties: {column: OJLQEN}
   name: mp
-  properties: {role: outlined, type: text}
+  properties:
+    align: left
+    margin: [null, '50', null, null]
+    placeholder: MP
+    role: outlined
+    type: text
   type: TextBox
 - layout_properties: {column: CLVIEP}
   name: db
-  properties: {role: outlined, type: text}
+  properties:
+    align: left
+    margin: [null, '50', null, null]
+    placeholder: db
+    role: outlined
+    type: number
   type: TextBox
 container:
   data_bindings: []
