@@ -929,6 +929,7 @@ components:
             - {data_key: column_4, expand: false, id: CLVIEP, title: db, width: 140}
             foreground: ''
             role: [tonal-data-grid, datagrid-card-view]
+            rows_per_page: 15
             show_page_controls: false
             wrap_on: never
           type: DataGrid

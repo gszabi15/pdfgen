@@ -16,7 +16,7 @@ class PDFgen(PDFgenTemplate):
     self.init_components(**properties)
     #self.outlined_button_1.add_event_handler('click',self.click)
     # Any code you write here will run before the form opens.
-    self.varazstargyak.items = {'varazstargyak_1':'','varazstargyak_2':'','varazstargyak_3':'','varazstargyak_4':'','varazstargyak_5':''}
+    self.varazstargyak.items = {'varazstargyak_1':'','varazstargyak_2':'','varazstargyak_3':'','varazstargyak_4':''}
     #self.column_panel_9.width = 680+470+15
     #self.repeating_panel.items = {'ke':'','te':'','ve':'','ce':''}
     self.fegyver_1.items = ['']*3
@@ -215,7 +215,7 @@ class PDFgen(PDFgenTemplate):
         "szazalek": [self.titkosajto_kereses.text, self.ugras.text, self.eses.text, self.maszas.text, self.zsebmetszes.text, self.zarnyitas.text, self.rejtozes.text, self.koteltanc.text, self.lopozas.text, self.csapdafelfedezes.text],
         "elony": elony + ['']*(5-len(elony)),
         "hatrany": hatrany + ['']*(5-len(hatrany)), 
-        "varazstargyak": self.getrow(self.varazstargyak),
+        "varazstargyak": str(self.getrow(self.varazstargyak)),
         "fegyver_nelkuli": [self.ke.text, self.te.text, self.ve.text, self.ce.text],
         "fegyver": self.getfegyver(),
         "pszi": [self.pszi.text, self.termeszetes_asztral.text, self.statikus_asztral.text, self.dinamikus_asztral.text, self.me_asztral.text, self.termeszetes_mental.text, self.statikus_mental.text, self.dinamikus_mental.text, self.me_mental.text, self.pszi_af.checked, self.pszi_mf.checked, self.pszi_pyarroni.checked, self.pszi_slan.checked, self.pszi_kyr.checked, self.pszi_siopa.checked],
