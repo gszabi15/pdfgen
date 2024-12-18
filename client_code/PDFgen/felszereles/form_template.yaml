@@ -1,11 +1,12 @@
 components:
-- layout_properties: {grid_position: 'BLCLVV,RMFJMG'}
+- data_bindings: []
+  layout_properties: {grid_position: 'BLCLVV,RMFJMG'}
   name: felszereles
-  properties: {role: outlined}
+  properties: {placeholder: felszerelés, role: outlined}
   type: TextBox
 - layout_properties: {grid_position: 'BLCLVV,JREPDV'}
   name: db
-  properties: {align: left, role: outlined, type: number}
+  properties: {align: left, placeholder: db, role: outlined, type: number}
   type: TextBox
 container:
   properties: {col_widths: '{"RMFJMG":45,"JREPDV":15}'}
