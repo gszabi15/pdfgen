@@ -1,21 +1,25 @@
 components:
 - layout_properties: {grid_position: 'TDPLGQ,IHQSPE'}
   name: mereg
-  properties: {role: outlined}
+  properties: {placeholder: méreg, role: outlined}
   type: TextBox
 - layout_properties: {grid_position: 'TDPLGQ,MHAYMV'}
   name: szint
-  properties: {role: outlined, type: number}
+  properties:
+    margin: [null, '30', null, null]
+    placeholder: szint
+    role: outlined
+    type: number
   type: TextBox
 - layout_properties: {grid_position: 'TDPLGQ,CHQPRG'}
   name: hatas1
-  properties: {role: outlined}
+  properties: {placeholder: 1. hatás, role: outlined}
   type: TextBox
 - layout_properties: {grid_position: 'TDPLGQ,GGPVZF'}
   name: hatas2
-  properties: {role: outlined}
+  properties: {placeholder: 2. hatás, role: outlined}
   type: TextBox
 container:
-  properties: {col_widths: '{"IHQSPE":15,"MHAYMV":5,"CHQPRG":20,"GGPVZF":20}'}
+  properties: {col_widths: '{"IHQSPE":15,"MHAYMV":7,"CHQPRG":18,"GGPVZF":20}'}
   type: ColumnPanel
 is_package: true

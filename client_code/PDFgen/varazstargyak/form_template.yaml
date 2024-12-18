@@ -1,22 +1,63 @@
 components:
-- layout_properties: {column: JKSDUP}
-  name: varazstargy
-  properties: {role: outlined}
-  type: TextBox
-- layout_properties: {column: VJQQOR}
-  name: hatas
-  properties: {role: outlined}
-  type: TextBox
-- layout_properties: {column: OJLQEN}
-  name: mp
-  properties: {role: outlined, type: text}
-  type: TextBox
-- layout_properties: {column: CLVIEP}
-  name: db
-  properties: {role: outlined, type: text}
-  type: TextBox
+- components:
+  - layout_properties: {expand: true, width: 200}
+    name: mp
+    properties:
+      align: left
+      margin: [null, '30', null, null]
+      placeholder: MP
+      role: outlined
+      type: text
+    type: TextBox
+  layout_properties: {column: OJLQEN}
+  name: flow_panel_1
+  properties: {}
+  type: FlowPanel
+- components:
+  - layout_properties: {expand: true}
+    name: db
+    properties:
+      align: left
+      margin: [null, '30', null, null]
+      placeholder: db
+      role: outlined
+      type: number
+    type: TextBox
+  layout_properties: {column: CLVIEP}
+  name: flow_panel_2
+  properties: {}
+  type: FlowPanel
+- components:
+  - layout_properties: {expand: true}
+    name: hatas
+    properties:
+      margin: [null, '140', null, null]
+      placeholder: hatás
+      role: outlined
+    type: TextBox
+  layout_properties: {column: VJQQOR}
+  name: flow_panel_3
+  properties: {}
+  type: FlowPanel
+- components:
+  - layout_properties: {expand: true}
+    name: varazstargy
+    properties:
+      margin: [null, '100', null, null]
+      placeholder: varázstárgy
+      role: outlined
+    type: TextBox
+  layout_properties: {column: JKSDUP}
+  name: flow_panel_4
+  properties: {}
+  type: FlowPanel
 container:
   data_bindings: []
-  properties: {auto_display_data: false, spacing_above: none, spacing_below: none, visible: true}
+  properties:
+    auto_display_data: false
+    margin: [null, '50', null, null]
+    spacing_above: none
+    spacing_below: none
+    visible: true
   type: DataRowPanel
 is_package: true

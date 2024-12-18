@@ -1,23 +1,23 @@
 components:
 - layout_properties: {grid_position: 'YUAQAO,GQMUQA'}
   name: cime
-  properties: {role: outlined}
+  properties: {placeholder: címe, role: outlined}
   type: TextBox
 - layout_properties: {grid_position: 'YUAQAO,XAJZDG'}
   name: rendezveny
-  properties: {role: outlined}
+  properties: {placeholder: rendezvény, role: outlined}
   type: TextBox
 - layout_properties: {grid_position: 'YUAQAO,TNKGUO'}
   name: csapat
-  properties: {role: outlined}
+  properties: {placeholder: csapat, role: outlined}
   type: TextBox
 - layout_properties: {grid_position: 'YUAQAO,NPAQYY'}
   name: km
-  properties: {role: outlined}
+  properties: {placeholder: KM, role: outlined}
   type: TextBox
 - layout_properties: {grid_position: 'YUAQAO,RMANII'}
   name: jutalom
-  properties: {role: outlined}
+  properties: {placeholder: jutalom, role: outlined}
   type: TextBox
 container: {type: ColumnPanel}
 is_package: true

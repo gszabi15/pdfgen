@@ -3,95 +3,140 @@ components:
   - components:
     - layout_properties: {}
       name: label_7
-      properties: {bold: true, text: Fegyver}
+      properties: {bold: true, text: 'Fegyver:'}
       type: Label
-    - layout_properties: {expand: true, width: 662}
+    - layout_properties: {expand: true, width: 286.467}
       name: nev
-      properties: {role: outlined}
+      properties:
+        margin: [null, '120', null, null]
+        role: outlined
       type: TextBox
     layout_properties: {grid_position: 'WLBCPY,ZFVJLO'}
     name: flow_panel_1
     properties: {}
     type: FlowPanel
   - components:
-    - layout_properties: {grid_position: 'CJHMHQ,EKGZNL WUDHAH,DYYKUR'}
-      name: label_3
-      properties: {bold: true, text: KÉ}
-      type: Label
-    - layout_properties: {grid_position: 'CJHMHQ,EKGZNL IJTLTS,NIHNAW'}
-      name: ke
-      properties: {role: outlined, type: text}
-      type: TextBox
-    - layout_properties: {grid_position: 'CJHMHQ,LJQUIK PYQYBR,LVWKKW'}
-      name: label_4
-      properties: {bold: true, text: TÉ/CÉ}
-      type: Label
-    - layout_properties: {grid_position: 'CJHMHQ,LJQUIK TMIPKV,BJDHAS'}
-      name: te
-      properties: {role: outlined, type: text}
-      type: TextBox
-    - layout_properties: {grid_position: 'CJHMHQ,RCAHIC UXHRXF,URTGUC'}
-      name: label_5
-      properties: {bold: true, text: VÉ/Táv}
-      type: Label
-    - layout_properties: {grid_position: 'CJHMHQ,RCAHIC NLPQFA,JXQGDM'}
-      name: ve
-      properties: {role: outlined, type: text}
-      type: TextBox
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'QPHFLP,UNXALJ'}
+          name: label_3
+          properties: {align: center, bold: true, text: KÉ}
+          type: Label
+        - layout_properties: {grid_position: 'GPNDVS,YLJLPX'}
+          name: ke
+          properties: {align: center, role: outlined, type: text}
+          type: TextBox
+        layout_properties: {width: 95}
+        name: column_panel_5
+        properties: {}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'AMGOIR,CKYCQN'}
+          name: label_4
+          properties: {align: center, bold: true, text: TÉ/CÉ}
+          type: Label
+        - layout_properties: {grid_position: 'ZBEZGL,DCRCGI'}
+          name: te
+          properties: {align: center, role: outlined, type: text}
+          type: TextBox
+        layout_properties: {width: 95}
+        name: column_panel_6
+        properties: {}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'AWAVPE,OKITDT'}
+          name: label_5
+          properties: {align: center, bold: true, text: VÉ/Táv}
+          type: Label
+        - layout_properties: {grid_position: 'CYTGZK,TZHVNA'}
+          name: ve
+          properties: {align: center, role: outlined, type: text}
+          type: TextBox
+        layout_properties: {width: 95}
+        name: column_panel_7
+        properties: {}
+        type: ColumnPanel
+      layout_properties: {grid_position: 'AYEZMN,NSRWTE'}
+      name: flow_panel_2
+      properties: {align: center}
+      type: FlowPanel
     layout_properties: {grid_position: 'HAJERO,MCNTNI'}
     name: column_panel_4
     properties: {role: outlined-card}
     type: ColumnPanel
   - components:
-    - layout_properties: {grid_position: 'JYVHOJ,FOQTCK IMPIYF,LDZCTY'}
-      name: label_1
-      properties: {bold: true, text: Tám/kör, underline: false}
-      type: Label
-    - layout_properties: {grid_position: 'JYVHOJ,FOQTCK FZVPPN,CIOVHO'}
-      name: tam
-      properties: {role: outlined}
-      type: TextBox
-    - layout_properties: {grid_position: 'JYVHOJ,DUEKIP SRZAXX,UZFIHY'}
-      name: label_2
-      properties: {bold: true, text: Sebzés, underline: false}
-      type: Label
-    - layout_properties: {grid_position: 'JYVHOJ,DUEKIP BVFPUL,AXKGSK'}
-      name: sebzes
-      properties: {role: outlined}
-      type: TextBox
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'BKIMUC,PUFERX'}
+          name: label_1
+          properties: {align: center, bold: true, text: Tám/kör, underline: false}
+          type: Label
+        - layout_properties: {grid_position: 'BKIMUC,PUFERX'}
+          name: tam
+          properties: {align: center, role: outlined}
+          type: TextBox
+        layout_properties: {width: 150}
+        name: column_panel_8
+        properties: {}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'ZVMOIL,XOPDUP'}
+          name: label_2
+          properties: {align: center, bold: true, text: Sebzés, underline: false}
+          type: Label
+        - layout_properties: {grid_position: 'ZVMOIL,XOPDUP'}
+          name: sebzes
+          properties: {align: center, role: outlined}
+          type: TextBox
+        layout_properties: {width: 150}
+        name: column_panel_9
+        properties: {}
+        type: ColumnPanel
+      layout_properties: {grid_position: 'EIUPKR,CBEPEN'}
+      name: flow_panel_3
+      properties: {align: center}
+      type: FlowPanel
     layout_properties: {grid_position: 'RZVUPC,WELOTB'}
     name: column_panel_1
     properties: {role: outlined-card}
     type: ColumnPanel
   - components:
-    - layout_properties: {grid_position: 'KOJJQM,CYTMII'}
-      name: magikus
-      properties: {text: mágikus}
-      type: CheckBox
-    - layout_properties: {grid_position: 'KIVJMG,FLBGKL'}
-      name: aldott
-      properties: {text: áldott}
-      type: CheckBox
-    layout_properties: {grid_position: 'OGHZCS,BJOFBS'}
-    name: column_panel_3
-    properties: {role: outlined-card, wrap_on: mobile}
-    type: ColumnPanel
-  - components:
-    - layout_properties: {grid_position: 'NYTAOZ,UZAVFU'}
-      name: label_6
-      properties: {bold: true, text: Pajzs}
-      type: Label
-    - layout_properties: {grid_position: 'NHSEJQ,NYTNTJ'}
-      name: pajzs
-      properties: {role: outlined}
-      type: TextBox
-    layout_properties: {grid_position: 'OGHZCS,WBLTEK'}
-    name: column_panel_2
-    properties: {col_widths: '{}', role: outlined-card}
-    type: ColumnPanel
+    - components:
+      - layout_properties: {grid_position: 'KOJJQM,CYTMII'}
+        name: magikus
+        properties: {text: mágikus}
+        type: CheckBox
+      - layout_properties: {grid_position: 'KIVJMG,FLBGKL'}
+        name: aldott
+        properties: {text: áldott}
+        type: CheckBox
+      layout_properties: null
+      name: column_panel_3
+      properties: {role: outlined-card, wrap_on: mobile}
+      type: ColumnPanel
+    - components:
+      - layout_properties: {grid_position: 'NYTAOZ,UZAVFU'}
+        name: label_6
+        properties: {align: center, bold: true, text: Pajzs}
+        type: Label
+      - layout_properties: {grid_position: 'NHSEJQ,NYTNTJ'}
+        name: pajzs
+        properties:
+          align: center
+          margin: [null, '90', null, null]
+          role: outlined
+        type: TextBox
+      layout_properties: {expand: true, width: 225}
+      name: column_panel_2
+      properties: {col_widths: '{}', role: outlined-card}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'LGKJZB,VMONVH'}
+    name: flow_panel_4
+    properties: {align: left}
+    type: FlowPanel
   layout_properties: {}
   name: outlined_card_1
-  properties: {col_widths: '{"BJOFBS":20,"WBLTEK":40}', role: elevated-card}
+  properties: {col_widths: '{}', role: elevated-card}
   type: ColumnPanel
 container:
   properties: {auto_display_data: true}

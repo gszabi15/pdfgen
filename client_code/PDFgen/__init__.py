@@ -280,3 +280,34 @@ class PDFgen(PDFgenTemplate):
 
   def button_3_click(self, **event_args):
     open_form('Egyszerusitett_kozos')
+
+  def pszi_change(self, **event_args):
+   self.statikus_mental.text = int(self.pszi.text)
+   self.statikus_asztral.text = int(self.pszi.text)
+
+  def akaratero_change(self, **event_args):
+    if type(self.akaratero.text) is int:
+      self.termeszetes_mental.text = int(self.akaratero.text) -10 if int(self.akaratero.text) >= 10 else 0
+
+  def asztral_change(self, **event_args):
+    if type(self.asztral.text) is int:
+      self.termeszetes_asztral.text = int(self.asztral.text) -10 if int(self.asztral.text) >= 10 else 0
+
+  def me_asztral(self, **event_args):
+    val = 0
+    if type(self.termeszetes_asztral.text) is int:
+      val += int(self.termeszetes_asztral.text)
+    if type(self.statikus_asztral.text) is int:
+      val += int(self.statikus_asztral.text)
+    if type(self.dinamikus_asztral.text) is int:
+      val += int(self.dinamikus_asztral.text)
+    self.me_asztral.text = val
+  def me_mental(self, **event_args):
+   val = 0
+   if type(self.termeszetes_mental.text) is int:
+      val += int(self.termeszetes_mental.text)
+   if type(self.statikus_mental.text) is int:
+      val += int(self.statikus_mental.text)
+   if type(self.dinamikus_mental.text) is int:
+      val += int(self.dinamikus_mental.text)
+   self.me_mental.text = val
