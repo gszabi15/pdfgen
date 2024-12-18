@@ -1,22 +1,17 @@
 components:
-- components:
-  - data_bindings: []
-    layout_properties: {expand: true}
-    name: felszereles
-    properties:
-      margin: [null, '100', null, null]
-      placeholder: felszerelés
-      role: outlined
-    type: TextBox
-  - layout_properties: {width: 83}
-    name: db
-    properties: {align: left, placeholder: db, role: outlined, type: number}
-    type: TextBox
-  layout_properties: {grid_position: 'RKVTTB,NTTGZY'}
-  name: flow_panel_1
-  properties: {}
-  type: FlowPanel
+- data_bindings: []
+  layout_properties: {grid_position: 'TGZGTE,GJDXQZ'}
+  name: felszereles
+  properties:
+    margin: [null, '100', null, null]
+    placeholder: felszerelés
+    role: outlined
+  type: TextBox
+- layout_properties: {grid_position: 'TGZGTE,ZYGHMU'}
+  name: db
+  properties: {align: left, placeholder: db, role: outlined, type: number}
+  type: TextBox
 container:
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"GJDXQZ":45,"ZYGHMU":15}'}
   type: ColumnPanel
 is_package: true

@@ -1,26 +1,19 @@
 components:
-- components:
-  - layout_properties: {expand: true, width: 299}
-    name: kepzettseg
-    properties:
-      margin: [null, '160', null, null]
-      role: outlined
-    type: TextBox
-  - components:
-    - name: af
-      properties: {checked: false, text: Af}
-      type: CheckBox
-    - name: mf
-      properties: {text: Mf}
-      type: CheckBox
-    name: flow_panel_2
-    properties: {}
-    type: FlowPanel
-  layout_properties: {grid_position: 'ZCKBJQ,MJCMMC'}
-  name: flow_panel_1
-  properties: {gap: medium}
-  type: FlowPanel
+- layout_properties: {grid_position: 'CHSFOS,BVYCGC'}
+  name: kepzettseg
+  properties:
+    margin: [null, '160', null, null]
+    role: outlined
+  type: TextBox
+- layout_properties: {grid_position: 'CHSFOS,HXWJAM JEBIPE,KTNQVB'}
+  name: af
+  properties: {checked: false, text: Af}
+  type: CheckBox
+- layout_properties: {grid_position: 'CHSFOS,HXWJAM JEBIPE,TKMDRA'}
+  name: mf
+  properties: {text: Mf}
+  type: CheckBox
 container:
-  properties: {col_widths: '{"MJCMMC":30}'}
+  properties: {col_widths: '{"BVYCGC":45,"HXWJAM":15,"KTNQVB":25,"TKMDRA":35}'}
   type: ColumnPanel
 is_package: true
