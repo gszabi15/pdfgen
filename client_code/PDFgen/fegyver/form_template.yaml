@@ -20,7 +20,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'CJHMHQ,EKGZNL IJTLTS,NIHNAW'}
       name: ke
-      properties: {role: outlined, type: number}
+      properties: {role: outlined, type: text}
       type: TextBox
     - layout_properties: {grid_position: 'CJHMHQ,LJQUIK PYQYBR,LVWKKW'}
       name: label_4
@@ -28,7 +28,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'CJHMHQ,LJQUIK TMIPKV,BJDHAS'}
       name: te
-      properties: {role: outlined, type: number}
+      properties: {role: outlined, type: text}
       type: TextBox
     - layout_properties: {grid_position: 'CJHMHQ,RCAHIC UXHRXF,URTGUC'}
       name: label_5
@@ -36,7 +36,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'CJHMHQ,RCAHIC NLPQFA,JXQGDM'}
       name: ve
-      properties: {role: outlined, type: number}
+      properties: {role: outlined, type: text}
       type: TextBox
     layout_properties: {grid_position: 'HAJERO,MCNTNI'}
     name: column_panel_4
