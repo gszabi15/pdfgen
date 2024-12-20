@@ -7,7 +7,12 @@ components:
   type: TextBox
 - layout_properties: {grid_position: 'CHSFOS,HXWJAM JEBIPE,KTNQVB'}
   name: af
-  properties: {checked: false, text: Af}
+  properties:
+    checked: false
+    spacing:
+      margin: [null, 0, null, null]
+      padding: [null, '25', null, null]
+    text: Af
   type: CheckBox
 - layout_properties: {grid_position: 'CHSFOS,HXWJAM JEBIPE,TKMDRA'}
   name: mf
